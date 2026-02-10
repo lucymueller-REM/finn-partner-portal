@@ -8,14 +8,14 @@ interface HeaderProps {
 export function Header({ variant = "home" }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/FINN_Logo_Black_Test_klein.jpg"
             alt="FINN"
-            width={100}
-            height={32}
-            className="h-8 w-auto"
+            width={80}
+            height={26}
+            className="h-6 w-auto"
             priority
           />
         </Link>
@@ -24,13 +24,13 @@ export function Header({ variant = "home" }: HeaderProps) {
           <nav className="flex items-center gap-3">
             <Link
               href="/login/buyer"
-              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+              className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
             >
               Login für Händler
             </Link>
             <Link
               href="/login/supplier"
-              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+              className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
             >
               Login für Einlieferer
             </Link>
@@ -39,13 +39,13 @@ export function Header({ variant = "home" }: HeaderProps) {
           <nav className="flex items-center gap-4">
             <Link
               href="#login"
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+              className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900"
             >
               Login für bestehende Partner
             </Link>
             <Link
               href="#partner-werden"
-              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+              className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
             >
               Partnerzugang anfragen
             </Link>
