@@ -377,33 +377,61 @@ export default function BuyerPage() {
                  HERO - Text above, Image below
                  ───────────────────────────────────────────────────────────── */}
               <section id="ueberblick" className="pt-24 pb-8">
-                {/* Text content */}
-                <div className="mb-10">
-                  <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
-                    Händler
-                  </p>
-                  <h1 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                    Der direkte Weg zu{" "}
-                    <span className="text-[#0087eb]">jungen Gebrauchtwagen.</span>
-                  </h1>
-                  <p className="mt-5 max-w-xl text-lg text-gray-600">
-                    Kaufen Sie Fahrzeuge aus Flotten und Remarketing-Programmen –
-                    mit festen Preisen, transparenten Zustandsdaten und
-                    vollständig digitaler Abwicklung.
-                  </p>
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <Link
-                      href="#partner-werden"
-                      className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
-                    >
-                      Partnerzugang anfragen
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-medium text-gray-600 transition hover:text-gray-900"
-                    >
-                      Zur Startseite
-                    </Link>
+                {/* Text content + Bullets side by side */}
+                <div className="mb-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+                  {/* Left: Text content */}
+                  <div>
+                    <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                      Händler
+                    </p>
+                    <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                      Der direkte Weg zu{" "}
+                      <span className="text-[#0087eb]">jungen Gebrauchtwagen.</span>
+                    </h1>
+                    <p className="mt-5 text-lg text-gray-600">
+                      Kaufen Sie Fahrzeuge aus Flotten und Remarketing-Programmen –
+                      mit festen Preisen, transparenten Zustandsdaten und
+                      vollständig digitaler Abwicklung.
+                    </p>
+                    <div className="mt-8 flex flex-wrap items-center gap-4">
+                      <Link
+                        href="#partner-werden"
+                        className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                      >
+                        Partnerzugang anfragen
+                      </Link>
+                      <Link
+                        href="/"
+                        className="text-sm font-medium text-gray-600 transition hover:text-gray-900"
+                      >
+                        Zur Startseite
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Right: Key facts from homepage */}
+                  <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6 lg:p-8">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+                      Auf einen Blick
+                    </p>
+                    <ul className="mt-4 space-y-3">
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Zugriff auf 5.000+ junge Gebrauchtwagen
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Durchschnittsalter ca. 12 Monate, nur 1. Vorbesitzer
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Strukturierter Direktkauf oder Gebotsverkauf
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Alle Fahrzeugdokumente digital verfügbar
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
