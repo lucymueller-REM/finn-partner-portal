@@ -4,15 +4,15 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white py-12">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <Link href="/">
             <Image
               src="/FINN_Logo_Black_Test_klein.jpg"
               alt="FINN"
-              width={100}
-              height={32}
-              className="h-8 w-auto"
+              width={80}
+              height={26}
+              className="h-6 w-auto"
             />
           </Link>
           <p className="text-sm text-gray-500">
