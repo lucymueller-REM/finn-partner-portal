@@ -376,54 +376,55 @@ export default function SupplierPage() {
                  HERO - Text above, Image below
                  ───────────────────────────────────────────────────────────── */}
               <section id="ueberblick" className="pt-24 pb-8">
-                {/* Hero header - full width */}
-                <div className="mb-8">
-                  <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
-                    Einlieferer
-                  </p>
-                  <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                    Flotten effizient vermarkten.{" "}
-                    <span className="text-[#0087eb]">Strukturiert & transparent.</span>
-                  </h1>
-                  <p className="mt-5 max-w-2xl text-lg text-gray-600">
-                    Remarketing über ein qualifiziertes Händlernetzwerk – mit
-                    Echtzeit-Reporting, Restwertsteuerung und prozessgesteuerter
-                    Abwicklung.
-                  </p>
-                </div>
-
-                {/* Buttons + Key facts side by side */}
-                <div className="mb-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-                  {/* Left: Button */}
-                  <Link
-                    href="#partner-werden"
-                    className="inline-flex w-fit items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
-                  >
-                    Partnerzugang anfragen
-                  </Link>
-
-                  {/* Right: Key facts in card */}
-                  <div className="flex items-center gap-6 rounded-xl border border-gray-200 bg-gray-50 px-6 py-3">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#0087eb]">Auf einen Blick</span>
-                    <span className="h-4 w-px bg-gray-300" />
-                    <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-700">
-                      <span className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                        Zusätzlicher Remarketing-Kanal
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                        Restwert- & Standzeit-Steuerung
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                        Wettbewerbsfähige Preise
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                        Full-Service zubuchbar
-                      </span>
+                {/* Text content + Bullets side by side */}
+                <div className="mb-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+                  {/* Left: Text content */}
+                  <div>
+                    <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                      Einlieferer
+                    </p>
+                    <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                      Flotten effizient vermarkten.{" "}
+                      <span className="text-[#0087eb]">Strukturiert & transparent.</span>
+                    </h1>
+                    <p className="mt-5 text-lg text-gray-600">
+                      Remarketing über ein qualifiziertes Händlernetzwerk – mit
+                      Echtzeit-Reporting, Restwertsteuerung und prozessgesteuerter
+                      Abwicklung.
+                    </p>
+                    <div className="mt-8">
+                      <Link
+                        href="#partner-werden"
+                        className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                      >
+                        Partnerzugang anfragen
+                      </Link>
                     </div>
+                  </div>
+
+                  {/* Right: Key facts from homepage */}
+                  <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6 lg:p-8">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+                      Auf einen Blick
+                    </p>
+                    <ul className="mt-4 space-y-3">
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Zusätzlicher Remarketing-Kanal
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Restwert- & Standzeit-Steuerung
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Wettbewerbsfähige Preise
+                      </li>
+                      <li className="flex items-center gap-3 text-gray-700">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                        Full-Service zubuchbar
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
