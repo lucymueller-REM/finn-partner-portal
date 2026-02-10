@@ -38,7 +38,7 @@ export function HomeTestimonials() {
             Das sagen unsere Partner
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Erfahrungen von Händlern und Suppliern, die bereits über die Plattform arbeiten.
+            Erfahrungen von Händlern und Einlieferern, die bereits über die Plattform arbeiten.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function HomeTestimonials() {
                       : "bg-emerald-50 text-emerald-600"
                   }`}
                 >
-                  {t.type === "buyer" ? "Händler" : "Supplier"}
+                  {t.type === "buyer" ? "Händler" : "Einlieferer"}
                 </span>
               </div>
             </div>
