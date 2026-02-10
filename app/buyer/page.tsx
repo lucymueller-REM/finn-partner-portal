@@ -158,23 +158,23 @@ function ProcessTimeline({ activeStep }: { activeStep: number }) {
 
 const faqItems = [
   {
-    q: "Wie beantrage ich den Partnerzugang?",
+    q: "Wie kann ich einen Partnerzugang für das FINN Partner Portal beantragen?",
     a: "Über das Formular auf dieser Seite. Wir prüfen Ihren Gewerbenachweis und schalten Sie innerhalb von 24 Stunden frei.",
   },
   {
-    q: "Welche Kosten fallen an?",
+    q: "Welche Kosten und Gebühren fallen für die Nutzung des Portals an?",
     a: "Die Registrierung ist kostenfrei. Gebühren fallen erst beim Fahrzeugkauf an und sind transparent im Portal einsehbar.",
   },
   {
-    q: "Welche Fahrzeugdaten sind verfügbar?",
+    q: "Welche Fahrzeugdaten und Dokumentationen sind für jedes Fahrzeug verfügbar?",
     a: "Für jedes Fahrzeug: Zustandsberichte, Laufleistung, Servicehistorie, Fotos und alle relevanten Dokumente.",
   },
   {
-    q: "Wie funktioniert die Reservierung?",
+    q: "Wie funktioniert der Reservierungsprozess für ein Fahrzeug im Portal?",
     a: "Per Klick im Portal. Es gibt kein Bieterverfahren – Sie reservieren direkt zum angezeigten Preis.",
   },
   {
-    q: "Wie läuft die Übergabe ab?",
+    q: "Wie läuft die Fahrzeugübergabe nach dem Kauf ab?",
     a: "Komplett digital: Vertrag, Rechnung und Übergabeprotokoll werden online abgewickelt. Abholung oder Lieferung nach Vereinbarung.",
   },
 ];
@@ -362,7 +362,7 @@ export default function BuyerPage() {
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-screen-2xl pl-4 pr-8 sm:pl-6 sm:pr-12 lg:pr-16">
+        <div className="mx-auto max-w-screen-2xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
@@ -560,7 +560,7 @@ export default function BuyerPage() {
                   <p className="mt-3 max-w-xl text-gray-600">
                     Alles, was Sie über den Partnerzugang wissen müssen.
                   </p>
-                  <div className="mt-10 max-w-2xl">
+                  <div className="mt-10 max-w-4xl">
                     <FaqAccordion />
                   </div>
                 </ScrollReveal>

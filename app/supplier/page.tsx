@@ -158,23 +158,23 @@ function ProcessTimeline({ activeStep }: { activeStep: number }) {
 
 const faqItems = [
   {
-    q: "Welche Fahrzeugtypen können wir vermarkten?",
+    q: "Welche Fahrzeugtypen können wir über das FINN Partner Portal vermarkten?",
     a: "Alle Fahrzeugtypen aus Flotten, Leasing-Rückläufern oder Mietwagen. Wir fokussieren uns auf junge Gebrauchtwagen bis ca. 24 Monate.",
   },
   {
-    q: "Wie funktioniert die technische Anbindung?",
+    q: "Wie funktioniert die technische Anbindung an das Partner Portal?",
     a: "Wir bieten eine REST-API für automatisierten Datenaustausch oder alternativ einen manuellen Upload via Dashboard.",
   },
   {
-    q: "Welche Händler kaufen über die Plattform?",
+    q: "Welche Händler kaufen Fahrzeuge über die Plattform?",
     a: "Über 1.200 verifizierte Gewerbehändler in Deutschland – vom Markenhändler bis zum spezialisierten Gebrauchtwagenhandel.",
   },
   {
-    q: "Wie werden Restwerte gesteuert?",
+    q: "Wie werden Restwerte und Preise für die Fahrzeuge gesteuert?",
     a: "Sie behalten volle Kontrolle über Preise. Wir liefern Marktdaten und Empfehlungen zur optimalen Preisgestaltung.",
   },
   {
-    q: "Welche Reportings sind verfügbar?",
+    q: "Welche Reportings und Analysen sind für Einlieferer verfügbar?",
     a: "Echtzeit-Dashboards zu Absatz, Standzeiten, Restwertentwicklung und Händlerperformance.",
   },
 ];
@@ -361,7 +361,7 @@ export default function SupplierPage() {
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-screen-2xl pl-4 pr-8 sm:pl-6 sm:pr-12 lg:pr-16">
+        <div className="mx-auto max-w-screen-2xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
@@ -559,7 +559,7 @@ export default function SupplierPage() {
                   <p className="mt-3 max-w-xl text-gray-600">
                     Alles, was Sie über die Zusammenarbeit wissen müssen.
                   </p>
-                  <div className="mt-10 max-w-2xl">
+                  <div className="mt-10 max-w-4xl">
                     <FaqAccordion />
                   </div>
                 </ScrollReveal>
