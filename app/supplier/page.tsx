@@ -377,7 +377,7 @@ export default function SupplierPage() {
                  ───────────────────────────────────────────────────────────── */}
               <section id="ueberblick" className="pt-24 pb-8">
                 {/* Text content + Bullets side by side */}
-                <div className="mb-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+                <div className="mb-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
                   {/* Left: Text content */}
                   <div>
                     <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
@@ -403,7 +403,7 @@ export default function SupplierPage() {
                   </div>
 
                   {/* Right: Key facts from homepage */}
-                  <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6 lg:p-8">
+                  <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 lg:p-6 lg:max-w-sm">
                     <p className="text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
                       Auf einen Blick
                     </p>
