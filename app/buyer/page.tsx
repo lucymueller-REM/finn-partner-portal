@@ -252,18 +252,18 @@ function IconDigital({ className }: { className?: string }) {
 const benefits = [
   {
     icon: IconInventory,
-    title: "Live-Inventar",
-    desc: "Täglich neue Fahrzeuge – inkl. Zustandsdaten, Laufleistung & Dokumente.",
+    title: "Schnelle Verfügbarkeit",
+    desc: "Fahrzeuge direkt reservieren – keine Wartezeiten durch Auktionsverfahren.",
   },
   {
     icon: IconPrice,
-    title: "Feste Preise",
-    desc: "Kein Bieterverfahren – klare Konditionen & strukturierter Direktkauf.",
+    title: "Planbare Einkaufskosten",
+    desc: "Transparente Preisgestaltung ohne versteckte Gebühren oder Nachverhandlungen.",
   },
   {
     icon: IconDigital,
-    title: "Digitale Abwicklung",
-    desc: "Reservierung, Vertrag, Rechnung und Übergabe – zentral über die Plattform.",
+    title: "Effiziente Prozesse",
+    desc: "Weniger Aufwand durch zentrale Abwicklung von Reservierung bis Übergabe.",
   },
 ];
 
@@ -456,10 +456,10 @@ export default function BuyerPage() {
               <section id="vorteile" className="pt-12 pb-20">
                 <ScrollReveal>
                   <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                    Ihre Vorteile auf einen Blick
+                    Ihre Vorteile als Händler
                   </h2>
                   <p className="mt-3 max-w-xl text-gray-600">
-                    Warum immer mehr Händler auf den digitalen Direktkanal setzen.
+                    Warum immer mehr Händler auf diesen Direktkanal setzen.
                   </p>
                   <div className="mt-12 grid gap-6 sm:grid-cols-3">
                     {benefits.map((b) => (

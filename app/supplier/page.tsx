@@ -251,18 +251,18 @@ function IconProcess({ className }: { className?: string }) {
 const benefits = [
   {
     icon: IconNetwork,
-    title: "Händlernetzwerk",
-    desc: "Zugang zu über 1.200 verifizierten Händlern – für schnelle Vermarktung Ihrer Flotte.",
+    title: "Qualifizierte Abnehmer",
+    desc: "Über 1.200 verifizierte Gewerbehändler – vom Markenhändler bis zum Spezialisten.",
   },
   {
     icon: IconChart,
-    title: "Reporting & Analytics",
-    desc: "Echtzeit-Einblicke in Absatz, Standzeiten und Restwertentwicklung.",
+    title: "Volle Transparenz",
+    desc: "Echtzeit-Dashboards zu Verkaufsstatus, Performance und Marktentwicklung.",
   },
   {
     icon: IconProcess,
-    title: "Strukturierte Abwicklung",
-    desc: "Prozessgesteuert von der Bestandsintegration bis zum erfolgreichen Verkauf.",
+    title: "Flexible Integration",
+    desc: "API-Anbindung oder manueller Upload – passend zu Ihren bestehenden Systemen.",
   },
 ];
 
