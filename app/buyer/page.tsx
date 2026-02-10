@@ -472,7 +472,7 @@ export default function BuyerPage() {
                     <div className="sticky top-32">
                       <div className="overflow-hidden rounded-xl border border-gray-100 shadow-lg">
                         <Image
-                          src="/hero-dashboard.jpg"
+                          src="/hero-dashboard2.jpg"
                           alt="Partner Portal Dashboard"
                           width={600}
                           height={400}

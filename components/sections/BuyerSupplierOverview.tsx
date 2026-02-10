@@ -2,29 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 const leftContent = {
-  kicker: "Buyer",
+  kicker: "Händler",
   headline: "Junge Gebrauchtwagen direkt einkaufen.",
   bullets: [
     "Zugriff auf 5.000+ junge Gebrauchtwagen",
-    "Durchschnittsalter ca. 12 Monate",
-    "Kein Auktionsprozess, strukturierter Direktkauf",
-    "Transparente Zustandsberichte & Dokumente",
+    "Durchschnittsalter ca. 12 Monate, nur 1. Vorbesitzer",
+    "Kein Auktionsprozess, strukturierter Direktkauf oder Gebotsverkauf",
+    "Alle relevanten Fahrzeugdokumente digital verfügbar",
   ],
   href: "/buyer",
   cta: "Ich bin Händler",
 };
 
 const rightContent = {
-  kicker: "Supplier",
+  kicker: "Einlieferer",
   headline: "Flotten digital vermarkten und steuern.",
   bullets: [
     "Digitaler Remarketing-Kanal",
     "Steuerung von Restwerten & Standzeiten",
-    "Reporting zu Absatz und Performance",
+    "Wettbewerbsfähige Preise durch breites Händlernetzwerk",
+    "Defleeting-Abwicklung flexibel zubuchbar",
     "Full-Service Abwicklung über uns",
   ],
   href: "/supplier",
-  cta: "Ich bin Supplier",
+  cta: "Ich bin Einlieferer",
 };
 
 function SplitPanel({
@@ -43,14 +44,17 @@ function SplitPanel({
   cta: string;
 }) {
   return (
-    <div className="relative h-[460px] w-full overflow-hidden rounded-2xl sm:h-[520px]">
-      {/* Background image */}
+    <Link
+      href={href}
+      className="group relative block h-[460px] w-full overflow-hidden rounded-2xl sm:h-[520px]"
+    >
+      {/* Background image with hover zoom */}
       <div className="absolute inset-0 z-0">
         <Image
           src={image}
           alt=""
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
           unoptimized
@@ -80,14 +84,11 @@ function SplitPanel({
             </li>
           ))}
         </ul>
-        <Link
-          href={href}
-          className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-[#0087eb] px-6 py-2.5 text-sm font-medium text-white transition hover:bg-[#006fc7]"
-        >
+        <span className="mt-8 inline-flex w-fit items-center justify-center rounded-xl bg-[#0087eb] px-6 py-2.5 text-sm font-medium text-white transition group-hover:bg-[#006fc7]">
           {cta}
-        </Link>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }
 

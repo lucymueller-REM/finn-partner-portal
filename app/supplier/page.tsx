@@ -471,7 +471,7 @@ export default function SupplierPage() {
                     <div className="sticky top-32">
                       <div className="overflow-hidden rounded-xl border border-gray-100 shadow-lg">
                         <Image
-                          src="/hero-dashboard.jpg"
+                          src="/hero-dashboard2.jpg"
                           alt="Supplier Dashboard"
                           width={600}
                           height={400}
