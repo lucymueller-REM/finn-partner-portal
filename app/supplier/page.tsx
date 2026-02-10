@@ -261,8 +261,8 @@ const benefits = [
   },
   {
     icon: IconProcess,
-    title: "Flexible Integration",
-    desc: "API-Anbindung oder manueller Upload – passend zu Ihren bestehenden Systemen.",
+    title: "Flexible Zusammenarbeit",
+    desc: "Ob automatisiert oder manuell – wir passen uns Ihren Prozessen an.",
   },
 ];
 
