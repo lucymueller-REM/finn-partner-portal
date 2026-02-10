@@ -362,7 +362,7 @@ export default function BuyerPage() {
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
+        <div className="mx-auto max-w-screen-2xl pl-4 pr-8 sm:pl-6 sm:pr-12 lg:pr-16">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
