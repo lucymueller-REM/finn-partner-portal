@@ -379,7 +379,7 @@ export default function SupplierPage() {
                 {/* Text content */}
                 <div className="mb-10">
                   <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
-                    Supplier
+                    Einlieferer
                   </p>
                   <h1 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                     Flotten digital vermarkten.{" "}
@@ -427,7 +427,7 @@ export default function SupplierPage() {
               <section id="vorteile" className="pt-12 pb-20">
                 <ScrollReveal>
                   <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                    Ihre Vorteile als Supplier
+                    Ihre Vorteile als Einlieferer
                   </h2>
                   <p className="mt-3 max-w-xl text-gray-600">
                     Warum OEMs und Leasinggesellschaften auf unsere Plattform setzen.

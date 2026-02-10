@@ -380,7 +380,7 @@ export default function BuyerPage() {
                 {/* Text content */}
                 <div className="mb-10">
                   <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
-                    Buyer
+                    Händler
                   </p>
                   <h1 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                     Der direkte Weg zu{" "}

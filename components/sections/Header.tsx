@@ -32,7 +32,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               href="/login/supplier"
               className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
             >
-              Login für Supplier
+              Login für Einlieferer
             </Link>
           </nav>
         ) : (
