@@ -40,7 +40,7 @@ export function Testimonials() {
                 {t.label}
               </p>
               <blockquote className="mt-3 text-lg leading-relaxed text-gray-700">
-                „{t.quote}"
+                &bdquo;{t.quote}&ldquo;
               </blockquote>
               <p className="mt-4 text-sm text-gray-500">{t.sub}</p>
             </div>
