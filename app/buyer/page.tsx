@@ -357,7 +357,7 @@ export default function BuyerPage() {
 
   return (
     <>
-      <Header />
+      <Header variant="subpage" />
       <main className="min-h-screen bg-white pt-16">
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
@@ -376,7 +376,7 @@ export default function BuyerPage() {
               {/* ─────────────────────────────────────────────────────────────
                  HERO - Text above, Image below
                  ───────────────────────────────────────────────────────────── */}
-              <section id="ueberblick" className="pt-24 pb-16">
+              <section id="ueberblick" className="pt-24 pb-8">
                 {/* Text content */}
                 <div className="mb-10">
                   <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
@@ -407,9 +407,9 @@ export default function BuyerPage() {
                   </div>
                 </div>
 
-                {/* Hero image - centered, max-width constrained */}
-                <div className="mx-auto max-w-[900px]">
-                  <div className="relative h-[380px] w-full overflow-hidden rounded-2xl shadow-sm md:h-[460px]">
+                {/* Hero image - full width aligned with text */}
+                <div>
+                  <div className="relative h-[280px] w-full overflow-hidden rounded-2xl shadow-sm md:h-[340px]">
                     <Image
                       src="/hero-buyer.jpg"
                       alt="Fahrzeuge im Partner Portal"
@@ -425,7 +425,7 @@ export default function BuyerPage() {
               {/* ─────────────────────────────────────────────────────────────
                  BENEFITS (3 cards)
                  ───────────────────────────────────────────────────────────── */}
-              <section id="vorteile" className="py-20">
+              <section id="vorteile" className="pt-12 pb-20">
                 <ScrollReveal>
                   <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
                     Ihre Vorteile auf einen Blick

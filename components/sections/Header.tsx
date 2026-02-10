@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
 
-export function Header() {
+interface HeaderProps {
+  variant?: "home" | "subpage";
+}
+
+export function Header({ variant = "home" }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
@@ -16,17 +19,38 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="flex items-center gap-4">
-          <Link
-            href="#login"
-            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
-          >
-            Login für bestehende Partner
-          </Link>
-          <Button asChild className="bg-[#0087eb] text-white hover:bg-[#006fc7]">
-            <Link href="#partnerzugang">Partnerzugang anfragen</Link>
-          </Button>
-        </nav>
+
+        {variant === "home" ? (
+          <nav className="flex items-center gap-3">
+            <Link
+              href="/login/buyer"
+              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+            >
+              Login für Händler
+            </Link>
+            <Link
+              href="/login/supplier"
+              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+            >
+              Login für Supplier
+            </Link>
+          </nav>
+        ) : (
+          <nav className="flex items-center gap-4">
+            <Link
+              href="#login"
+              className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+            >
+              Login für bestehende Partner
+            </Link>
+            <Link
+              href="#partner-werden"
+              className="inline-flex items-center rounded-xl bg-[#0087eb] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+            >
+              Partnerzugang anfragen
+            </Link>
+          </nav>
+        )}
       </div>
     </header>
   );
