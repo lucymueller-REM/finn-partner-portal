@@ -394,41 +394,37 @@ export default function BuyerPage() {
                 </div>
 
                 {/* Buttons + Key facts side by side */}
-                <div className="mb-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-                  {/* Left: Buttons */}
-                  <div className="flex flex-wrap items-center gap-4">
-                    <Link
-                      href="#partner-werden"
-                      className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
-                    >
-                      Partnerzugang anfragen
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-sm font-medium text-gray-600 transition hover:text-gray-900"
-                    >
-                      Zur Startseite
-                    </Link>
-                  </div>
+                <div className="mb-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+                  {/* Left: Button */}
+                  <Link
+                    href="#partner-werden"
+                    className="inline-flex w-fit items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                  >
+                    Partnerzugang anfragen
+                  </Link>
 
-                  {/* Right: Key facts inline */}
-                  <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
-                    <span className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                      5.000+ Fahrzeuge
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                      Ø 12 Monate, 1. Vorbesitzer
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                      Direktkauf oder Gebotsverkauf
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
-                      Dokumente digital
-                    </span>
+                  {/* Right: Key facts in card */}
+                  <div className="flex items-center gap-6 rounded-xl border border-gray-200 bg-gray-50 px-6 py-3">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#0087eb]">Auf einen Blick</span>
+                    <span className="h-4 w-px bg-gray-300" />
+                    <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-700">
+                      <span className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
+                        5.000+ Fahrzeuge
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
+                        Ø 12 Monate, 1. Vorbesitzer
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
+                        Direktkauf oder Gebotsverkauf
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#0087eb]" />
+                        Dokumente digital
+                      </span>
+                    </div>
                   </div>
                 </div>
 
