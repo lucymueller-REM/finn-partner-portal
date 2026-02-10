@@ -94,7 +94,7 @@ function SplitPanel({
 export function BuyerSupplierOverview() {
   return (
     <section className="bg-white py-4 sm:py-8">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-2">
           <SplitPanel
             image="/hero-buyer.jpg"

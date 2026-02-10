@@ -32,7 +32,7 @@ const testimonials = [
 export function HomeTestimonials() {
   return (
     <section className="bg-gray-50 py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Das sagen unsere Partner

@@ -22,7 +22,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Eingesetzt von Händlergruppen, OEMs und Leasinggesellschaften.
         </h2>

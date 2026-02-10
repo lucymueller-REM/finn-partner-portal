@@ -8,7 +8,7 @@ interface HeaderProps {
 export function Header({ variant = "home" }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/FINN_Logo_Black_Test_klein.jpg"
