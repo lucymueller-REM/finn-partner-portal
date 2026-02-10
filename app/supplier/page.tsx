@@ -361,7 +361,7 @@ export default function SupplierPage() {
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 lg:px-8">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
@@ -371,7 +371,7 @@ export default function SupplierPage() {
             </aside>
 
             {/* RIGHT: Main content */}
-            <div className="max-w-5xl">
+            <div>
               {/* ─────────────────────────────────────────────────────────────
                  HERO - Text above, Image below
                  ───────────────────────────────────────────────────────────── */}
