@@ -24,7 +24,7 @@ const kpis = [
 export function KpiTiles() {
   return (
     <section className="border-t border-gray-200 bg-gray-50 py-20">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <h2 className="mb-12 text-center text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
           Aktuell im Netzwerk
         </h2>

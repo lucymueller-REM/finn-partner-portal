@@ -8,7 +8,7 @@ const stats = [
 export function LiveTracker() {
   return (
     <section className="bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
         <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
           Live im Portal
         </p>
