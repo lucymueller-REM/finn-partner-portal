@@ -265,7 +265,7 @@ export function ScrollStory() {
   const activeData = sections.find((s) => s.id === activeSection) || sections[0];
 
   return (
-    <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6">
+    <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6">
       {/* Mobile: Horizontal navigation chips */}
       <div className="sticky top-16 z-30 -mx-4 overflow-x-auto bg-white/95 px-4 py-3 backdrop-blur lg:hidden">
         <div className="flex gap-2">
