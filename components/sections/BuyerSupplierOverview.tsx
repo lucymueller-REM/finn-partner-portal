@@ -73,9 +73,9 @@ function SplitPanel({
           {bullets.map((b) => (
             <li
               key={b}
-              className="flex items-start gap-2 text-sm text-white/90 sm:text-base"
+              className="flex items-center gap-2 text-sm text-white/90 sm:text-base"
             >
-              <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
               {b}
             </li>
           ))}
