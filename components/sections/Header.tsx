@@ -13,9 +13,9 @@ export function Header({ variant = "home" }: HeaderProps) {
           <Image
             src="/FINN_Logo_Black_Test_klein.jpg"
             alt="FINN"
-            width={80}
-            height={26}
-            className="h-6 w-auto"
+            width={90}
+            height={29}
+            className="h-7 w-auto"
             priority
           />
         </Link>
