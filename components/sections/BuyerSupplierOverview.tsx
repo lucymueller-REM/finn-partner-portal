@@ -16,9 +16,9 @@ const leftContent = {
 
 const rightContent = {
   kicker: "Einlieferer",
-  headline: "Flotten digital vermarkten und steuern.",
+  headline: "Flotten effizient vermarkten und steuern.",
   bullets: [
-    "Digitaler Remarketing-Kanal",
+    "Zusätzlicher Remarketing-Kanal",
     "Steuerung von Restwerten & Standzeiten",
     "Wettbewerbsfähige Preise durch breites Händlernetzwerk",
     "Defleeting-Abwicklung flexibel zubuchbar",
