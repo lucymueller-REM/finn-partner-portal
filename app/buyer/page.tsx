@@ -492,13 +492,12 @@ export default function BuyerPage() {
                   {/* Right: Sticky image */}
                   <div className="hidden lg:block">
                     <div className="sticky top-32">
-                      <div className="overflow-hidden rounded-xl border border-gray-100 shadow-lg">
+                      <div className="relative aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-gray-100 shadow-lg">
                         <Image
                           src="/hero-dashboard2.jpg"
                           alt="Partner Portal Dashboard"
-                          width={600}
-                          height={400}
-                          className="h-auto w-full object-cover"
+                          fill
+                          className="object-cover"
                           unoptimized
                         />
                       </div>
