@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <Link href="/">
             <Image
-              src="/FINN_Logo_Black_Test_zwei.jpg"
+              src="/FINN_Logo_Black_Test_klein.jpg"
               alt="FINN"
               width={100}
               height={32}
