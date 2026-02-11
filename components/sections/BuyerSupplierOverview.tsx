@@ -78,7 +78,9 @@ function SplitPanel({
               key={b}
               className="flex items-center gap-2 text-xs text-white/90 sm:text-sm"
             >
-              <span className="h-1 w-1 shrink-0 rounded-full bg-[#0087eb]" />
+              <svg className="h-4 w-4 shrink-0 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
               {b}
             </li>
           ))}
