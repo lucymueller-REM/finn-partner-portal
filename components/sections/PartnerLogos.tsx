@@ -1,14 +1,20 @@
 "use client";
 
+import Image from "next/image";
+
 const partners = [
-  { name: "Partner 1" },
-  { name: "Partner 2" },
-  { name: "Partner 3" },
-  { name: "Partner 4" },
-  { name: "Partner 5" },
-  { name: "Partner 6" },
-  { name: "Partner 7" },
-  { name: "Partner 8" },
+  { name: "AHG", logo: "/Partner_Logo_ahg.png" },
+  { name: "Assenheimer", logo: "/Partner_Logo_Assenheimer.png" },
+  { name: "Baltes", logo: "/Partner_Logo_Baltes.png" },
+  { name: "BHG", logo: "/Partner_Logo_bhg.png" },
+  { name: "Bierschneider", logo: "/Partner_Logo_Bierschneider.png" },
+  { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png" },
+  { name: "Dosch", logo: "/Partner_Logo_Dosch.png" },
+  { name: "Elspass", logo: "/Partner_Logo_Elspass.png" },
+  { name: "Euler", logo: "/Partner_Logo_euler.png" },
+  { name: "Häusler", logo: "/Partner_Logo_Häusler.png" },
+  { name: "Scherer", logo: "/Partner_Logo_Scherer.png" },
+  { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png" },
 ];
 
 export function PartnerLogos() {
@@ -27,22 +33,32 @@ export function PartnerLogos() {
           {partners.map((partner, i) => (
             <div
               key={`a-${i}`}
-              className="mx-6 flex h-10 w-24 flex-shrink-0 items-center justify-center rounded-md bg-gray-100"
+              className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center"
             >
-              <span className="text-xs font-medium text-gray-400">
-                {partner.name}
-              </span>
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={100}
+                height={40}
+                className="h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition"
+                unoptimized
+              />
             </div>
           ))}
           {/* Duplicate for seamless loop */}
           {partners.map((partner, i) => (
             <div
               key={`b-${i}`}
-              className="mx-6 flex h-10 w-24 flex-shrink-0 items-center justify-center rounded-md bg-gray-100"
+              className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center"
             >
-              <span className="text-xs font-medium text-gray-400">
-                {partner.name}
-              </span>
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={100}
+                height={40}
+                className="h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition"
+                unoptimized
+              />
             </div>
           ))}
         </div>
@@ -58,7 +74,7 @@ export function PartnerLogos() {
           }
         }
         .animate-scroll {
-          animation: scroll 25s linear infinite;
+          animation: scroll 30s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
