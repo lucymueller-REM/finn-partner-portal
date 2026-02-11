@@ -1,0 +1,289 @@
+{
+  "header": {
+    "loginForPartner": "Login für Partner",
+    "requestAccess": "Partnerzugang anfragen",
+    "loginForDealer": "Login für Händler",
+    "loginForSupplier": "Login für Einlieferer",
+    "login": "Login"
+  },
+  "home": {
+    "dealer": {
+      "kicker": "Händler",
+      "headline": "Junge Gebrauchtwagen direkt einkaufen.",
+      "bullets": [
+        "Keine Gebühren – nur Fahrzeugpreis zahlen",
+        "Bieten oder zum Sofortpreis kaufen",
+        "Abholung oder Lieferung zu Ihnen",
+        "Export in eigene Systeme via Excel & API"
+      ],
+      "cta": "Mehr erfahren"
+    },
+    "supplier": {
+      "kicker": "Einlieferer",
+      "headline": "Flotten effizient vermarkten und steuern.",
+      "bullets": [
+        "2.000+ Händler in pan-europäischem Netzwerk",
+        "Steuerung von Restwerten & Standzeiten",
+        "Persönlicher Ansprechpartner rund um die Uhr",
+        "Full-Service modular zubuchbar"
+      ],
+      "cta": "Mehr erfahren"
+    },
+    "partners": "Unsere Partner"
+  },
+  "buyer": {
+    "nav": {
+      "overview": "Überblick",
+      "benefits": "Vorteile",
+      "assortment": "Sortiment",
+      "howItWorks": "So funktioniert's",
+      "feedback": "Feedback",
+      "faq": "FAQ",
+      "becomePartner": "Partner werden"
+    },
+    "hero": {
+      "kicker": "Händler",
+      "headline": "Ihr Zugang zu jungen Gebrauchtwagen",
+      "description": "Kaufen Sie Fahrzeuge aus Abo-Rückläufern und Flotten – mit transparenten Preisen und vollständig digitaler Abwicklung.",
+      "cta": "Partnerzugang anfragen",
+      "atAGlance": "Auf einen Blick",
+      "bullets": [
+        "Keine Gebühren – nur Fahrzeugpreis",
+        "Bieten oder Sofortpreis",
+        "Abholung oder Lieferung",
+        "Export via Excel & API"
+      ]
+    },
+    "benefits": {
+      "headline": "Ihre Vorteile als Händler",
+      "description": "Warum immer mehr Händler auf diesen Direktkanal setzen.",
+      "items": [
+        {
+          "title": "Umfassende Fahrzeugdaten",
+          "desc": "Gutachten, Konfiguration, COC und Volumen-Forecast – alle Infos auf einen Blick."
+        },
+        {
+          "title": "Keine versteckten Kosten",
+          "desc": "Sie zahlen nur den Fahrzeugpreis – keine Gebühren, keine Provisionen."
+        },
+        {
+          "title": "Flexible Kaufoptionen",
+          "desc": "Bieten oder Sofortpreis – plus Abholung auf eigene Kosten oder Lieferung."
+        }
+      ]
+    },
+    "assortment": {
+      "headline": "Unser Sortiment",
+      "description": "Wählen Sie zwischen sofort verfügbaren Fahrzeugen oder sichern Sie sich Ihren Supply im Voraus.",
+      "stock": {
+        "title": "Stock Purchase",
+        "subtitle": "Sofort verfügbare Fahrzeuge inkl. Gutachten",
+        "bullets": [
+          "Kurzfristige Nachfrage-Erfüllung",
+          "Schnelle Abwicklung",
+          "Gutachten vorhanden"
+        ]
+      },
+      "preSales": {
+        "title": "Pre-Sales",
+        "subtitle": "Fahrzeuge verfügbar in 1–12 Monaten",
+        "bullets": [
+          "Mittelfristige Volumenplanung",
+          "Hohe Planungssicherheit für Nachfrage und Preise",
+          "Definierte Parameter für Km, Schäden und Alter"
+        ]
+      }
+    },
+    "process": {
+      "headline": "So funktioniert der Händler-Zugang",
+      "description": "In sechs Schritten zum ersten Fahrzeug – vollständig digital.",
+      "steps": [
+        {
+          "title": "Registrierung als Gewerbepartner",
+          "desc": "Kostenfreie Anmeldung über das Portal inkl. Gewerbenachweis."
+        },
+        {
+          "title": "Verifizierung",
+          "desc": "Prüfung und Freischaltung innerhalb von 24 Stunden."
+        },
+        {
+          "title": "Zugriff auf Inventar & Forecast",
+          "desc": "Live-Bestand inkl. Gutachten, Konfiguration, COC und Volumen-Forecast."
+        },
+        {
+          "title": "Fahrzeugauswahl & Reservierung",
+          "desc": "Bieten oder zum Sofortpreis kaufen – ohne klassisches Auktionsverfahren."
+        },
+        {
+          "title": "Abholung oder Lieferung",
+          "desc": "Kostenfreie Selbstabholung oder Lieferung direkt zu Ihnen."
+        },
+        {
+          "title": "After-Sales & Dokumentation",
+          "desc": "Alle Dokumente inkl. Zulassungsbescheinigung jederzeit im Portal abrufbar."
+        }
+      ]
+    },
+    "faq": {
+      "headline": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Wie kann ich einen Partnerzugang für das FINN Partner Portal beantragen?",
+          "a": "Über das Formular auf dieser Seite. Wir prüfen Ihren Gewerbenachweis und schalten Sie innerhalb von 24 Stunden frei."
+        },
+        {
+          "q": "Welche Kosten fallen für die Nutzung des Portals an?",
+          "a": "Die Registrierung und Nutzung ist komplett kostenfrei. Sie zahlen nur den Fahrzeugpreis – keine versteckten Gebühren oder Provisionen."
+        },
+        {
+          "q": "Welche Fahrzeugdaten und Dokumentationen sind verfügbar?",
+          "a": "Für jedes Fahrzeug: Gutachten, Konfiguration, COC, Laufleistung, Servicehistorie, Fotos und alle relevanten Dokumente."
+        },
+        {
+          "q": "Wie funktioniert der Kauf eines Fahrzeugs im Portal?",
+          "a": "Sie können entweder ein Gebot abgeben oder zum Sofortpreis kaufen. Kein klassisches Auktionsverfahren mit Wartezeiten."
+        },
+        {
+          "q": "Wie läuft die Fahrzeugübergabe nach dem Kauf ab?",
+          "a": "Sie wählen zwischen kostenfreier Selbstabholung oder Lieferung direkt zu Ihrem Standort. Alle Dokumente inkl. Zulassungsbescheinigung sind im Portal abrufbar."
+        },
+        {
+          "q": "Kann ich das Fahrzeuginventar in mein eigenes System exportieren?",
+          "a": "Ja, über Excel-Export oder API-Anbindung können Sie Fahrzeugdaten einfach in Ihre eigenen Systeme übernehmen."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Bereit für den nächsten Schritt?",
+      "description": "Erhalten Sie Zugriff auf verfügbare Fahrzeuge inkl. Zustandsdaten und digitaler Abwicklung.",
+      "button": "Jetzt Zugang beantragen",
+      "note": "Wir melden uns innerhalb von 24 Stunden."
+    }
+  },
+  "supplier": {
+    "nav": {
+      "overview": "Überblick",
+      "benefits": "Vorteile",
+      "fullService": "Full-Service",
+      "howItWorks": "So funktioniert's",
+      "feedback": "Feedback",
+      "faq": "FAQ",
+      "becomePartner": "Partner werden"
+    },
+    "hero": {
+      "kicker": "Einlieferer",
+      "headline": "Ihr digitaler Remarketing-Kanal",
+      "description": "Vermarkten Sie Ihre Flotte über unser Händlernetzwerk – mit transparenter Steuerung und vollständiger Abwicklung.",
+      "cta": "Partnerzugang anfragen",
+      "atAGlance": "Auf einen Blick",
+      "bullets": [
+        "2.000+ Händler pan-europäisch",
+        "Restwert- & Standzeit-Steuerung",
+        "Persönlicher Ansprechpartner",
+        "Full-Service modular zubuchbar"
+      ]
+    },
+    "benefits": {
+      "headline": "Ihre Vorteile als Einlieferer",
+      "description": "Warum OEMs und Leasinggesellschaften auf unsere Plattform setzen.",
+      "items": [
+        {
+          "title": "Pan-europäisches Netzwerk",
+          "desc": "Über 2.000 verifizierte Gewerbehändler in Europa – vom Markenhändler bis zum Spezialisten."
+        },
+        {
+          "title": "Volle Transparenz",
+          "desc": "Echtzeit-Dashboards zu Verkaufsstatus, Standzeiten und Restwertentwicklung."
+        },
+        {
+          "title": "Modulare Services",
+          "desc": "Vermarktung, Abmeldung, Begutachtung, Logistik – flexibel zubuchbar nach Ihrem Bedarf."
+        }
+      ]
+    },
+    "fullService": {
+      "headline": "Full-Service nach Ihrem Bedarf",
+      "description": "Wir übernehmen genau das, was Sie brauchen – modular und flexibel zubuchbar.",
+      "services": [
+        { "title": "Abmeldung", "desc": "Behördliche Abwicklung" },
+        { "title": "Begutachtung", "desc": "Zustandsberichte erstellen" },
+        { "title": "Logistik", "desc": "Abholung & Lagerung" },
+        { "title": "Transport", "desc": "Lieferung zum Händler" }
+      ],
+      "accountManager": {
+        "title": "Persönlicher Ansprechpartner",
+        "desc": "Ihr dedizierter Account Manager steht Ihnen rund um die Uhr zur Verfügung."
+      }
+    },
+    "process": {
+      "headline": "So funktioniert die Zusammenarbeit",
+      "description": "Von der Integration bis zum ersten Verkauf – strukturiert und transparent.",
+      "steps": [
+        {
+          "title": "Erstgespräch & Bedarfsanalyse",
+          "desc": "Wir analysieren Ihre Flotte und Remarketing-Ziele. Basierend auf umfassenden Marktdaten erhalten Sie eine erste Preisindikation."
+        },
+        {
+          "title": "Technische Integration",
+          "desc": "Anbindung Ihrer Systeme via API, manuellem Upload oder Excel-Tabellen – ganz wie Sie es bevorzugen."
+        },
+        {
+          "title": "Fahrzeugintegration",
+          "desc": "Sie teilen uns VIN und Zustandsbericht – den Rest übernehmen wir für Sie."
+        },
+        {
+          "title": "Vermarktung im Händlernetzwerk",
+          "desc": "Ihre Fahrzeuge werden über 2.000+ verifizierten Händlern in unserem pan-europäischen Netzwerk angeboten."
+        },
+        {
+          "title": "Reporting & Steuerung",
+          "desc": "Echtzeit-Dashboards zu Absatz, Standzeiten und Restwertentwicklung."
+        }
+      ]
+    },
+    "faq": {
+      "headline": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Welche Fahrzeugtypen können wir über das FINN Partner Portal vermarkten?",
+          "a": "Alle Fahrzeugtypen aus Flotten, Leasing-Rückläufern oder Mietwagen. Wir fokussieren uns auf junge Gebrauchtwagen bis ca. 24 Monate."
+        },
+        {
+          "q": "Wie funktioniert die technische Anbindung an das Partner Portal?",
+          "a": "Wir bieten eine REST-API für automatisierten Datenaustausch, manuellen Upload via Dashboard oder den Austausch per Excel-Tabellen – ganz wie Sie es bevorzugen."
+        },
+        {
+          "q": "Welche Händler kaufen Fahrzeuge über die Plattform?",
+          "a": "Über 2.000 verifizierte Gewerbehändler in unserem pan-europäischen Netzwerk – vom Markenhändler bis zum spezialisierten Gebrauchtwagenhandel."
+        },
+        {
+          "q": "Wie werden Restwerte und Preise für die Fahrzeuge gesteuert?",
+          "a": "Sie behalten volle Kontrolle über Preise. Wir liefern umfassende Marktdaten und Empfehlungen zur optimalen Preisgestaltung."
+        },
+        {
+          "q": "Welche Reportings und Analysen sind für Einlieferer verfügbar?",
+          "a": "Echtzeit-Dashboards zu Absatz, Standzeiten und Restwertentwicklung – alles transparent in Ihrem persönlichen Portal."
+        },
+        {
+          "q": "Welche Services können wir zusätzlich zur Vermarktung in Anspruch nehmen?",
+          "a": "Wir bieten modulare Full-Service-Lösungen: Abmeldung, Begutachtung, Logistik und Transport – flexibel zubuchbar, genau das was Sie brauchen."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Bereit für den nächsten Schritt?",
+      "description": "Starten Sie mit der digitalen Vermarktung Ihrer Flotte über unser qualifiziertes Händlernetzwerk.",
+      "button": "Jetzt Kontakt aufnehmen",
+      "note": "Wir melden uns innerhalb von 24 Stunden."
+    }
+  },
+  "footer": {
+    "copyright": "FINN GmbH. Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "language": {
+    "de": "Deutsch",
+    "en": "English"
+  }
+}

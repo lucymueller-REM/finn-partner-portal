@@ -1,0 +1,289 @@
+{
+  "header": {
+    "loginForPartner": "Partner Login",
+    "requestAccess": "Request Access",
+    "loginForDealer": "Dealer Login",
+    "loginForSupplier": "Supplier Login",
+    "login": "Login"
+  },
+  "home": {
+    "dealer": {
+      "kicker": "Dealers",
+      "headline": "Buy young used cars directly.",
+      "bullets": [
+        "No fees – only pay the vehicle price",
+        "Bid or buy at fixed price",
+        "Pickup or delivery to you",
+        "Export to your systems via Excel & API"
+      ],
+      "cta": "Learn more"
+    },
+    "supplier": {
+      "kicker": "Suppliers",
+      "headline": "Market and manage fleets efficiently.",
+      "bullets": [
+        "2,000+ dealers in pan-European network",
+        "Control residual values & standing times",
+        "Personal contact available 24/7",
+        "Full-service modularly bookable"
+      ],
+      "cta": "Learn more"
+    },
+    "partners": "Our Partners"
+  },
+  "buyer": {
+    "nav": {
+      "overview": "Overview",
+      "benefits": "Benefits",
+      "assortment": "Assortment",
+      "howItWorks": "How it works",
+      "feedback": "Feedback",
+      "faq": "FAQ",
+      "becomePartner": "Become Partner"
+    },
+    "hero": {
+      "kicker": "Dealers",
+      "headline": "Your access to young used cars",
+      "description": "Buy vehicles from subscription returns and fleets – with transparent pricing and fully digital processing.",
+      "cta": "Request Access",
+      "atAGlance": "At a glance",
+      "bullets": [
+        "No fees – only vehicle price",
+        "Bid or fixed price",
+        "Pickup or delivery",
+        "Export via Excel & API"
+      ]
+    },
+    "benefits": {
+      "headline": "Your Benefits as a Dealer",
+      "description": "Why more and more dealers are choosing this direct channel.",
+      "items": [
+        {
+          "title": "Comprehensive Vehicle Data",
+          "desc": "Appraisals, configuration, COC and volume forecast – all information at a glance."
+        },
+        {
+          "title": "No Hidden Costs",
+          "desc": "You only pay the vehicle price – no fees, no commissions."
+        },
+        {
+          "title": "Flexible Purchase Options",
+          "desc": "Bid or fixed price – plus pickup at your expense or delivery."
+        }
+      ]
+    },
+    "assortment": {
+      "headline": "Our Assortment",
+      "description": "Choose between immediately available vehicles or secure your supply in advance.",
+      "stock": {
+        "title": "Stock Purchase",
+        "subtitle": "Immediately available vehicles incl. appraisal",
+        "bullets": [
+          "Short-term demand fulfillment",
+          "Fast processing",
+          "Appraisal available"
+        ]
+      },
+      "preSales": {
+        "title": "Pre-Sales",
+        "subtitle": "Vehicles available in 1–12 months",
+        "bullets": [
+          "Medium-term volume planning",
+          "High planning security for demand and prices",
+          "Defined parameters for km, damage and age"
+        ]
+      }
+    },
+    "process": {
+      "headline": "How Dealer Access Works",
+      "description": "Six steps to your first vehicle – fully digital.",
+      "steps": [
+        {
+          "title": "Register as Business Partner",
+          "desc": "Free registration via the portal incl. business license."
+        },
+        {
+          "title": "Verification",
+          "desc": "Review and activation within 24 hours."
+        },
+        {
+          "title": "Access to Inventory & Forecast",
+          "desc": "Live inventory incl. appraisals, configuration, COC and volume forecast."
+        },
+        {
+          "title": "Vehicle Selection & Reservation",
+          "desc": "Bid or buy at fixed price – no classic auction process."
+        },
+        {
+          "title": "Pickup or Delivery",
+          "desc": "Free self-pickup or delivery directly to you."
+        },
+        {
+          "title": "After-Sales & Documentation",
+          "desc": "All documents incl. registration certificate available in the portal anytime."
+        }
+      ]
+    },
+    "faq": {
+      "headline": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How can I apply for partner access to the FINN Partner Portal?",
+          "a": "Via the form on this page. We verify your business license and activate you within 24 hours."
+        },
+        {
+          "q": "What costs are there for using the portal?",
+          "a": "Registration and use is completely free. You only pay the vehicle price – no hidden fees or commissions."
+        },
+        {
+          "q": "What vehicle data and documentation is available?",
+          "a": "For each vehicle: appraisals, configuration, COC, mileage, service history, photos and all relevant documents."
+        },
+        {
+          "q": "How does purchasing a vehicle in the portal work?",
+          "a": "You can either place a bid or buy at the fixed price. No classic auction process with waiting times."
+        },
+        {
+          "q": "How does vehicle handover work after purchase?",
+          "a": "Choose between free self-pickup or delivery directly to your location. All documents incl. registration certificate are available in the portal."
+        },
+        {
+          "q": "Can I export the vehicle inventory to my own system?",
+          "a": "Yes, via Excel export or API connection you can easily transfer vehicle data to your own systems."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Ready for the Next Step?",
+      "description": "Get access to available vehicles incl. condition data and digital processing.",
+      "button": "Request Access Now",
+      "note": "We'll get back to you within 24 hours."
+    }
+  },
+  "supplier": {
+    "nav": {
+      "overview": "Overview",
+      "benefits": "Benefits",
+      "fullService": "Full-Service",
+      "howItWorks": "How it works",
+      "feedback": "Feedback",
+      "faq": "FAQ",
+      "becomePartner": "Become Partner"
+    },
+    "hero": {
+      "kicker": "Suppliers",
+      "headline": "Your Digital Remarketing Channel",
+      "description": "Market your fleet through our dealer network – with transparent control and complete processing.",
+      "cta": "Request Access",
+      "atAGlance": "At a glance",
+      "bullets": [
+        "2,000+ dealers pan-European",
+        "Residual value & standing time control",
+        "Personal contact person",
+        "Full-service modularly bookable"
+      ]
+    },
+    "benefits": {
+      "headline": "Your Benefits as a Supplier",
+      "description": "Why OEMs and leasing companies rely on our platform.",
+      "items": [
+        {
+          "title": "Pan-European Network",
+          "desc": "Over 2,000 verified commercial dealers in Europe – from brand dealers to specialists."
+        },
+        {
+          "title": "Full Transparency",
+          "desc": "Real-time dashboards for sales status, standing times and residual value development."
+        },
+        {
+          "title": "Modular Services",
+          "desc": "Remarketing, deregistration, appraisal, logistics – flexibly bookable according to your needs."
+        }
+      ]
+    },
+    "fullService": {
+      "headline": "Full-Service According to Your Needs",
+      "description": "We take over exactly what you need – modular and flexibly bookable.",
+      "services": [
+        { "title": "Deregistration", "desc": "Official processing" },
+        { "title": "Appraisal", "desc": "Create condition reports" },
+        { "title": "Logistics", "desc": "Pickup & storage" },
+        { "title": "Transport", "desc": "Delivery to dealer" }
+      ],
+      "accountManager": {
+        "title": "Personal Contact Person",
+        "desc": "Your dedicated account manager is available to you around the clock."
+      }
+    },
+    "process": {
+      "headline": "How the Collaboration Works",
+      "description": "From integration to first sale – structured and transparent.",
+      "steps": [
+        {
+          "title": "Initial Meeting & Needs Analysis",
+          "desc": "We analyze your fleet and remarketing goals. Based on comprehensive market data, you receive an initial price indication."
+        },
+        {
+          "title": "Technical Integration",
+          "desc": "Connect your systems via API, manual upload or Excel spreadsheets – however you prefer."
+        },
+        {
+          "title": "Vehicle Integration",
+          "desc": "You share VIN and condition report – we take care of the rest."
+        },
+        {
+          "title": "Marketing in Dealer Network",
+          "desc": "Your vehicles are offered to 2,000+ verified dealers in our pan-European network."
+        },
+        {
+          "title": "Reporting & Control",
+          "desc": "Real-time dashboards for sales, standing times and residual value development."
+        }
+      ]
+    },
+    "faq": {
+      "headline": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What vehicle types can we market through the FINN Partner Portal?",
+          "a": "All vehicle types from fleets, leasing returns or rental cars. We focus on young used cars up to approx. 24 months."
+        },
+        {
+          "q": "How does the technical connection to the Partner Portal work?",
+          "a": "We offer a REST API for automated data exchange, manual upload via dashboard or exchange via Excel spreadsheets – however you prefer."
+        },
+        {
+          "q": "Which dealers buy vehicles through the platform?",
+          "a": "Over 2,000 verified commercial dealers in our pan-European network – from brand dealers to specialized used car traders."
+        },
+        {
+          "q": "How are residual values and prices for vehicles controlled?",
+          "a": "You retain full control over prices. We provide comprehensive market data and recommendations for optimal pricing."
+        },
+        {
+          "q": "What reports and analyses are available for suppliers?",
+          "a": "Real-time dashboards for sales, standing times and residual value development – all transparent in your personal portal."
+        },
+        {
+          "q": "What services can we use in addition to marketing?",
+          "a": "We offer modular full-service solutions: deregistration, appraisal, logistics and transport – flexibly bookable, exactly what you need."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Ready for the Next Step?",
+      "description": "Start digital marketing of your fleet through our qualified dealer network.",
+      "button": "Contact Us Now",
+      "note": "We'll get back to you within 24 hours."
+    }
+  },
+  "footer": {
+    "copyright": "FINN GmbH. All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "language": {
+    "de": "Deutsch",
+    "en": "English"
+  }
+}

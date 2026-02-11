@@ -1,31 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const leftContent = {
-  kicker: "Händler",
-  headline: "Junge Gebrauchtwagen direkt einkaufen.",
-  bullets: [
-    "Keine Gebühren – nur Fahrzeugpreis zahlen",
-    "Bieten oder zum Sofortpreis kaufen",
-    "Abholung oder Lieferung zu Ihnen",
-    "Export in eigene Systeme via Excel & API",
-  ],
-  href: "/buyer",
-  cta: "Mehr erfahren",
-};
-
-const rightContent = {
-  kicker: "Einlieferer",
-  headline: "Flotten effizient vermarkten und steuern.",
-  bullets: [
-    "2.000+ Händler in pan-europäischem Netzwerk",
-    "Steuerung von Restwerten & Standzeiten",
-    "Persönlicher Ansprechpartner rund um die Uhr",
-    "Full-Service modular zubuchbar",
-  ],
-  href: "/supplier",
-  cta: "Mehr erfahren",
-};
+import { useLanguage } from "@/i18n/LanguageContext";
 
 function SplitPanel({
   image,
@@ -94,25 +71,27 @@ function SplitPanel({
 }
 
 export function BuyerSupplierOverview() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-white py-4 sm:py-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-2">
           <SplitPanel
             image="/hero-buyer.jpg"
-            kicker={leftContent.kicker}
-            headline={leftContent.headline}
-            bullets={leftContent.bullets}
-            href={leftContent.href}
-            cta={leftContent.cta}
+            kicker={t.home.dealer.kicker}
+            headline={t.home.dealer.headline}
+            bullets={t.home.dealer.bullets}
+            href="/buyer"
+            cta={t.home.dealer.cta}
           />
           <SplitPanel
             image="/hero-supplier.jpg"
-            kicker={rightContent.kicker}
-            headline={rightContent.headline}
-            bullets={rightContent.bullets}
-            href={rightContent.href}
-            cta={rightContent.cta}
+            kicker={t.home.supplier.kicker}
+            headline={t.home.supplier.headline}
+            bullets={t.home.supplier.bullets}
+            href="/supplier"
+            cta={t.home.supplier.cta}
           />
         </div>
       </div>

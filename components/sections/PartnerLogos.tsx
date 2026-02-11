@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const partners = [
   // Gemischt: Händler + OEMs/LB gleichmäßig verteilt
@@ -39,11 +40,13 @@ function LogoItem({ partner }: { partner: { name: string; logo: string; scale: s
 }
 
 export function PartnerLogos() {
+  const { t } = useLanguage();
+
   return (
     <section className="overflow-hidden bg-white py-4 border-t border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[10px] font-medium uppercase tracking-widest text-gray-400">
-          Unsere Partner
+          {t.home.partners}
         </p>
       </div>
 
