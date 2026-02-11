@@ -3,24 +3,23 @@
 import Image from "next/image";
 
 const partners = [
-  // Händler
+  // Gemischt: Händler + OEMs/LB gleichmäßig verteilt
   { name: "AHG", logo: "/Partner_Logo_ahg.png", scale: "scale-100" },
   { name: "Assenheimer", logo: "/Partner_Logo_Assenheimer.png", scale: "scale-100" },
   { name: "Baltes", logo: "/Partner_Logo_Baltes.png", scale: "scale-100" },
+  { name: "Nissan", logo: "/Partner_Logo_nissan.svg", scale: "scale-100" },
   { name: "BHG", logo: "/Partner_Logo_bhg.png", scale: "scale-100" },
   { name: "Bierschneider", logo: "/Partner_Logo_Bierschneider.png", scale: "scale-100" },
   { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png", scale: "scale-100" },
+  { name: "Polestar", logo: "/Partner_Logo_polestar.svg", scale: "scale-100" },
   { name: "Dosch", logo: "/Partner_Logo_Dosch.png", scale: "scale-100" },
   { name: "Elspass", logo: "/Partner_Logo_Elspass.png", scale: "scale-100" },
+  { name: "Credit Agricole Autobank", logo: "/Partner_Logo_autobank.png", scale: "scale-150" },
   { name: "Euler", logo: "/Partner_Logo_euler.png", scale: "scale-150" },
   { name: "Häusler", logo: "/Partner_Logo_Häusler.png", scale: "scale-150" },
+  { name: "Leasys", logo: "/Partner_Logo_leasy.png", scale: "scale-100" },
   { name: "Scherer", logo: "/Partner_Logo_Scherer.png", scale: "scale-150" },
   { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png", scale: "scale-100" },
-  // OEMs / Leasingbanken
-  { name: "Nissan", logo: "/Partner_Logo_nissan.png", scale: "scale-125" },
-  { name: "Polestar", logo: "/Partner_Logo_polestar.png", scale: "scale-125" },
-  { name: "Credit Agricole Autobank", logo: "/Partner_Logo_autobank.png", scale: "scale-125" },
-  { name: "Leasys", logo: "/Partner_Logo_leasy.png", scale: "scale-100" },
 ];
 
 function LogoItem({ partner }: { partner: { name: string; logo: string; scale: string } }) {
