@@ -7,6 +7,51 @@
     "login": "Login"
   },
   "home": {
+    "hero": {
+      "headline": "Die Plattform für Handel und Remarketing von jungen Gebrauchtwagen.",
+      "description": "Kaufen Sie junge Gebrauchtwagen über einen digitalen B2B-Marktplatz oder vermarkten Sie Flotten strukturiert über das Partnernetzwerk."
+    },
+    "liveTracker": {
+      "title": "Live im Portal",
+      "stats": [
+        { "value": "42", "label": "Fahrzeuge heute neu gelistet" },
+        { "value": "14 Tage", "label": "Ø Remarketing-Standzeit" },
+        { "value": "1.200+", "label": "Aktive Händler im Netzwerk" },
+        { "value": "80+", "label": "Verkäufe diese Woche" }
+      ]
+    },
+    "testimonials": {
+      "headline": "Das sagen unsere Partner",
+      "description": "Erfahrungen von Händlern und Einlieferern, die bereits über die Plattform arbeiten.",
+      "dealerLabel": "Händler",
+      "supplierLabel": "Einlieferer",
+      "items": [
+        {
+          "quote": "Seit wir über die Plattform einkaufen, haben wir unsere Beschaffungszeit um 60% reduziert. Die Fahrzeugdaten sind transparent und der Prozess läuft reibungslos.",
+          "name": "Stefan Krause",
+          "role": "Geschäftsführer, Autohaus Krause GmbH",
+          "type": "buyer"
+        },
+        {
+          "quote": "Die Integration war unkompliziert und das Reporting gibt uns volle Transparenz über unsere Remarketing-Performance. Ein echter Mehrwert für unser Fleet-Management.",
+          "name": "Dr. Julia Hoffmann",
+          "role": "Head of Remarketing, Premium Leasing AG",
+          "type": "supplier"
+        },
+        {
+          "quote": "Endlich keine Auktionen mehr. Feste Preise, schnelle Abwicklung und top Fahrzeugqualität – genau das, was wir gesucht haben.",
+          "name": "Markus Weber",
+          "role": "Einkaufsleiter, Weber Automobile",
+          "type": "buyer"
+        },
+        {
+          "quote": "Mit dem Partner Portal erreichen wir ein qualifiziertes Händlernetzwerk ohne großen Vertriebsaufwand. Die Standzeiten haben sich deutlich verkürzt.",
+          "name": "Thomas Richter",
+          "role": "Director Fleet Sales, OEM Partner",
+          "type": "supplier"
+        }
+      ]
+    },
     "dealer": {
       "kicker": "Händler",
       "headline": "Junge Gebrauchtwagen direkt einkaufen.",
@@ -124,6 +169,27 @@
         }
       ]
     },
+    "feedback": {
+      "headline": "Das sagen unsere Partner",
+      "description": "Erfahrungen von Händlern, die bereits über die Plattform einkaufen.",
+      "testimonials": [
+        {
+          "quote": "Endlich ein Kanal ohne Auktionsstress. Die Fahrzeugdaten sind vollständig und der Prozess läuft komplett digital.",
+          "name": "Thomas M.",
+          "role": "Geschäftsführer, Autohaus in Bayern"
+        },
+        {
+          "quote": "Die Standzeiten sind deutlich kürzer als bei klassischen Kanälen.",
+          "name": "Sandra W.",
+          "role": "Einkaufsleitung, Fahrzeughandel NRW"
+        },
+        {
+          "quote": "Transparente Zustandsberichte und schnelle Abwicklung.",
+          "name": "Michael S.",
+          "role": "Inhaber, Gebrauchtwagenhandel"
+        }
+      ]
+    },
     "faq": {
       "headline": "Häufige Fragen",
       "items": [
@@ -238,6 +304,27 @@
         {
           "title": "Reporting & Steuerung",
           "desc": "Echtzeit-Dashboards zu Absatz, Standzeiten und Restwertentwicklung."
+        }
+      ]
+    },
+    "feedback": {
+      "headline": "Das sagen unsere Partner",
+      "description": "Erfahrungen von OEMs und Leasinggesellschaften, die bereits über die Plattform vermarkten.",
+      "testimonials": [
+        {
+          "quote": "Die Plattform hat unsere Remarketing-Prozesse komplett digitalisiert. Kürzere Standzeiten und bessere Restwerte.",
+          "name": "Dr. Martin K.",
+          "role": "Leiter Remarketing, Premium-OEM"
+        },
+        {
+          "quote": "Endlich ein Kanal, der Transparenz bietet. Das Reporting hilft uns bei der strategischen Planung.",
+          "name": "Julia S.",
+          "role": "Fleet Manager, Leasinggesellschaft"
+        },
+        {
+          "quote": "Die Integration war unkompliziert und das Händlernetzwerk ist qualitativ hochwertig.",
+          "name": "Andreas B.",
+          "role": "Geschäftsführer, Captive Bank"
         }
       ]
     },

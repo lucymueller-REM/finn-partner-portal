@@ -1,20 +1,19 @@
-const stats = [
-  { value: "42", label: "Fahrzeuge heute neu gelistet" },
-  { value: "14 Tage", label: "Ø Remarketing-Standzeit" },
-  { value: "1.200+", label: "Aktive Händler im Netzwerk" },
-  { value: "80+", label: "Verkäufe diese Woche" },
-];
+"use client";
+
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function LiveTracker() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
         <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
-          Live im Portal
+          {t.home.liveTracker.title}
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
+          {t.home.liveTracker.stats.map((s, idx) => (
+            <div key={idx} className="text-center">
               <p className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 {s.value}
               </p>

@@ -7,6 +7,51 @@
     "login": "Login"
   },
   "home": {
+    "hero": {
+      "headline": "The platform for trading and remarketing young used cars.",
+      "description": "Buy young used cars through a digital B2B marketplace or market fleets in a structured way through the partner network."
+    },
+    "liveTracker": {
+      "title": "Live in Portal",
+      "stats": [
+        { "value": "42", "label": "Vehicles listed today" },
+        { "value": "14 days", "label": "Ø Remarketing standing time" },
+        { "value": "1,200+", "label": "Active dealers in network" },
+        { "value": "80+", "label": "Sales this week" }
+      ]
+    },
+    "testimonials": {
+      "headline": "What Our Partners Say",
+      "description": "Experiences from dealers and suppliers already working through the platform.",
+      "dealerLabel": "Dealer",
+      "supplierLabel": "Supplier",
+      "items": [
+        {
+          "quote": "Since we started buying through the platform, we've reduced our procurement time by 60%. Vehicle data is transparent and the process runs smoothly.",
+          "name": "Stefan Krause",
+          "role": "Managing Director, Autohaus Krause GmbH",
+          "type": "buyer"
+        },
+        {
+          "quote": "Integration was uncomplicated and reporting gives us full transparency on our remarketing performance. Real added value for our fleet management.",
+          "name": "Dr. Julia Hoffmann",
+          "role": "Head of Remarketing, Premium Leasing AG",
+          "type": "supplier"
+        },
+        {
+          "quote": "Finally no more auctions. Fixed prices, fast processing and top vehicle quality – exactly what we were looking for.",
+          "name": "Markus Weber",
+          "role": "Purchasing Manager, Weber Automobile",
+          "type": "buyer"
+        },
+        {
+          "quote": "With the Partner Portal, we reach a qualified dealer network without major sales effort. Standing times have been significantly reduced.",
+          "name": "Thomas Richter",
+          "role": "Director Fleet Sales, OEM Partner",
+          "type": "supplier"
+        }
+      ]
+    },
     "dealer": {
       "kicker": "Dealers",
       "headline": "Buy young used cars directly.",
@@ -124,6 +169,27 @@
         }
       ]
     },
+    "feedback": {
+      "headline": "What Our Partners Say",
+      "description": "Experiences from dealers already purchasing through the platform.",
+      "testimonials": [
+        {
+          "quote": "Finally a channel without auction stress. Vehicle data is complete and the process runs completely digital.",
+          "name": "Thomas M.",
+          "role": "Managing Director, Car Dealership in Bavaria"
+        },
+        {
+          "quote": "Standing times are significantly shorter than with traditional channels.",
+          "name": "Sandra W.",
+          "role": "Purchasing Manager, Vehicle Trade NRW"
+        },
+        {
+          "quote": "Transparent condition reports and fast processing.",
+          "name": "Michael S.",
+          "role": "Owner, Used Car Trade"
+        }
+      ]
+    },
     "faq": {
       "headline": "Frequently Asked Questions",
       "items": [
@@ -238,6 +304,27 @@
         {
           "title": "Reporting & Control",
           "desc": "Real-time dashboards for sales, standing times and residual value development."
+        }
+      ]
+    },
+    "feedback": {
+      "headline": "What Our Partners Say",
+      "description": "Experiences from OEMs and leasing companies already marketing through the platform.",
+      "testimonials": [
+        {
+          "quote": "The platform has completely digitized our remarketing processes. Shorter standing times and better residual values.",
+          "name": "Dr. Martin K.",
+          "role": "Head of Remarketing, Premium OEM"
+        },
+        {
+          "quote": "Finally a channel that offers transparency. The reporting helps us with strategic planning.",
+          "name": "Julia S.",
+          "role": "Fleet Manager, Leasing Company"
+        },
+        {
+          "quote": "Integration was uncomplicated and the dealer network is high quality.",
+          "name": "Andreas B.",
+          "role": "Managing Director, Captive Bank"
         }
       ]
     },

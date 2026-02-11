@@ -188,56 +188,6 @@ function IconDigital({ className }: { className?: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   BENEFITS DATA
-   ═════════════════════════════════════════════════════════════════════════════ */
-
-const benefits = [
-  {
-    icon: IconInventory,
-    title: "Umfassende Fahrzeugdaten",
-    desc: "Gutachten, Konfiguration, COC und Volumen-Forecast – alle Infos auf einen Blick.",
-  },
-  {
-    icon: IconPrice,
-    title: "Keine versteckten Kosten",
-    desc: "Sie zahlen nur den Fahrzeugpreis – keine Gebühren, keine Provisionen.",
-  },
-  {
-    icon: IconDigital,
-    title: "Flexible Kaufoptionen",
-    desc: "Bieten oder Sofortpreis – plus Abholung auf eigene Kosten oder Lieferung.",
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════════════════════
-   TESTIMONIALS DATA
-   ═════════════════════════════════════════════════════════════════════════════ */
-
-const testimonials = [
-  {
-    quote:
-      "Endlich ein Kanal ohne Auktionsstress. Die Fahrzeugdaten sind vollständig und der Prozess läuft komplett digital.",
-    name: "Thomas M.",
-    role: "Geschäftsführer, Autohaus in Bayern",
-    featured: true,
-  },
-  {
-    quote:
-      "Die Standzeiten sind deutlich kürzer als bei klassischen Kanälen.",
-    name: "Sandra W.",
-    role: "Einkaufsleitung, Fahrzeughandel NRW",
-    featured: false,
-  },
-  {
-    quote:
-      "Transparente Zustandsberichte und schnelle Abwicklung.",
-    name: "Michael S.",
-    role: "Inhaber, Gebrauchtwagenhandel",
-    featured: false,
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════════════════════
    BUYER PAGE
    ═════════════════════════════════════════════════════════════════════════════ */
 
@@ -340,16 +290,13 @@ export default function BuyerPage() {
                   {/* Left: Text content */}
                   <div>
                     <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
-                      Händler
+                      {t.buyer.hero.kicker}
                     </p>
                     <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
-                      Der direkte Weg zu{" "}
-                      <span className="text-[#0087eb]">jungen Gebrauchtwagen.</span>
+                      {t.buyer.hero.headline}
                     </h1>
                     <p className="mt-4 text-base text-gray-600">
-                      Kaufen Sie Fahrzeuge aus Flotten und Remarketing-Programmen –
-                      mit festen Preisen, transparenten Zustandsdaten und
-                      vollständig digitaler Abwicklung.
+                      {t.buyer.hero.description}
                     </p>
                     <div className="mt-8">
                       <a
@@ -358,7 +305,7 @@ export default function BuyerPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center rounded-lg bg-[#0087eb] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                       >
-                        Partnerzugang anfragen
+                        {t.buyer.hero.cta}
                       </a>
                     </div>
                   </div>
@@ -366,25 +313,15 @@ export default function BuyerPage() {
                   {/* Right: Key facts from homepage */}
                   <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4 lg:p-5 lg:max-w-xs">
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0087eb]">
-                      Auf einen Blick
+                      {t.buyer.hero.atAGlance}
                     </p>
                     <ul className="mt-3 space-y-2">
-                      <li className="flex items-center gap-2 text-xs text-gray-700">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Keine Gebühren – nur Fahrzeugpreis
-                      </li>
-                      <li className="flex items-center gap-2 text-xs text-gray-700">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Bieten oder Sofortpreis
-                      </li>
-                      <li className="flex items-center gap-2 text-xs text-gray-700">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Abholung oder Lieferung
-                      </li>
-                      <li className="flex items-center gap-2 text-xs text-gray-700">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Export via Excel & API
-                      </li>
+                      {t.buyer.hero.bullets.map((bullet, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-xs text-gray-700">
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
+                          {bullet}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -410,19 +347,21 @@ export default function BuyerPage() {
               <section id="vorteile" className="pt-10 pb-14">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                    Ihre Vorteile als Händler
+                    {t.buyer.benefits.headline}
                   </h2>
                   <p className="mt-2 max-w-lg text-sm text-gray-600">
-                    Warum immer mehr Händler auf diesen Direktkanal setzen.
+                    {t.buyer.benefits.description}
                   </p>
                   <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                    {benefits.map((b) => (
+                    {t.buyer.benefits.items.map((b, idx) => (
                       <div
-                        key={b.title}
+                        key={idx}
                         className="rounded-lg border border-gray-100 bg-gray-50/50 p-4"
                       >
                         <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0087eb]/10">
-                          <b.icon className="h-4 w-4 text-[#0087eb]" />
+                          {idx === 0 && <IconInventory className="h-4 w-4 text-[#0087eb]" />}
+                          {idx === 1 && <IconPrice className="h-4 w-4 text-[#0087eb]" />}
+                          {idx === 2 && <IconDigital className="h-4 w-4 text-[#0087eb]" />}
                         </div>
                         <h3 className="text-sm font-semibold text-gray-900">{b.title}</h3>
                         <p className="mt-1.5 text-xs text-gray-600 leading-relaxed">{b.desc}</p>
@@ -438,10 +377,10 @@ export default function BuyerPage() {
               <section id="sortiment" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                    Unser Sortiment
+                    {t.buyer.assortment.headline}
                   </h2>
                   <p className="mt-2 max-w-lg text-sm text-gray-600">
-                    Wählen Sie zwischen sofort verfügbaren Fahrzeugen oder sichern Sie sich Ihren Supply im Voraus.
+                    {t.buyer.assortment.description}
                   </p>
                   
                   <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -451,35 +390,21 @@ export default function BuyerPage() {
                       <div className="flex items-center gap-3 mb-4">
                         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">1</span>
                         <div>
-                          <h3 className="text-base font-bold text-gray-900">Stock Purchase</h3>
-                          <p className="text-xs text-gray-500">Sofort verfügbare Fahrzeuge inkl. Gutachten</p>
+                          <h3 className="text-base font-bold text-gray-900">{t.buyer.assortment.stock.title}</h3>
+                          <p className="text-xs text-gray-500">{t.buyer.assortment.stock.subtitle}</p>
                         </div>
                       </div>
                       <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Kurzfristige Nachfrage-Erfüllung</p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Schnelle Abwicklung</p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Gutachten vorhanden</p>
-                          </div>
-                        </li>
+                        {t.buyer.assortment.stock.bullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                              <p className="text-sm font-medium text-gray-900">{bullet}</p>
+                            </div>
+                          </li>
+                        ))}
                       </ul>
                     </div>
 
@@ -489,37 +414,21 @@ export default function BuyerPage() {
                       <div className="flex items-center gap-3 mb-4">
                         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">2</span>
                         <div>
-                          <h3 className="text-base font-bold text-gray-900">Pre-Sales</h3>
-                          <p className="text-xs text-gray-500">Fahrzeuge verfügbar in 1–12 Monaten</p>
+                          <h3 className="text-base font-bold text-gray-900">{t.buyer.assortment.preSales.title}</h3>
+                          <p className="text-xs text-gray-500">{t.buyer.assortment.preSales.subtitle}</p>
                         </div>
                       </div>
                       <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Mittelfristige Volumenplanung</p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Hohe Planungssicherheit</p>
-                            <p className="text-xs text-gray-500">für Nachfrage und Preise</p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Definierte Parameter</p>
-                            <p className="text-xs text-gray-500">für Km, Schäden und Alter</p>
-                          </div>
-                        </li>
+                        {t.buyer.assortment.preSales.bullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                              <p className="text-sm font-medium text-gray-900">{bullet}</p>
+                            </div>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -532,10 +441,10 @@ export default function BuyerPage() {
               <section id="so-funktionierts" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                    So funktioniert der Händler-Zugang
+                    {t.buyer.process.headline}
                   </h2>
                   <p className="mt-2 max-w-lg text-sm text-gray-600">
-                    In fünf Schritten zum ersten Fahrzeug – vollständig digital.
+                    {t.buyer.process.description}
                   </p>
                 </ScrollReveal>
 
@@ -567,10 +476,10 @@ export default function BuyerPage() {
               <section id="feedback" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                    Das sagen unsere Partner
+                    {t.buyer.feedback.headline}
                   </h2>
                   <p className="mt-2 max-w-lg text-sm text-gray-600">
-                    Erfahrungen von Händlern, die bereits über die Plattform einkaufen.
+                    {t.buyer.feedback.description}
                   </p>
 
                   <div className="mt-8 grid gap-4 lg:grid-cols-2">
@@ -580,23 +489,23 @@ export default function BuyerPage() {
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
                       <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-                        {testimonials[0].quote}
+                        {t.buyer.feedback.testimonials[0].quote}
                       </p>
                       <div className="mt-4">
-                        <p className="text-sm font-medium text-gray-900">{testimonials[0].name}</p>
-                        <p className="text-xs text-gray-500">{testimonials[0].role}</p>
+                        <p className="text-sm font-medium text-gray-900">{t.buyer.feedback.testimonials[0].name}</p>
+                        <p className="text-xs text-gray-500">{t.buyer.feedback.testimonials[0].role}</p>
                       </div>
                     </div>
 
                     {/* Smaller testimonials */}
-                    {testimonials.slice(1).map((t) => (
-                      <div key={t.name} className="rounded-lg border border-gray-100 p-4">
+                    {t.buyer.feedback.testimonials.slice(1).map((testimonial, idx) => (
+                      <div key={idx} className="rounded-lg border border-gray-100 p-4">
                         <p className="text-xs text-gray-700 leading-relaxed">
-                          &ldquo;{t.quote}&rdquo;
+                          &ldquo;{testimonial.quote}&rdquo;
                         </p>
                         <div className="mt-3">
-                          <p className="text-xs font-medium text-gray-900">{t.name}</p>
-                          <p className="text-[10px] text-gray-500">{t.role}</p>
+                          <p className="text-xs font-medium text-gray-900">{testimonial.name}</p>
+                          <p className="text-[10px] text-gray-500">{testimonial.role}</p>
                         </div>
                       </div>
                     ))}
@@ -610,10 +519,10 @@ export default function BuyerPage() {
               <section id="faq" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                    Häufige Fragen
+                    {t.buyer.faq.headline}
                   </h2>
                   <p className="mt-2 max-w-lg text-sm text-gray-600">
-                    Alles, was Sie über den Partnerzugang wissen müssen.
+                    {t.buyer.faq.headline}
                   </p>
                   <div className="mt-6 max-w-3xl">
                     <FaqAccordion items={t.buyer.faq.items} />
@@ -628,11 +537,10 @@ export default function BuyerPage() {
                 <ScrollReveal>
                   <div className="rounded-xl bg-gray-50 p-6 text-center sm:p-8">
                     <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
-                      Partnerzugang anfragen
+                      {t.buyer.cta.headline}
                     </h2>
                     <p className="mx-auto mt-3 max-w-sm text-sm text-gray-600">
-                      Erhalten Sie Zugriff auf verfügbare Fahrzeuge inkl. Zustandsdaten
-                      und digitaler Abwicklung.
+                      {t.buyer.cta.description}
                     </p>
                     <a
                       href="https://partners.one.finn.auto/p/login"
@@ -640,10 +548,10 @@ export default function BuyerPage() {
                       rel="noopener noreferrer"
                       className="mt-6 inline-flex items-center rounded-lg bg-[#0087eb] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                     >
-                      Jetzt Zugang beantragen
+                      {t.buyer.cta.button}
                     </a>
                     <p className="mt-3 text-[10px] text-gray-500">
-                      Wir melden uns innerhalb von 24 Stunden.
+                      {t.buyer.cta.note}
                     </p>
                   </div>
                 </ScrollReveal>
