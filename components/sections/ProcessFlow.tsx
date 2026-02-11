@@ -47,7 +47,7 @@ function TimelineColumn({
 export function ProcessFlow() {
   return (
     <section className="border-t border-gray-200 bg-gray-50 py-24">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Die Infrastruktur hinter dem FINN Partner Portal
         </h2>

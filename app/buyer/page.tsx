@@ -358,11 +358,11 @@ export default function BuyerPage() {
   return (
     <>
       <Header variant="buyer" />
-      <main className="min-h-screen bg-white pt-16">
+      <main className="min-h-screen bg-white pt-14">
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-screen-2xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
+        <div className="mx-auto max-w-6xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
@@ -384,11 +384,11 @@ export default function BuyerPage() {
                     <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
                       Händler
                     </p>
-                    <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                    <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
                       Der direkte Weg zu{" "}
                       <span className="text-[#0087eb]">jungen Gebrauchtwagen.</span>
                     </h1>
-                    <p className="mt-5 text-lg text-gray-600">
+                    <p className="mt-4 text-base text-gray-600">
                       Kaufen Sie Fahrzeuge aus Flotten und Remarketing-Programmen –
                       mit festen Preisen, transparenten Zustandsdaten und
                       vollständig digitaler Abwicklung.
@@ -398,7 +398,7 @@ export default function BuyerPage() {
                         href="https://partners.one.finn.auto/p/login"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                        className="inline-flex items-center rounded-lg bg-[#0087eb] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                       >
                         Partnerzugang anfragen
                       </a>

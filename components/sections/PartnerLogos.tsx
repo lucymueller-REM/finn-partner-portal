@@ -14,7 +14,7 @@ const partners = [
 export function PartnerLogos() {
   return (
     <section className="overflow-hidden bg-white py-10 border-t border-gray-100">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-medium uppercase tracking-widest text-gray-400">
           Unsere Partner
         </p>
