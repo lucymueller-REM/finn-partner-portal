@@ -484,6 +484,100 @@ export default function BuyerPage() {
               </section>
 
               {/* ─────────────────────────────────────────────────────────────
+                 SALES TYPES (Pre-Sales & Stock)
+                 ───────────────────────────────────────────────────────────── */}
+              <section className="py-14 border-t border-gray-100">
+                <ScrollReveal>
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+                    Zwei Wege zum Fahrzeug
+                  </h2>
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
+                    Wählen Sie zwischen sofort verfügbaren Fahrzeugen oder sichern Sie sich Ihren Supply im Voraus.
+                  </p>
+                  
+                  <div className="mt-8 grid gap-6 lg:grid-cols-2">
+                    {/* Pre-Sales */}
+                    <div className="rounded-xl border border-gray-200 bg-white p-6 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0087eb]" />
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">1</span>
+                        <div>
+                          <h3 className="text-base font-bold text-gray-900">Pre-Sales</h3>
+                          <p className="text-xs text-gray-500">Fahrzeuge verfügbar in 1–12 Monaten</p>
+                        </div>
+                      </div>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Mittelfristige Volumenplanung</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Hohe Planungssicherheit</p>
+                            <p className="text-xs text-gray-500">für Nachfrage und Preise</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Definierte Parameter</p>
+                            <p className="text-xs text-gray-500">für Km, Schäden und Alter</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Stock Purchase */}
+                    <div className="rounded-xl border border-gray-200 bg-white p-6 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0087eb]" />
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">2</span>
+                        <div>
+                          <h3 className="text-base font-bold text-gray-900">Stock Purchase</h3>
+                          <p className="text-xs text-gray-500">Sofort verfügbare Fahrzeuge inkl. Gutachten</p>
+                        </div>
+                      </div>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Kurzfristige Nachfrage-Erfüllung</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Schnelle Abwicklung</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <svg className="h-5 w-5 shrink-0 text-green-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">Gutachten vorhanden</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </section>
+
+              {/* ─────────────────────────────────────────────────────────────
                  HOW IT WORKS (editorial timeline + sticky image)
                  ───────────────────────────────────────────────────────────── */}
               <section id="so-funktionierts" className="py-14 border-t border-gray-100">
