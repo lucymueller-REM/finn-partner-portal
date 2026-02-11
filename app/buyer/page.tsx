@@ -50,6 +50,7 @@ function ScrollReveal({ children, className = "" }: { children: ReactNode; class
 const tocItems = [
   { id: "ueberblick", label: "Überblick" },
   { id: "vorteile", label: "Vorteile" },
+  { id: "verkaufstypen", label: "Verkaufstypen" },
   { id: "so-funktionierts", label: "So funktioniert's" },
   { id: "feedback", label: "Feedback" },
   { id: "faq", label: "FAQ" },
@@ -486,7 +487,7 @@ export default function BuyerPage() {
               {/* ─────────────────────────────────────────────────────────────
                  SALES TYPES (Pre-Sales & Stock)
                  ───────────────────────────────────────────────────────────── */}
-              <section className="py-14 border-t border-gray-100">
+              <section id="verkaufstypen" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     Zwei Wege zum Fahrzeug
@@ -599,7 +600,7 @@ export default function BuyerPage() {
                     <div className="sticky top-32">
                       <div className="relative aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-gray-100 shadow-lg">
                         <Image
-                          src="/hero-dashboard2.jpg"
+                          src="/hero-dashboard.jpg"
                           alt="Partner Portal Dashboard"
                           fill
                           className="object-cover"

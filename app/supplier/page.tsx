@@ -50,6 +50,7 @@ function ScrollReveal({ children, className = "" }: { children: ReactNode; class
 const tocItems = [
   { id: "ueberblick", label: "Überblick" },
   { id: "vorteile", label: "Vorteile" },
+  { id: "full-service", label: "Full-Service" },
   { id: "so-funktionierts", label: "So funktioniert's" },
   { id: "feedback", label: "Feedback" },
   { id: "faq", label: "FAQ" },
@@ -480,7 +481,7 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  MODULAR SERVICES
                  ───────────────────────────────────────────────────────────── */}
-              <section className="py-14 border-t border-gray-100">
+              <section id="full-service" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     Full-Service nach Ihrem Bedarf
