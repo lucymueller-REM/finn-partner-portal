@@ -91,27 +91,27 @@ const processSteps = [
   {
     num: "01",
     title: "Erstgespräch & Bedarfsanalyse",
-    desc: "Wir analysieren Ihre Flotte und Remarketing-Ziele gemeinsam.",
+    desc: "Wir analysieren Ihre Flotte und Remarketing-Ziele. Basierend auf umfassenden Marktdaten erhalten Sie eine erste Preisindikation.",
   },
   {
     num: "02",
     title: "Technische Integration",
-    desc: "Anbindung Ihrer Systeme via API oder manuellem Upload.",
+    desc: "Anbindung Ihrer Systeme via API, manuellem Upload oder Excel-Tabellen – ganz wie Sie es bevorzugen.",
   },
   {
     num: "03",
-    title: "Bestandsübernahme",
-    desc: "Fahrzeuge werden inkl. Zustandsdaten und Dokumentation eingestellt.",
+    title: "Fahrzeugintegration",
+    desc: "Sie teilen uns VIN und Zustandsbericht – den Rest übernehmen wir für Sie.",
   },
   {
     num: "04",
     title: "Vermarktung im Händlernetzwerk",
-    desc: "Ihre Fahrzeuge werden über 1.200+ verifizierten Händlern angeboten.",
+    desc: "Ihre Fahrzeuge werden über 2.000+ verifizierten Händlern in unserem pan-europäischen Netzwerk angeboten.",
   },
   {
     num: "05",
     title: "Reporting & Steuerung",
-    desc: "Echtzeit-Einblicke in Absatz, Standzeiten und Restwertentwicklung.",
+    desc: "Echtzeit-Dashboards zu Absatz, Standzeiten und Restwertentwicklung.",
   },
 ];
 
@@ -163,19 +163,23 @@ const faqItems = [
   },
   {
     q: "Wie funktioniert die technische Anbindung an das Partner Portal?",
-    a: "Wir bieten eine REST-API für automatisierten Datenaustausch oder alternativ einen manuellen Upload via Dashboard.",
+    a: "Wir bieten eine REST-API für automatisierten Datenaustausch, manuellen Upload via Dashboard oder den Austausch per Excel-Tabellen – ganz wie Sie es bevorzugen.",
   },
   {
     q: "Welche Händler kaufen Fahrzeuge über die Plattform?",
-    a: "Über 1.200 verifizierte Gewerbehändler in Deutschland – vom Markenhändler bis zum spezialisierten Gebrauchtwagenhandel.",
+    a: "Über 2.000 verifizierte Gewerbehändler in unserem pan-europäischen Netzwerk – vom Markenhändler bis zum spezialisierten Gebrauchtwagenhandel.",
   },
   {
     q: "Wie werden Restwerte und Preise für die Fahrzeuge gesteuert?",
-    a: "Sie behalten volle Kontrolle über Preise. Wir liefern Marktdaten und Empfehlungen zur optimalen Preisgestaltung.",
+    a: "Sie behalten volle Kontrolle über Preise. Wir liefern umfassende Marktdaten und Empfehlungen zur optimalen Preisgestaltung.",
   },
   {
     q: "Welche Reportings und Analysen sind für Einlieferer verfügbar?",
-    a: "Echtzeit-Dashboards zu Absatz, Standzeiten, Restwertentwicklung und Händlerperformance.",
+    a: "Echtzeit-Dashboards zu Absatz, Standzeiten und Restwertentwicklung – alles transparent in Ihrem persönlichen Portal.",
+  },
+  {
+    q: "Welche Services können wir zusätzlich zur Vermarktung in Anspruch nehmen?",
+    a: "Wir bieten modulare Full-Service-Lösungen: Abmeldung, Begutachtung, Logistik und Transport – flexibel zubuchbar, genau das was Sie brauchen.",
   },
 ];
 
@@ -251,18 +255,18 @@ function IconProcess({ className }: { className?: string }) {
 const benefits = [
   {
     icon: IconNetwork,
-    title: "Qualifizierte Abnehmer",
-    desc: "Über 1.200 verifizierte Gewerbehändler – vom Markenhändler bis zum Spezialisten.",
+    title: "Pan-europäisches Netzwerk",
+    desc: "Über 2.000 verifizierte Gewerbehändler in Europa – vom Markenhändler bis zum Spezialisten.",
   },
   {
     icon: IconChart,
     title: "Volle Transparenz",
-    desc: "Echtzeit-Dashboards zu Verkaufsstatus, Performance und Marktentwicklung.",
+    desc: "Echtzeit-Dashboards zu Verkaufsstatus, Standzeiten und Restwertentwicklung.",
   },
   {
     icon: IconProcess,
-    title: "Flexible Zusammenarbeit",
-    desc: "Ob automatisiert oder manuell – wir passen uns Ihren Prozessen an.",
+    title: "Modulare Services",
+    desc: "Vermarktung, Abmeldung, Begutachtung, Logistik – flexibel zubuchbar nach Ihrem Bedarf.",
   },
 ];
 
@@ -412,7 +416,7 @@ export default function SupplierPage() {
                     <ul className="mt-3 space-y-2">
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Zusätzlicher Remarketing-Kanal
+                        2.000+ Händler pan-europäisch
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
@@ -420,11 +424,11 @@ export default function SupplierPage() {
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Wettbewerbsfähige Preise
+                        Persönlicher Ansprechpartner
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Full-Service zubuchbar
+                        Full-Service modular zubuchbar
                       </li>
                     </ul>
                   </div>
@@ -469,6 +473,69 @@ export default function SupplierPage() {
                         <p className="mt-1.5 text-xs text-gray-600 leading-relaxed">{b.desc}</p>
                       </div>
                     ))}
+                  </div>
+                </ScrollReveal>
+              </section>
+
+              {/* ─────────────────────────────────────────────────────────────
+                 MODULAR SERVICES
+                 ───────────────────────────────────────────────────────────── */}
+              <section className="py-14 border-t border-gray-100">
+                <ScrollReveal>
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+                    Full-Service nach Ihrem Bedarf
+                  </h2>
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
+                    Wir übernehmen genau das, was Sie brauchen – modular und flexibel zubuchbar.
+                  </p>
+                  <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="rounded-lg border border-gray-100 bg-white p-4 text-center">
+                      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0087eb]/10">
+                        <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-sm font-semibold text-gray-900">Abmeldung</h3>
+                      <p className="mt-1 text-xs text-gray-500">Behördliche Abwicklung</p>
+                    </div>
+                    <div className="rounded-lg border border-gray-100 bg-white p-4 text-center">
+                      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0087eb]/10">
+                        <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                        </svg>
+                      </div>
+                      <h3 className="text-sm font-semibold text-gray-900">Begutachtung</h3>
+                      <p className="mt-1 text-xs text-gray-500">Zustandsberichte erstellen</p>
+                    </div>
+                    <div className="rounded-lg border border-gray-100 bg-white p-4 text-center">
+                      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0087eb]/10">
+                        <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                      </div>
+                      <h3 className="text-sm font-semibold text-gray-900">Logistik</h3>
+                      <p className="mt-1 text-xs text-gray-500">Abholung & Lagerung</p>
+                    </div>
+                    <div className="rounded-lg border border-gray-100 bg-white p-4 text-center">
+                      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0087eb]/10">
+                        <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                        </svg>
+                      </div>
+                      <h3 className="text-sm font-semibold text-gray-900">Transport</h3>
+                      <p className="mt-1 text-xs text-gray-500">Lieferung zum Händler</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 rounded-lg bg-[#0087eb]/5 border border-[#0087eb]/20 p-4 flex items-center gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0087eb]/10">
+                      <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">Persönlicher Ansprechpartner</p>
+                      <p className="text-xs text-gray-600">Ihr dedizierter Account Manager steht Ihnen rund um die Uhr zur Verfügung.</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               </section>

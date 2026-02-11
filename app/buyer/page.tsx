@@ -91,7 +91,7 @@ const processSteps = [
   {
     num: "01",
     title: "Registrierung als Gewerbepartner",
-    desc: "Antrag über das Portal inkl. Gewerbenachweis.",
+    desc: "Kostenfreie Anmeldung über das Portal inkl. Gewerbenachweis.",
   },
   {
     num: "02",
@@ -100,18 +100,23 @@ const processSteps = [
   },
   {
     num: "03",
-    title: "Zugriff auf verfügbares Inventar",
-    desc: "Live-Bestand inkl. Zustandsdaten, Laufleistung & Dokumentation.",
+    title: "Zugriff auf Inventar & Forecast",
+    desc: "Live-Bestand inkl. Gutachten, Konfiguration, COC und Volumen-Forecast.",
   },
   {
     num: "04",
     title: "Fahrzeugauswahl & Reservierung",
-    desc: "Direkte Reservierung ohne Auktionsprozess.",
+    desc: "Bieten oder zum Sofortpreis kaufen – ohne klassisches Auktionsverfahren.",
   },
   {
     num: "05",
-    title: "Digitaler Kaufabschluss",
-    desc: "Vertrag, Rechnung und Übergabe vollständig digital.",
+    title: "Abholung oder Lieferung",
+    desc: "Kostenfreie Selbstabholung oder Lieferung direkt zu Ihnen.",
+  },
+  {
+    num: "06",
+    title: "After-Sales & Dokumentation",
+    desc: "Alle Dokumente inkl. Zulassungsbescheinigung jederzeit im Portal abrufbar.",
   },
 ];
 
@@ -162,20 +167,24 @@ const faqItems = [
     a: "Über das Formular auf dieser Seite. Wir prüfen Ihren Gewerbenachweis und schalten Sie innerhalb von 24 Stunden frei.",
   },
   {
-    q: "Welche Kosten und Gebühren fallen für die Nutzung des Portals an?",
-    a: "Die Registrierung ist kostenfrei. Gebühren fallen erst beim Fahrzeugkauf an und sind transparent im Portal einsehbar.",
+    q: "Welche Kosten fallen für die Nutzung des Portals an?",
+    a: "Die Registrierung und Nutzung ist komplett kostenfrei. Sie zahlen nur den Fahrzeugpreis – keine versteckten Gebühren oder Provisionen.",
   },
   {
-    q: "Welche Fahrzeugdaten und Dokumentationen sind für jedes Fahrzeug verfügbar?",
-    a: "Für jedes Fahrzeug: Zustandsberichte, Laufleistung, Servicehistorie, Fotos und alle relevanten Dokumente.",
+    q: "Welche Fahrzeugdaten und Dokumentationen sind verfügbar?",
+    a: "Für jedes Fahrzeug: Gutachten, Konfiguration, COC, Laufleistung, Servicehistorie, Fotos und alle relevanten Dokumente.",
   },
   {
-    q: "Wie funktioniert der Reservierungsprozess für ein Fahrzeug im Portal?",
-    a: "Per Klick im Portal. Es gibt kein Bieterverfahren – Sie reservieren direkt zum angezeigten Preis.",
+    q: "Wie funktioniert der Kauf eines Fahrzeugs im Portal?",
+    a: "Sie können entweder ein Gebot abgeben oder zum Sofortpreis kaufen. Kein klassisches Auktionsverfahren mit Wartezeiten.",
   },
   {
     q: "Wie läuft die Fahrzeugübergabe nach dem Kauf ab?",
-    a: "Komplett digital: Vertrag, Rechnung und Übergabeprotokoll werden online abgewickelt. Abholung oder Lieferung nach Vereinbarung.",
+    a: "Sie wählen zwischen kostenfreier Selbstabholung oder Lieferung direkt zu Ihrem Standort. Alle Dokumente inkl. Zulassungsbescheinigung sind im Portal abrufbar.",
+  },
+  {
+    q: "Kann ich das Fahrzeuginventar in mein eigenes System exportieren?",
+    a: "Ja, über Excel-Export oder API-Anbindung können Sie Fahrzeugdaten einfach in Ihre eigenen Systeme übernehmen.",
   },
 ];
 
@@ -252,18 +261,18 @@ function IconDigital({ className }: { className?: string }) {
 const benefits = [
   {
     icon: IconInventory,
-    title: "Schnelle Verfügbarkeit",
-    desc: "Fahrzeuge direkt reservieren – keine Wartezeiten durch Auktionsverfahren.",
+    title: "Umfassende Fahrzeugdaten",
+    desc: "Gutachten, Konfiguration, COC und Volumen-Forecast – alle Infos auf einen Blick.",
   },
   {
     icon: IconPrice,
-    title: "Planbare Einkaufskosten",
-    desc: "Transparente Preisgestaltung ohne versteckte Gebühren oder Nachverhandlungen.",
+    title: "Keine versteckten Kosten",
+    desc: "Sie zahlen nur den Fahrzeugpreis – keine Gebühren, keine Provisionen.",
   },
   {
     icon: IconDigital,
-    title: "Effiziente Prozesse",
-    desc: "Weniger Aufwand durch zentrale Abwicklung von Reservierung bis Übergabe.",
+    title: "Flexible Kaufoptionen",
+    desc: "Bieten oder Sofortpreis – plus Abholung auf eigene Kosten oder Lieferung.",
   },
 ];
 
@@ -413,19 +422,19 @@ export default function BuyerPage() {
                     <ul className="mt-3 space-y-2">
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        5.000+ junge Gebrauchtwagen
+                        Keine Gebühren – nur Fahrzeugpreis
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Ø 12 Monate, nur 1. Vorbesitzer
+                        Bieten oder Sofortpreis
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Direktkauf oder Gebotsverkauf
+                        Abholung oder Lieferung
                       </li>
                       <li className="flex items-center gap-2 text-xs text-gray-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
-                        Alle Dokumente digital verfügbar
+                        Export via Excel & API
                       </li>
                     </ul>
                   </div>
