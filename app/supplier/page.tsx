@@ -356,7 +356,7 @@ export default function SupplierPage() {
 
   return (
     <>
-      <Header variant="subpage" />
+      <Header variant="supplier" />
       <main className="min-h-screen bg-white pt-16">
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)

@@ -1,0 +1,147 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Header } from "@/components/sections/Header";
+import { Footer } from "@/components/sections/Footer";
+
+export default function HaendlerLoginPage() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Hier würde die Login-Logik kommen
+    alert("Login-Funktion wird noch implementiert.");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <>
+      <Header variant="subpage" />
+      <main className="min-h-screen bg-white pt-16">
+        <div className="flex min-h-[calc(100vh-4rem)]">
+          {/* Left side - Login form */}
+          <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
+            <div className="mx-auto w-full max-w-sm">
+              <div className="mb-10">
+                <Link href="/" className="inline-block">
+                  <Image
+                    src="/FINN_Logo_Black_Test_klein.jpg"
+                    alt="FINN"
+                    width={100}
+                    height={32}
+                    className="h-8 w-auto"
+                  />
+                </Link>
+                <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                  Händler-Login
+                </p>
+                <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900">
+                  Willkommen zurück
+                </h1>
+                <p className="mt-2 text-sm text-gray-600">
+                  Melden Sie sich an, um auf Ihre Fahrzeuge und Bestellungen zuzugreifen.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    E-Mail-Adresse
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    placeholder="ihre@email.de"
+                  />
+                </div>
+
+                <div>
+                  <div className="flex items-center justify-between">
+                    <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                      Passwort
+                    </label>
+                    <Link
+                      href="#passwort-vergessen"
+                      className="text-sm text-[#0087eb] hover:underline"
+                    >
+                      Passwort vergessen?
+                    </Link>
+                  </div>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                    value={formData.password}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    placeholder="••••••••"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-xl bg-[#0087eb] px-4 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                >
+                  Anmelden
+                </button>
+              </form>
+
+              <div className="mt-8 text-center">
+                <p className="text-sm text-gray-600">
+                  Noch kein Partner?{" "}
+                  <Link href="/registrierung/haendler" className="font-medium text-[#0087eb] hover:underline">
+                    Jetzt registrieren
+                  </Link>
+                </p>
+              </div>
+
+              <div className="mt-8 border-t border-gray-200 pt-8">
+                <Link
+                  href="/buyer"
+                  className="text-sm text-gray-500 hover:text-gray-700"
+                >
+                  ← Zurück zur Händler-Übersicht
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Image/Branding */}
+          <div className="hidden lg:block lg:flex-1 relative bg-gray-50">
+            <div className="absolute inset-0 flex items-center justify-center p-12">
+              <div className="max-w-md text-center">
+                <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-[#0087eb]/10">
+                  <svg className="h-10 w-10 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h2 className="text-xl font-semibold text-gray-900">
+                  Ihr Partner Portal
+                </h2>
+                <p className="mt-4 text-gray-600">
+                  Greifen Sie auf verfügbare Fahrzeuge zu, verwalten Sie Ihre Reservierungen
+                  und behalten Sie den Überblick über Ihre Bestellhistorie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
