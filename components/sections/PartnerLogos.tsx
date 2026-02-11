@@ -25,7 +25,7 @@ function LogoItem({ partner }: { partner: { name: string; logo: string; scale: s
           src={partner.logo}
           alt={partner.name}
           fill
-          className="object-contain opacity-70 hover:opacity-100 transition-all duration-300"
+          className="object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
           unoptimized
         />
       </div>
