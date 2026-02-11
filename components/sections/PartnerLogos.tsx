@@ -15,10 +15,10 @@ const partners = [
   { name: "Dosch", logo: "/Partner_Logo_Dosch.png", scale: "scale-100" },
   { name: "Elspass", logo: "/Partner_Logo_Elspass.png", scale: "scale-100" },
   { name: "Credit Agricole Autobank", logo: "/Partner_Logo_autobank.png", scale: "scale-150" },
-  { name: "Euler", logo: "/Partner_Logo_euler.png", scale: "scale-150" },
-  { name: "Häusler", logo: "/Partner_Logo_Häusler.png", scale: "scale-150" },
+  { name: "Euler", logo: "/Partner_Logo_euler.png", scale: "scale-[2]" },
+  { name: "Häusler", logo: "/Partner_Logo_Häusler.png", scale: "scale-[2]" },
   { name: "Leasys", logo: "/Partner_Logo_leasy.png", scale: "scale-100" },
-  { name: "Scherer", logo: "/Partner_Logo_Scherer.png", scale: "scale-150" },
+  { name: "Scherer", logo: "/Partner_Logo_Scherer.png", scale: "scale-[2]" },
   { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png", scale: "scale-100" },
 ];
 
