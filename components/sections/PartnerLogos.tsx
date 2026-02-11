@@ -19,13 +19,13 @@ const partners = [
 
 function LogoItem({ partner }: { partner: { name: string; logo: string } }) {
   return (
-    <div className="mx-8 flex h-12 w-32 flex-shrink-0 items-center justify-center">
-      <div className="relative h-10 w-28">
+    <div className="mx-10 flex h-16 w-40 flex-shrink-0 items-center justify-center">
+      <div className="relative h-14 w-36">
         <Image
           src={partner.logo}
           alt={partner.name}
           fill
-          className="object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          className="object-contain opacity-70 hover:opacity-100 transition-all duration-300"
           unoptimized
         />
       </div>
