@@ -28,7 +28,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50"
             >
-              Login
+              Login für Partner
             </a>
             <a
               href="https://partners.one.finn.auto/p/login"
@@ -36,7 +36,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
             >
-              Registrieren
+              Partnerzugang anfragen
             </a>
           </nav>
         ) : variant === "buyer" ? (

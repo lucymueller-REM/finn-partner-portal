@@ -11,7 +11,7 @@ const leftContent = {
     "Alle Fahrzeugdokumente digital verfügbar",
   ],
   href: "/buyer",
-  cta: "Ich bin Händler",
+  cta: "Mehr erfahren",
 };
 
 const rightContent = {
@@ -24,7 +24,7 @@ const rightContent = {
     "Defleeting & Full-Service Abwicklung zubuchbar",
   ],
   href: "/supplier",
-  cta: "Ich bin Einlieferer",
+  cta: "Mehr erfahren",
 };
 
 function SplitPanel({
