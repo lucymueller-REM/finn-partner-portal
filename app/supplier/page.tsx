@@ -405,25 +405,25 @@ export default function SupplierPage() {
                   </div>
 
                   {/* Right: Key facts from homepage */}
-                  <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 lg:p-6 lg:max-w-sm">
-                    <p className="text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+                  <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4 lg:p-5 lg:max-w-xs">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0087eb]">
                       Auf einen Blick
                     </p>
-                    <ul className="mt-4 space-y-3">
-                      <li className="flex items-center gap-3 text-gray-700">
-                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                    <ul className="mt-3 space-y-2">
+                      <li className="flex items-center gap-2 text-xs text-gray-700">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
                         Zusätzlicher Remarketing-Kanal
                       </li>
-                      <li className="flex items-center gap-3 text-gray-700">
-                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                      <li className="flex items-center gap-2 text-xs text-gray-700">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
                         Restwert- & Standzeit-Steuerung
                       </li>
-                      <li className="flex items-center gap-3 text-gray-700">
-                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                      <li className="flex items-center gap-2 text-xs text-gray-700">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
                         Wettbewerbsfähige Preise
                       </li>
-                      <li className="flex items-center gap-3 text-gray-700">
-                        <span className="h-2 w-2 shrink-0 rounded-full bg-[#0087eb]" />
+                      <li className="flex items-center gap-2 text-xs text-gray-700">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
                         Full-Service zubuchbar
                       </li>
                     </ul>
@@ -432,7 +432,7 @@ export default function SupplierPage() {
 
                 {/* Hero image - full width aligned with text */}
                 <div>
-                  <div className="relative h-[280px] w-full overflow-hidden rounded-2xl shadow-sm md:h-[340px]">
+                  <div className="relative h-[220px] w-full overflow-hidden rounded-xl shadow-sm md:h-[280px]">
                     <Image
                       src="/hero-supplier.jpg"
                       alt="Supplier Dashboard"
@@ -448,25 +448,25 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  BENEFITS (3 cards)
                  ───────────────────────────────────────────────────────────── */}
-              <section id="vorteile" className="pt-12 pb-20">
+              <section id="vorteile" className="pt-10 pb-14">
                 <ScrollReveal>
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     Ihre Vorteile als Einlieferer
                   </h2>
-                  <p className="mt-3 max-w-xl text-gray-600">
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
                     Warum OEMs und Leasinggesellschaften auf unsere Plattform setzen.
                   </p>
-                  <div className="mt-12 grid gap-6 sm:grid-cols-3">
+                  <div className="mt-8 grid gap-4 sm:grid-cols-3">
                     {benefits.map((b) => (
                       <div
                         key={b.title}
-                        className="rounded-xl border border-gray-100 bg-gray-50/50 p-6"
+                        className="rounded-lg border border-gray-100 bg-gray-50/50 p-4"
                       >
-                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0087eb]/10">
-                          <b.icon className="h-5 w-5 text-[#0087eb]" />
+                        <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0087eb]/10">
+                          <b.icon className="h-4 w-4 text-[#0087eb]" />
                         </div>
-                        <h3 className="font-semibold text-gray-900">{b.title}</h3>
-                        <p className="mt-2 text-sm text-gray-600 leading-relaxed">{b.desc}</p>
+                        <h3 className="text-sm font-semibold text-gray-900">{b.title}</h3>
+                        <p className="mt-1.5 text-xs text-gray-600 leading-relaxed">{b.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -476,17 +476,17 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  HOW IT WORKS (editorial timeline + sticky image)
                  ───────────────────────────────────────────────────────────── */}
-              <section id="so-funktionierts" className="py-20 border-t border-gray-100">
+              <section id="so-funktionierts" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     So funktioniert die Zusammenarbeit
                   </h2>
-                  <p className="mt-3 max-w-xl text-gray-600">
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
                     Von der Integration bis zum ersten Verkauf – strukturiert und transparent.
                   </p>
                 </ScrollReveal>
 
-                <div className="mt-12 grid gap-12 lg:grid-cols-2">
+                <div className="mt-8 grid gap-8 lg:grid-cols-2">
                   {/* Left: Steps */}
                   <ProcessTimeline activeStep={activeStep} />
 
@@ -510,39 +510,39 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  FEEDBACK (1 featured + 2 smaller)
                  ───────────────────────────────────────────────────────────── */}
-              <section id="feedback" className="py-20 border-t border-gray-100">
+              <section id="feedback" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     Das sagen unsere Partner
                   </h2>
-                  <p className="mt-3 max-w-xl text-gray-600">
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
                     Erfahrungen von OEMs und Leasinggesellschaften, die bereits über die Plattform vermarkten.
                   </p>
 
-                  <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                  <div className="mt-8 grid gap-4 lg:grid-cols-2">
                     {/* Featured testimonial */}
-                    <div className="rounded-2xl bg-gray-50 p-8 lg:row-span-2">
-                      <svg className="h-8 w-8 text-[#0087eb]/30" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="rounded-xl bg-gray-50 p-5 lg:row-span-2">
+                      <svg className="h-6 w-6 text-[#0087eb]/30" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
-                      <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                      <p className="mt-3 text-sm text-gray-700 leading-relaxed">
                         {testimonials[0].quote}
                       </p>
-                      <div className="mt-6">
-                        <p className="font-medium text-gray-900">{testimonials[0].name}</p>
-                        <p className="text-sm text-gray-500">{testimonials[0].role}</p>
+                      <div className="mt-4">
+                        <p className="text-sm font-medium text-gray-900">{testimonials[0].name}</p>
+                        <p className="text-xs text-gray-500">{testimonials[0].role}</p>
                       </div>
                     </div>
 
                     {/* Smaller testimonials */}
                     {testimonials.slice(1).map((t) => (
-                      <div key={t.name} className="rounded-xl border border-gray-100 p-6">
-                        <p className="text-sm text-gray-700 leading-relaxed">
+                      <div key={t.name} className="rounded-lg border border-gray-100 p-4">
+                        <p className="text-xs text-gray-700 leading-relaxed">
                           &ldquo;{t.quote}&rdquo;
                         </p>
-                        <div className="mt-4">
-                          <p className="text-sm font-medium text-gray-900">{t.name}</p>
-                          <p className="text-xs text-gray-500">{t.role}</p>
+                        <div className="mt-3">
+                          <p className="text-xs font-medium text-gray-900">{t.name}</p>
+                          <p className="text-[10px] text-gray-500">{t.role}</p>
                         </div>
                       </div>
                     ))}
@@ -553,15 +553,15 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  FAQ
                  ───────────────────────────────────────────────────────────── */}
-              <section id="faq" className="py-20 border-t border-gray-100">
+              <section id="faq" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     Häufige Fragen
                   </h2>
-                  <p className="mt-3 max-w-xl text-gray-600">
+                  <p className="mt-2 max-w-lg text-sm text-gray-600">
                     Alles, was Sie über die Zusammenarbeit wissen müssen.
                   </p>
-                  <div className="mt-10 max-w-4xl">
+                  <div className="mt-6 max-w-3xl">
                     <FaqAccordion />
                   </div>
                 </ScrollReveal>
@@ -570,13 +570,13 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  CTA
                  ───────────────────────────────────────────────────────────── */}
-              <section id="partner-werden" className="py-20 border-t border-gray-100">
+              <section id="partner-werden" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
-                  <div className="rounded-2xl bg-gray-50 p-8 text-center sm:p-12">
-                    <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  <div className="rounded-xl bg-gray-50 p-6 text-center sm:p-8">
+                    <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                       Partnerzugang anfragen
                     </h2>
-                    <p className="mx-auto mt-4 max-w-md text-gray-600">
+                    <p className="mx-auto mt-3 max-w-sm text-sm text-gray-600">
                       Starten Sie mit der digitalen Vermarktung Ihrer Flotte über
                       unser qualifiziertes Händlernetzwerk.
                     </p>
@@ -584,11 +584,11 @@ export default function SupplierPage() {
                       href="https://partners.one.finn.auto/p/login"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-8 inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                      className="mt-6 inline-flex items-center rounded-lg bg-[#0087eb] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                     >
                       Jetzt Kontakt aufnehmen
                     </a>
-                    <p className="mt-4 text-xs text-gray-500">
+                    <p className="mt-3 text-[10px] text-gray-500">
                       Wir melden uns innerhalb von 24 Stunden.
                     </p>
                   </div>

@@ -21,28 +21,28 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-center text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
           Eingesetzt von Händlergruppen, OEMs und Leasinggesellschaften.
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-gray-600">
+        <p className="mx-auto mt-3 max-w-xl text-center text-sm text-gray-600">
           Das FINN Partner Portal ist Teil der Remarketing- und
           Einkaufsprozesse führender Marktteilnehmer.
         </p>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
           {testimonials.map((t) => (
             <div
               key={t.label}
-              className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm"
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
             >
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#0087eb]">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-[#0087eb]">
                 {t.label}
               </p>
-              <blockquote className="mt-3 text-lg leading-relaxed text-gray-700">
+              <blockquote className="mt-2 text-sm leading-relaxed text-gray-700">
                 &bdquo;{t.quote}&ldquo;
               </blockquote>
-              <p className="mt-4 text-sm text-gray-500">{t.sub}</p>
+              <p className="mt-3 text-xs text-gray-500">{t.sub}</p>
             </div>
           ))}
         </div>

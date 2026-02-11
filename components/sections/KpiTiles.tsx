@@ -23,24 +23,24 @@ const kpis = [
 
 export function KpiTiles() {
   return (
-    <section className="border-t border-gray-200 bg-gray-50 py-20">
+    <section className="border-t border-gray-200 bg-gray-50 py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="mb-12 text-center text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+        <h2 className="mb-8 text-center text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
           Aktuell im Netzwerk
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {kpis.map((kpi) => (
             <div
               key={kpi.label}
-              className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm"
+              className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm"
             >
-              <p className="text-xs font-medium uppercase tracking-wider text-[#0087eb]">
+              <p className="text-[10px] font-medium uppercase tracking-wider text-[#0087eb]">
                 {kpi.sub}
               </p>
-              <p className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
+              <p className="mt-1.5 text-2xl font-bold text-gray-900 lg:text-3xl">
                 {kpi.value}
               </p>
-              <p className="mt-2 text-sm text-gray-600">{kpi.label}</p>
+              <p className="mt-1.5 text-xs text-gray-600">{kpi.label}</p>
             </div>
           ))}
         </div>

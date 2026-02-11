@@ -22,19 +22,19 @@ function TimelineColumn({
   steps: { num: string; title: string; desc: string }[];
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10">
-      <h3 className="text-xl font-bold text-gray-500">{title}</h3>
-      <div className="mt-10 relative">
-        <div className="absolute left-5 top-2 bottom-2 w-px bg-gray-200" aria-hidden />
+    <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
+      <h3 className="text-base font-bold text-gray-500">{title}</h3>
+      <div className="mt-6 relative">
+        <div className="absolute left-4 top-2 bottom-2 w-px bg-gray-200" aria-hidden />
         <ul className="space-y-0">
           {steps.map((s) => (
-            <li key={s.num} className="relative flex gap-6 pb-10 last:pb-0">
-              <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 bg-white text-sm font-bold text-gray-400">
+            <li key={s.num} className="relative flex gap-4 pb-6 last:pb-0">
+              <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 bg-white text-xs font-bold text-gray-400">
                 {s.num}
               </span>
               <div className="flex-1 pt-0.5">
-                <h4 className="font-semibold text-gray-900">{s.title}</h4>
-                <p className="mt-1 text-sm text-gray-600">{s.desc}</p>
+                <h4 className="text-sm font-semibold text-gray-900">{s.title}</h4>
+                <p className="mt-0.5 text-xs text-gray-600">{s.desc}</p>
               </div>
             </li>
           ))}
@@ -46,17 +46,17 @@ function TimelineColumn({
 
 export function ProcessFlow() {
   return (
-    <section className="border-t border-gray-200 bg-gray-50 py-24">
+    <section className="border-t border-gray-200 bg-gray-50 py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-center text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
           Die Infrastruktur hinter dem FINN Partner Portal
         </h2>
-        <p className="mx-auto mt-5 max-w-2xl text-center text-gray-600">
+        <p className="mx-auto mt-3 max-w-xl text-center text-sm text-gray-600">
           Ein strukturierter Prozess für Einkauf und Remarketing – vollständig
           digital gesteuert.
         </p>
 
-        <div className="mt-20 grid gap-12 lg:grid-cols-2">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <TimelineColumn title="Händler-Zugang" steps={haendlerSteps} />
           <TimelineColumn title="Remarketing über FINN" steps={remarketingSteps} />
         </div>

@@ -13,23 +13,23 @@ const partners = [
 
 export function PartnerLogos() {
   return (
-    <section className="overflow-hidden bg-white py-10 border-t border-gray-100">
+    <section className="overflow-hidden bg-white py-6 border-t border-gray-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-medium uppercase tracking-widest text-gray-400">
+        <p className="text-center text-[10px] font-medium uppercase tracking-widest text-gray-400">
           Unsere Partner
         </p>
       </div>
 
       {/* Scrolling container */}
-      <div className="relative mt-6">
+      <div className="relative mt-4">
         <div className="flex animate-scroll">
           {/* First set of logos */}
           {partners.map((partner, i) => (
             <div
               key={`a-${i}`}
-              className="mx-8 flex h-12 w-32 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100"
+              className="mx-6 flex h-10 w-24 flex-shrink-0 items-center justify-center rounded-md bg-gray-100"
             >
-              <span className="text-sm font-medium text-gray-400">
+              <span className="text-xs font-medium text-gray-400">
                 {partner.name}
               </span>
             </div>
@@ -38,9 +38,9 @@ export function PartnerLogos() {
           {partners.map((partner, i) => (
             <div
               key={`b-${i}`}
-              className="mx-8 flex h-12 w-32 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100"
+              className="mx-6 flex h-10 w-24 flex-shrink-0 items-center justify-center rounded-md bg-gray-100"
             >
-              <span className="text-sm font-medium text-gray-400">
+              <span className="text-xs font-medium text-gray-400">
                 {partner.name}
               </span>
             </div>
