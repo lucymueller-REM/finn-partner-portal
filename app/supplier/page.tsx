@@ -394,7 +394,7 @@ export default function SupplierPage() {
                     </p>
                     <div className="mt-8">
                       <Link
-                        href="#partner-werden"
+                        href="/registrierung/einlieferer"
                         className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                       >
                         Partnerzugang anfragen
@@ -579,7 +579,7 @@ export default function SupplierPage() {
                       unser qualifiziertes Händlernetzwerk.
                     </p>
                     <Link
-                      href="#partner-werden"
+                      href="/registrierung/einlieferer"
                       className="mt-8 inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                     >
                       Jetzt Kontakt aufnehmen

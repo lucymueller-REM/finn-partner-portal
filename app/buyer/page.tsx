@@ -395,7 +395,7 @@ export default function BuyerPage() {
                     </p>
                     <div className="mt-8">
                       <Link
-                        href="#partner-werden"
+                        href="/registrierung/haendler"
                         className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                       >
                         Partnerzugang anfragen
@@ -580,7 +580,7 @@ export default function BuyerPage() {
                       und digitaler Abwicklung.
                     </p>
                     <Link
-                      href="#partner-werden"
+                      href="/registrierung/haendler"
                       className="mt-8 inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                     >
                       Jetzt Zugang beantragen
