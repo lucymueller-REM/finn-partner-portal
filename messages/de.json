@@ -8,7 +8,9 @@
   },
   "home": {
     "hero": {
-      "headline": "Die Plattform für Handel und Remarketing von jungen Gebrauchtwagen.",
+      "headlinePart1": "Die Plattform für Handel und Remarketing von ",
+      "headlineHighlight": "jungen Gebrauchtwagen",
+      "headlinePart2": ".",
       "description": "Kaufen Sie junge Gebrauchtwagen über einen digitalen B2B-Marktplatz oder vermarkten Sie Flotten strukturiert über das Partnernetzwerk."
     },
     "liveTracker": {
@@ -88,7 +90,8 @@
     },
     "hero": {
       "kicker": "Händler",
-      "headline": "Ihr Zugang zu jungen Gebrauchtwagen",
+      "headlinePart1": "Der direkte Weg zu ",
+      "headlineHighlight": "jungen Gebrauchtwagen.",
       "description": "Kaufen Sie Fahrzeuge aus Abo-Rückläufern und Flotten – mit transparenten Preisen und vollständig digitaler Abwicklung.",
       "cta": "Partnerzugang anfragen",
       "atAGlance": "Auf einen Blick",
@@ -238,7 +241,8 @@
     },
     "hero": {
       "kicker": "Einlieferer",
-      "headline": "Ihr digitaler Remarketing-Kanal",
+      "headlinePart1": "Flotten effizient vermarkten. ",
+      "headlineHighlight": "Strukturiert & transparent.",
       "description": "Vermarkten Sie Ihre Flotte über unser Händlernetzwerk – mit transparenter Steuerung und vollständiger Abwicklung.",
       "cta": "Partnerzugang anfragen",
       "atAGlance": "Auf einen Blick",

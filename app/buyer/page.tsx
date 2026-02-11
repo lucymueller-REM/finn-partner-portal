@@ -293,7 +293,8 @@ export default function BuyerPage() {
                       {t.buyer.hero.kicker}
                     </p>
                     <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
-                      {t.buyer.hero.headline}
+                      {t.buyer.hero.headlinePart1}
+                      <span className="text-[#0087eb]">{t.buyer.hero.headlineHighlight}</span>
                     </h1>
                     <p className="mt-4 text-base text-gray-600">
                       {t.buyer.hero.description}

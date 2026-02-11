@@ -292,7 +292,8 @@ export default function SupplierPage() {
                       {t.supplier.hero.kicker}
                     </p>
                     <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
-                      {t.supplier.hero.headline}
+                      {t.supplier.hero.headlinePart1}
+                      <span className="text-[#0087eb]">{t.supplier.hero.headlineHighlight}</span>
                     </h1>
                     <p className="mt-4 text-base text-gray-600">
                       {t.supplier.hero.description}

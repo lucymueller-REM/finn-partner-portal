@@ -8,7 +8,9 @@
   },
   "home": {
     "hero": {
-      "headline": "The platform for trading and remarketing young used cars.",
+      "headlinePart1": "The platform for trading and remarketing ",
+      "headlineHighlight": "young used cars",
+      "headlinePart2": ".",
       "description": "Buy young used cars through a digital B2B marketplace or market fleets in a structured way through the partner network."
     },
     "liveTracker": {
@@ -88,7 +90,8 @@
     },
     "hero": {
       "kicker": "Dealers",
-      "headline": "Your access to young used cars",
+      "headlinePart1": "The direct way to ",
+      "headlineHighlight": "young used cars.",
       "description": "Buy vehicles from subscription returns and fleets – with transparent pricing and fully digital processing.",
       "cta": "Request Access",
       "atAGlance": "At a glance",
@@ -238,7 +241,8 @@
     },
     "hero": {
       "kicker": "Suppliers",
-      "headline": "Your Digital Remarketing Channel",
+      "headlinePart1": "Market fleets efficiently. ",
+      "headlineHighlight": "Structured & transparent.",
       "description": "Market your fleet through our dealer network – with transparent control and complete processing.",
       "cta": "Request Access",
       "atAGlance": "At a glance",
