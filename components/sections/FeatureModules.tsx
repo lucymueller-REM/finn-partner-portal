@@ -35,7 +35,7 @@ const features = [
 export function FeatureModules() {
   return (
     <section className="py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="text-center text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
           Ein Portal für Einkauf, Steuerung und Vermarktung.
         </h2>

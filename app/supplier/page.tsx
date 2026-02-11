@@ -361,7 +361,7 @@ export default function SupplierPage() {
         {/* ═══════════════════════════════════════════════════════════════════
            TWO-COLUMN LAYOUT: TOC (left) + Content (right)
            ═══════════════════════════════════════════════════════════════════ */}
-        <div className="mx-auto max-w-6xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
+        <div className="mx-auto max-w-7xl pl-4 pr-12 sm:pl-6 sm:pr-20 lg:pr-32">
           <div className="xl:grid xl:grid-cols-[200px_1fr] xl:gap-12">
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">

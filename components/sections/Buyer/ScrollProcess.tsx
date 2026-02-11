@@ -96,7 +96,7 @@ export function ScrollProcess() {
 
   return (
     <section className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
           So funktioniert&apos;s
         </h2>
