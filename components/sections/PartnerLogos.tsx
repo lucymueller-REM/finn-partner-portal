@@ -3,24 +3,24 @@
 import Image from "next/image";
 
 const partners = [
-  { name: "AHG", logo: "/Partner_Logo_ahg.png" },
-  { name: "Assenheimer", logo: "/Partner_Logo_Assenheimer.png" },
-  { name: "Baltes", logo: "/Partner_Logo_Baltes.png" },
-  { name: "BHG", logo: "/Partner_Logo_bhg.png" },
-  { name: "Bierschneider", logo: "/Partner_Logo_Bierschneider.png" },
-  { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png" },
-  { name: "Dosch", logo: "/Partner_Logo_Dosch.png" },
-  { name: "Elspass", logo: "/Partner_Logo_Elspass.png" },
-  { name: "Euler", logo: "/Partner_Logo_euler.png" },
-  { name: "Häusler", logo: "/Partner_Logo_Häusler.png" },
-  { name: "Scherer", logo: "/Partner_Logo_Scherer.png" },
-  { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png" },
+  { name: "AHG", logo: "/Partner_Logo_ahg.png", scale: "scale-100" },
+  { name: "Assenheimer", logo: "/Partner_Logo_Assenheimer.png", scale: "scale-100" },
+  { name: "Baltes", logo: "/Partner_Logo_Baltes.png", scale: "scale-100" },
+  { name: "BHG", logo: "/Partner_Logo_bhg.png", scale: "scale-100" },
+  { name: "Bierschneider", logo: "/Partner_Logo_Bierschneider.png", scale: "scale-100" },
+  { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png", scale: "scale-100" },
+  { name: "Dosch", logo: "/Partner_Logo_Dosch.png", scale: "scale-100" },
+  { name: "Elspass", logo: "/Partner_Logo_Elspass.png", scale: "scale-100" },
+  { name: "Euler", logo: "/Partner_Logo_euler.png", scale: "scale-150" },
+  { name: "Häusler", logo: "/Partner_Logo_Häusler.png", scale: "scale-150" },
+  { name: "Scherer", logo: "/Partner_Logo_Scherer.png", scale: "scale-150" },
+  { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png", scale: "scale-100" },
 ];
 
-function LogoItem({ partner }: { partner: { name: string; logo: string } }) {
+function LogoItem({ partner }: { partner: { name: string; logo: string; scale: string } }) {
   return (
-    <div className="mx-10 flex h-16 w-40 flex-shrink-0 items-center justify-center">
-      <div className="relative h-14 w-36">
+    <div className="mx-10 flex h-16 w-40 flex-shrink-0 items-center justify-center overflow-hidden">
+      <div className={`relative h-14 w-36 ${partner.scale}`}>
         <Image
           src={partner.logo}
           alt={partner.name}
