@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef, ReactNode } from "react";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 /* ═══════════════════════════════════════════════════════════════════════════════
    SCROLL REVEAL - Fade in/out on scroll
@@ -47,24 +48,14 @@ function ScrollReveal({ children, className = "" }: { children: ReactNode; class
    TABLE OF CONTENTS - Subtle sticky navigation
    ═════════════════════════════════════════════════════════════════════════════ */
 
-const tocItems = [
-  { id: "ueberblick", label: "Überblick" },
-  { id: "vorteile", label: "Vorteile" },
-  { id: "sortiment", label: "Sortiment" },
-  { id: "so-funktionierts", label: "So funktioniert's" },
-  { id: "feedback", label: "Feedback" },
-  { id: "faq", label: "FAQ" },
-  { id: "partner-werden", label: "Partner werden" },
-];
-
-function TableOfContents({ activeSection }: { activeSection: string }) {
+function TableOfContents({ activeSection, items }: { activeSection: string; items: { id: string; label: string }[] }) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <nav className="space-y-1">
-      {tocItems.map((item) => {
+      {items.map((item) => {
         const isActive = activeSection === item.id;
         return (
           <button
@@ -88,47 +79,15 @@ function TableOfContents({ activeSection }: { activeSection: string }) {
    PROCESS STEPS with scroll highlighting
    ═════════════════════════════════════════════════════════════════════════════ */
 
-const processSteps = [
-  {
-    num: "01",
-    title: "Registrierung als Gewerbepartner",
-    desc: "Kostenfreie Anmeldung über das Portal inkl. Gewerbenachweis.",
-  },
-  {
-    num: "02",
-    title: "Verifizierung",
-    desc: "Prüfung und Freischaltung innerhalb von 24 Stunden.",
-  },
-  {
-    num: "03",
-    title: "Zugriff auf Inventar & Forecast",
-    desc: "Live-Bestand inkl. Gutachten, Konfiguration, COC und Volumen-Forecast.",
-  },
-  {
-    num: "04",
-    title: "Fahrzeugauswahl & Reservierung",
-    desc: "Bieten oder zum Sofortpreis kaufen – ohne klassisches Auktionsverfahren.",
-  },
-  {
-    num: "05",
-    title: "Abholung oder Lieferung",
-    desc: "Kostenfreie Selbstabholung oder Lieferung direkt zu Ihnen.",
-  },
-  {
-    num: "06",
-    title: "After-Sales & Dokumentation",
-    desc: "Alle Dokumente inkl. Zulassungsbescheinigung jederzeit im Portal abrufbar.",
-  },
-];
-
-function ProcessTimeline({ activeStep }: { activeStep: number }) {
+function ProcessTimeline({ activeStep, steps }: { activeStep: number; steps: { title: string; desc: string }[] }) {
   return (
     <div className="space-y-8">
-      {processSteps.map((step, idx) => {
+      {steps.map((step, idx) => {
         const isActive = idx === activeStep;
+        const num = String(idx + 1).padStart(2, '0');
         return (
           <div
-            key={step.num}
+            key={idx}
             id={`step-${idx}`}
             className={`transition-all duration-300 ${
               isActive ? "opacity-100" : "opacity-50"
@@ -142,7 +101,7 @@ function ProcessTimeline({ activeStep }: { activeStep: number }) {
                     : "border-gray-200 bg-white text-gray-400"
                 }`}
               >
-                {step.num}
+                {num}
               </span>
               <div className="pt-1">
                 <h4 className={`font-semibold transition-colors ${isActive ? "text-gray-900" : "text-gray-600"}`}>
@@ -162,39 +121,12 @@ function ProcessTimeline({ activeStep }: { activeStep: number }) {
    FAQ ACCORDION
    ═════════════════════════════════════════════════════════════════════════════ */
 
-const faqItems = [
-  {
-    q: "Wie kann ich einen Partnerzugang für das FINN Partner Portal beantragen?",
-    a: "Über das Formular auf dieser Seite. Wir prüfen Ihren Gewerbenachweis und schalten Sie innerhalb von 24 Stunden frei.",
-  },
-  {
-    q: "Welche Kosten fallen für die Nutzung des Portals an?",
-    a: "Die Registrierung und Nutzung ist komplett kostenfrei. Sie zahlen nur den Fahrzeugpreis – keine versteckten Gebühren oder Provisionen.",
-  },
-  {
-    q: "Welche Fahrzeugdaten und Dokumentationen sind verfügbar?",
-    a: "Für jedes Fahrzeug: Gutachten, Konfiguration, COC, Laufleistung, Servicehistorie, Fotos und alle relevanten Dokumente.",
-  },
-  {
-    q: "Wie funktioniert der Kauf eines Fahrzeugs im Portal?",
-    a: "Sie können entweder ein Gebot abgeben oder zum Sofortpreis kaufen. Kein klassisches Auktionsverfahren mit Wartezeiten.",
-  },
-  {
-    q: "Wie läuft die Fahrzeugübergabe nach dem Kauf ab?",
-    a: "Sie wählen zwischen kostenfreier Selbstabholung oder Lieferung direkt zu Ihrem Standort. Alle Dokumente inkl. Zulassungsbescheinigung sind im Portal abrufbar.",
-  },
-  {
-    q: "Kann ich das Fahrzeuginventar in mein eigenes System exportieren?",
-    a: "Ja, über Excel-Export oder API-Anbindung können Sie Fahrzeugdaten einfach in Ihre eigenen Systeme übernehmen.",
-  },
-];
-
-function FaqAccordion() {
+function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div className="divide-y divide-gray-100">
-      {faqItems.map((item, idx) => (
+      {items.map((item, idx) => (
         <div key={idx} className="py-4">
           <button
             onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
@@ -310,22 +242,38 @@ const testimonials = [
    ═════════════════════════════════════════════════════════════════════════════ */
 
 export default function BuyerPage() {
+  const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState("ueberblick");
   const [activeStep, setActiveStep] = useState(0);
+
+  // Create TOC items from translations
+  const tocItems = [
+    { id: "ueberblick", label: t.buyer.nav.overview },
+    { id: "vorteile", label: t.buyer.nav.benefits },
+    { id: "sortiment", label: t.buyer.nav.assortment },
+    { id: "so-funktionierts", label: t.buyer.nav.howItWorks },
+    { id: "feedback", label: t.buyer.nav.feedback },
+    { id: "faq", label: t.buyer.nav.faq },
+    { id: "partner-werden", label: t.buyer.nav.becomePartner },
+  ];
+
+  // Create process steps from translations
+  const processSteps = t.buyer.process.steps;
 
   // Observe sections for TOC highlighting
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
+    const tocIds = ["ueberblick", "vorteile", "sortiment", "so-funktionierts", "feedback", "faq", "partner-werden"];
 
-    tocItems.forEach((item) => {
-      const el = document.getElementById(item.id);
+    tocIds.forEach((id) => {
+      const el = document.getElementById(id);
       if (!el) return;
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(item.id);
+              setActiveSection(id);
             }
           });
         },
@@ -363,7 +311,7 @@ export default function BuyerPage() {
     });
 
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  }, [processSteps]);
 
   return (
     <>
@@ -377,7 +325,7 @@ export default function BuyerPage() {
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
               <div className="sticky top-24 pt-8">
-                <TableOfContents activeSection={activeSection} />
+                <TableOfContents activeSection={activeSection} items={tocItems} />
               </div>
             </aside>
 
@@ -593,7 +541,7 @@ export default function BuyerPage() {
 
                 <div className="mt-8 grid gap-8 lg:grid-cols-2">
                   {/* Left: Steps */}
-                  <ProcessTimeline activeStep={activeStep} />
+                  <ProcessTimeline activeStep={activeStep} steps={processSteps} />
 
                   {/* Right: Sticky image */}
                   <div className="hidden lg:block">
@@ -668,7 +616,7 @@ export default function BuyerPage() {
                     Alles, was Sie über den Partnerzugang wissen müssen.
                   </p>
                   <div className="mt-6 max-w-3xl">
-                    <FaqAccordion />
+                    <FaqAccordion items={t.buyer.faq.items} />
                   </div>
                 </ScrollReveal>
               </section>
