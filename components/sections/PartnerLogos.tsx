@@ -24,8 +24,8 @@ const partners = [
 
 function LogoItem({ partner }: { partner: { name: string; logo: string; scale: string } }) {
   return (
-    <div className="mx-10 flex h-16 w-40 flex-shrink-0 items-center justify-center overflow-hidden">
-      <div className={`relative h-14 w-36 ${partner.scale}`}>
+    <div className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center overflow-hidden">
+      <div className={`relative h-8 w-24 ${partner.scale}`}>
         <Image
           src={partner.logo}
           alt={partner.name}
@@ -40,7 +40,7 @@ function LogoItem({ partner }: { partner: { name: string; logo: string; scale: s
 
 export function PartnerLogos() {
   return (
-    <section className="overflow-hidden bg-white py-6 border-t border-gray-100">
+    <section className="overflow-hidden bg-white py-4 border-t border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[10px] font-medium uppercase tracking-widest text-gray-400">
           Unsere Partner
@@ -48,7 +48,7 @@ export function PartnerLogos() {
       </div>
 
       {/* Scrolling container */}
-      <div className="relative mt-4 overflow-hidden">
+      <div className="relative mt-2 overflow-hidden">
         <div className="logo-scroll flex">
           {/* First set of logos */}
           {partners.map((partner, i) => (
