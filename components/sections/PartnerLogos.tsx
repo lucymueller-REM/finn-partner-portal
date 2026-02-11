@@ -17,6 +17,22 @@ const partners = [
   { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png" },
 ];
 
+function LogoItem({ partner }: { partner: { name: string; logo: string } }) {
+  return (
+    <div className="mx-8 flex h-12 w-32 flex-shrink-0 items-center justify-center">
+      <div className="relative h-10 w-28">
+        <Image
+          src={partner.logo}
+          alt={partner.name}
+          fill
+          className="object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          unoptimized
+        />
+      </div>
+    </div>
+  );
+}
+
 export function PartnerLogos() {
   return (
     <section className="overflow-hidden bg-white py-6 border-t border-gray-100">
@@ -27,45 +43,21 @@ export function PartnerLogos() {
       </div>
 
       {/* Scrolling container */}
-      <div className="relative mt-4">
-        <div className="flex animate-scroll">
+      <div className="relative mt-4 overflow-hidden">
+        <div className="logo-scroll flex">
           {/* First set of logos */}
           {partners.map((partner, i) => (
-            <div
-              key={`a-${i}`}
-              className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center"
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={100}
-                height={40}
-                className="h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition"
-                unoptimized
-              />
-            </div>
+            <LogoItem key={`a-${i}`} partner={partner} />
           ))}
           {/* Duplicate for seamless loop */}
           {partners.map((partner, i) => (
-            <div
-              key={`b-${i}`}
-              className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center"
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={100}
-                height={40}
-                className="h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition"
-                unoptimized
-              />
-            </div>
+            <LogoItem key={`b-${i}`} partner={partner} />
           ))}
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll {
+      <style jsx global>{`
+        @keyframes logo-scroll {
           0% {
             transform: translateX(0);
           }
@@ -73,11 +65,9 @@ export function PartnerLogos() {
             transform: translateX(-50%);
           }
         }
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
-        .animate-scroll:hover {
-          animation-play-state: paused;
+        .logo-scroll {
+          animation: logo-scroll 40s linear infinite;
+          width: max-content;
         }
       `}</style>
     </section>
