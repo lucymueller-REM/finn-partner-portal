@@ -8,7 +8,11 @@ export function LiveTracker() {
   return (
     <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
-        <p className="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+        <p className="mb-8 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#0087eb] opacity-75"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#0087eb]"></span>
+          </span>
           {t.home.liveTracker.title}
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
