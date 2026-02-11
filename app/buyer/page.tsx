@@ -394,12 +394,14 @@ export default function BuyerPage() {
                       vollständig digitaler Abwicklung.
                     </p>
                     <div className="mt-8">
-                      <Link
-                        href="/registrierung/haendler"
+                      <a
+                        href="https://partners.one.finn.auto/p/login"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center rounded-xl bg-[#0087eb] px-7 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                       >
                         Partnerzugang anfragen
-                      </Link>
+                      </a>
                     </div>
                   </div>
 
@@ -579,12 +581,14 @@ export default function BuyerPage() {
                       Erhalten Sie Zugriff auf verfügbare Fahrzeuge inkl. Zustandsdaten
                       und digitaler Abwicklung.
                     </p>
-                    <Link
-                      href="/registrierung/haendler"
+                    <a
+                      href="https://partners.one.finn.auto/p/login"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="mt-8 inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
                     >
                       Jetzt Zugang beantragen
-                    </Link>
+                    </a>
                     <p className="mt-4 text-xs text-gray-500">
                       Wir melden uns innerhalb von 24 Stunden.
                     </p>
