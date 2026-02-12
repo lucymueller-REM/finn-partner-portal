@@ -30,12 +30,12 @@ export function Header({ variant = "home" }: HeaderProps) {
           <LanguageSwitcher />
           
           {variant === "home" ? (
-            <nav className="flex items-center gap-3">
+            <nav className="flex items-center justify-end gap-3 w-[280px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 min-w-[110px]"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50"
               >
                 {t.header.loginForPartner}
               </a>
@@ -43,18 +43,18 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
               >
                 {t.header.requestAccess}
               </a>
             </nav>
           ) : variant === "buyer" ? (
-            <nav className="flex items-center gap-4">
+            <nav className="flex items-center justify-end gap-4 w-[280px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900 min-w-[100px] text-center"
+                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900"
               >
                 {t.header.loginForDealer}
               </a>
@@ -62,18 +62,18 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
               >
                 {t.header.requestAccess}
               </a>
             </nav>
           ) : variant === "supplier" ? (
-            <nav className="flex items-center gap-4">
+            <nav className="flex items-center justify-end gap-4 w-[280px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900 min-w-[115px] text-center"
+                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900"
               >
                 {t.header.loginForSupplier}
               </a>
@@ -81,7 +81,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
               >
                 {t.header.requestAccess}
               </a>
