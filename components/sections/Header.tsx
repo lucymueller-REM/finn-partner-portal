@@ -35,7 +35,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 min-w-[110px]"
               >
                 {t.header.loginForPartner}
               </a>
@@ -43,7 +43,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
               >
                 {t.header.requestAccess}
               </a>
@@ -54,7 +54,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900"
+                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900 min-w-[100px] text-center"
               >
                 {t.header.loginForDealer}
               </a>
@@ -62,7 +62,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
               >
                 {t.header.requestAccess}
               </a>
@@ -73,7 +73,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900"
+                className="text-xs font-medium text-gray-600 transition-colors hover:text-gray-900 min-w-[115px] text-center"
               >
                 {t.header.loginForSupplier}
               </a>
@@ -81,7 +81,7 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[155px]"
               >
                 {t.header.requestAccess}
               </a>
