@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv-Gu3sA07VtUinnwUQCQUAp07QOWUmxE6aAWI80c5t4D16c5xiXQPG-X9kgqyjtnx7Q/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjZ3dAOU46J8RTYEXZ634QOzm4uOZn8vpScy4a06T2XT0Ie0AguBwODhUpTEOjEYwLnQ/exec";
 
 export default function EinliefererRegistrierungPage() {
   const [formData, setFormData] = useState({
@@ -39,10 +39,12 @@ export default function EinliefererRegistrierungPage() {
         body: JSON.stringify({
           partnerType: "Einlieferer",
           companyName: formData.firmenname,
-          contactPerson: `${formData.vorname} ${formData.nachname}`,
+          firstName: formData.vorname,
+          lastName: formData.nachname,
           email: formData.email,
           phone: formData.telefon,
-          location: `${formData.plz} ${formData.ort}, ${formData.land}`,
+          location: `${formData.plz} ${formData.ort}`,
+          country: formData.land,
           message: formData.nachricht,
         }),
       });
