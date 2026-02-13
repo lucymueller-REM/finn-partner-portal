@@ -97,7 +97,7 @@ function ProcessTimeline({ activeStep, steps }: { activeStep: number; steps: { t
               <span
                 className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-bold transition-all ${
                   isActive
-                    ? "border-[#0087eb] bg-[#0087eb] text-white"
+                    ? "border-[#0072ea] bg-[#0072ea] text-white"
                     : "border-gray-200 bg-white text-gray-400"
                 }`}
               >
@@ -289,12 +289,12 @@ export default function BuyerPage() {
                 <div className="mb-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
                   {/* Left: Text content */}
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                    <p className="text-sm font-medium uppercase tracking-widest text-[#0072ea]">
                       {t.buyer.hero.kicker}
                     </p>
                     <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
                       {t.buyer.hero.headlinePart1}
-                      <span className="text-[#0087eb]">{t.buyer.hero.headlineHighlight}</span>
+                      <span className="text-[#0072ea]">{t.buyer.hero.headlineHighlight}</span>
                     </h1>
                     <p className="mt-4 text-base text-gray-600">
                       {t.buyer.hero.description}
@@ -302,7 +302,7 @@ export default function BuyerPage() {
                     <div className="mt-8">
                       <Link
                         href="/registrierung/haendler"
-                        className="inline-flex items-center rounded-lg bg-[#0087eb] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                        className="inline-flex items-center bg-[#0072ea] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#005fc4]"
                       >
                         {t.buyer.hero.cta}
                       </Link>
@@ -311,13 +311,13 @@ export default function BuyerPage() {
 
                   {/* Right: Key facts from homepage */}
                   <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4 lg:p-5 lg:max-w-xs">
-                    <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0087eb]">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0072ea]">
                       {t.buyer.hero.atAGlance}
                     </p>
                     <ul className="mt-3 space-y-2">
                       {t.buyer.hero.bullets.map((bullet, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-xs text-gray-700">
-                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0072ea]" />
                           {bullet}
                         </li>
                       ))}
@@ -357,10 +357,10 @@ export default function BuyerPage() {
                         key={idx}
                         className="rounded-lg border border-gray-100 bg-gray-50/50 p-4"
                       >
-                        <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0087eb]/10">
-                          {idx === 0 && <IconInventory className="h-4 w-4 text-[#0087eb]" />}
-                          {idx === 1 && <IconPrice className="h-4 w-4 text-[#0087eb]" />}
-                          {idx === 2 && <IconDigital className="h-4 w-4 text-[#0087eb]" />}
+                        <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0072ea]/10">
+                          {idx === 0 && <IconInventory className="h-4 w-4 text-[#0072ea]" />}
+                          {idx === 1 && <IconPrice className="h-4 w-4 text-[#0072ea]" />}
+                          {idx === 2 && <IconDigital className="h-4 w-4 text-[#0072ea]" />}
                         </div>
                         <h3 className="text-sm font-semibold text-gray-900">{b.title}</h3>
                         <p className="mt-1.5 text-xs text-gray-600 leading-relaxed">{b.desc}</p>
@@ -385,9 +385,9 @@ export default function BuyerPage() {
                   <div className="mt-8 grid gap-6 lg:grid-cols-2">
                     {/* Stock Purchase - links (einfacher, schneller) */}
                     <div className="rounded-xl border border-gray-200 bg-white p-6 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0087eb]" />
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0072ea]" />
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">1</span>
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0072ea] text-white text-sm font-bold">1</span>
                         <div>
                           <h3 className="text-base font-bold text-gray-900">{t.buyer.assortment.stock.title}</h3>
                           <p className="text-xs text-gray-500">{t.buyer.assortment.stock.subtitle}</p>
@@ -409,9 +409,9 @@ export default function BuyerPage() {
 
                     {/* Pre-Sales - rechts (für Planung) */}
                     <div className="rounded-xl border border-gray-200 bg-white p-6 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0087eb]" />
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#0072ea]" />
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0087eb] text-white text-sm font-bold">2</span>
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0072ea] text-white text-sm font-bold">2</span>
                         <div>
                           <h3 className="text-base font-bold text-gray-900">{t.buyer.assortment.preSales.title}</h3>
                           <p className="text-xs text-gray-500">{t.buyer.assortment.preSales.subtitle}</p>
@@ -484,7 +484,7 @@ export default function BuyerPage() {
                   <div className="mt-8 grid gap-4 lg:grid-cols-2">
                     {/* Featured testimonial */}
                     <div className="rounded-xl bg-gray-50 p-5 lg:row-span-2">
-                      <svg className="h-6 w-6 text-[#0087eb]/30" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="h-6 w-6 text-[#0072ea]/30" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
                       <p className="mt-3 text-sm text-gray-700 leading-relaxed">
@@ -543,7 +543,7 @@ export default function BuyerPage() {
                     </p>
                     <Link
                       href="/registrierung/haendler"
-                      className="mt-6 inline-flex items-center rounded-lg bg-[#0087eb] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                      className="mt-6 inline-flex items-center bg-[#0072ea] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#005fc4]"
                     >
                       {t.buyer.cta.button}
                     </Link>

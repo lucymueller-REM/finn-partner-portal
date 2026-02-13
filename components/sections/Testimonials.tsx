@@ -36,7 +36,7 @@ export function Testimonials() {
               key={t.label}
               className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-[#0087eb]">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-[#0072ea]">
                 {t.label}
               </p>
               <blockquote className="mt-2 text-sm leading-relaxed text-gray-700">

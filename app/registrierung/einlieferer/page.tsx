@@ -10,11 +10,13 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv-Gu3sA07Vt
 export default function EinliefererRegistrierungPage() {
   const [formData, setFormData] = useState({
     firmenname: "",
-    ansprechpartner: "",
+    vorname: "",
+    nachname: "",
     email: "",
     telefon: "",
     plz: "",
     ort: "",
+    land: "Deutschland",
     nachricht: "",
   });
 
@@ -37,10 +39,10 @@ export default function EinliefererRegistrierungPage() {
         body: JSON.stringify({
           partnerType: "Einlieferer",
           companyName: formData.firmenname,
-          contactPerson: formData.ansprechpartner,
+          contactPerson: `${formData.vorname} ${formData.nachname}`,
           email: formData.email,
           phone: formData.telefon,
-          location: `${formData.plz} ${formData.ort}`,
+          location: `${formData.plz} ${formData.ort}, ${formData.land}`,
           message: formData.nachricht,
         }),
       });
@@ -81,7 +83,7 @@ export default function EinliefererRegistrierungPage() {
               </p>
               <Link
                 href="/supplier"
-                className="mt-8 inline-flex items-center rounded-xl bg-[#0087eb] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                className="mt-8 inline-flex items-center bg-[#0072ea] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#005fc4]"
               >
                 Zurück zur Einlieferer-Seite
               </Link>
@@ -100,10 +102,10 @@ export default function EinliefererRegistrierungPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
           {/* Header */}
           <div className="mb-12">
-            <Link href="/supplier" className="text-sm text-[#0087eb] hover:underline">
+            <Link href="/supplier" className="text-sm text-[#0072ea] hover:underline">
               ← Zurück zur Einlieferer-Übersicht
             </Link>
-            <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+            <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0072ea]">
               Einlieferer-Registrierung
             </p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -132,21 +134,35 @@ export default function EinliefererRegistrierungPage() {
                     required
                     value={formData.firmenname}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
                 </div>
-                <div className="sm:col-span-2">
-                  <label htmlFor="ansprechpartner" className="block text-sm font-medium text-gray-700">
-                    Ansprechpartner *
+                <div>
+                  <label htmlFor="vorname" className="block text-sm font-medium text-gray-700">
+                    Vorname *
                   </label>
                   <input
                     type="text"
-                    name="ansprechpartner"
-                    id="ansprechpartner"
+                    name="vorname"
+                    id="vorname"
                     required
-                    value={formData.ansprechpartner}
+                    value={formData.vorname}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="nachname" className="block text-sm font-medium text-gray-700">
+                    Nachname *
+                  </label>
+                  <input
+                    type="text"
+                    name="nachname"
+                    id="nachname"
+                    required
+                    value={formData.nachname}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
                 </div>
               </div>
@@ -167,7 +183,7 @@ export default function EinliefererRegistrierungPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
                 </div>
                 <div>
@@ -181,7 +197,7 @@ export default function EinliefererRegistrierungPage() {
                     required
                     value={formData.telefon}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
                 </div>
                 <div>
@@ -194,7 +210,7 @@ export default function EinliefererRegistrierungPage() {
                     id="plz"
                     value={formData.plz}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
                 </div>
                 <div>
@@ -207,8 +223,34 @@ export default function EinliefererRegistrierungPage() {
                     id="ort"
                     value={formData.ort}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   />
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="land" className="block text-sm font-medium text-gray-700">
+                    Land
+                  </label>
+                  <select
+                    name="land"
+                    id="land"
+                    value={formData.land}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
+                  >
+                    <option value="Deutschland">Deutschland</option>
+                    <option value="Österreich">Österreich</option>
+                    <option value="Schweiz">Schweiz</option>
+                    <option value="Niederlande">Niederlande</option>
+                    <option value="Belgien">Belgien</option>
+                    <option value="Luxemburg">Luxemburg</option>
+                    <option value="Frankreich">Frankreich</option>
+                    <option value="Italien">Italien</option>
+                    <option value="Spanien">Spanien</option>
+                    <option value="Polen">Polen</option>
+                    <option value="Tschechien">Tschechien</option>
+                    <option value="Dänemark">Dänemark</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -226,7 +268,7 @@ export default function EinliefererRegistrierungPage() {
                   rows={4}
                   value={formData.nachricht}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   placeholder="Beschreiben Sie kurz Ihre Remarketing-Anforderungen oder stellen Sie Fragen."
                 />
               </div>
@@ -245,7 +287,7 @@ export default function EinliefererRegistrierungPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center bg-[#0072ea] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#005fc4] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
               </button>

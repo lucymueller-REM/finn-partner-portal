@@ -97,7 +97,7 @@ function ProcessTimeline({ activeStep, steps }: { activeStep: number; steps: { t
               <span
                 className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-bold transition-all ${
                   isActive
-                    ? "border-[#0087eb] bg-[#0087eb] text-white"
+                    ? "border-[#0072ea] bg-[#0072ea] text-white"
                     : "border-gray-200 bg-white text-gray-400"
                 }`}
               >
@@ -288,12 +288,12 @@ export default function SupplierPage() {
                 <div className="mb-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
                   {/* Left: Text content */}
                   <div>
-                    <p className="text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                    <p className="text-sm font-medium uppercase tracking-widest text-[#0072ea]">
                       {t.supplier.hero.kicker}
                     </p>
                     <h1 className="mt-3 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
                       {t.supplier.hero.headlinePart1}
-                      <span className="text-[#0087eb]">{t.supplier.hero.headlineHighlight}</span>
+                      <span className="text-[#0072ea]">{t.supplier.hero.headlineHighlight}</span>
                     </h1>
                     <p className="mt-4 text-base text-gray-600">
                       {t.supplier.hero.description}
@@ -301,7 +301,7 @@ export default function SupplierPage() {
                     <div className="mt-8">
                       <Link
                         href="/registrierung/einlieferer"
-                        className="inline-flex items-center rounded-lg bg-[#0087eb] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                        className="inline-flex items-center bg-[#0072ea] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#005fc4]"
                       >
                         {t.supplier.hero.cta}
                       </Link>
@@ -310,13 +310,13 @@ export default function SupplierPage() {
 
                   {/* Right: Key facts from homepage */}
                   <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4 lg:p-5 lg:max-w-xs">
-                    <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0087eb]">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-[#0072ea]">
                       {t.supplier.hero.atAGlance}
                     </p>
                     <ul className="mt-3 space-y-2">
                       {t.supplier.hero.bullets.map((bullet, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-xs text-gray-700">
-                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0087eb]" />
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#0072ea]" />
                           {bullet}
                         </li>
                       ))}
@@ -356,10 +356,10 @@ export default function SupplierPage() {
                         key={idx}
                         className="rounded-lg border border-gray-100 bg-gray-50/50 p-4"
                       >
-                        <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0087eb]/10">
-                          {idx === 0 && <IconNetwork className="h-4 w-4 text-[#0087eb]" />}
-                          {idx === 1 && <IconChart className="h-4 w-4 text-[#0087eb]" />}
-                          {idx === 2 && <IconProcess className="h-4 w-4 text-[#0087eb]" />}
+                        <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-[#0072ea]/10">
+                          {idx === 0 && <IconNetwork className="h-4 w-4 text-[#0072ea]" />}
+                          {idx === 1 && <IconChart className="h-4 w-4 text-[#0072ea]" />}
+                          {idx === 2 && <IconProcess className="h-4 w-4 text-[#0072ea]" />}
                         </div>
                         <h3 className="text-sm font-semibold text-gray-900">{b.title}</h3>
                         <p className="mt-1.5 text-xs text-gray-600 leading-relaxed">{b.desc}</p>
@@ -383,24 +383,24 @@ export default function SupplierPage() {
                   <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                     {t.supplier.fullService.services.map((service, idx) => (
                       <div key={idx} className="rounded-lg border border-gray-100 bg-white p-4 text-center">
-                        <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0087eb]/10">
+                        <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#0072ea]/10">
                           {idx === 0 && (
-                            <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="h-5 w-5 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           )}
                           {idx === 1 && (
-                            <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="h-5 w-5 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                             </svg>
                           )}
                           {idx === 2 && (
-                            <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="h-5 w-5 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                             </svg>
                           )}
                           {idx === 3 && (
-                            <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                            <svg className="h-5 w-5 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
                             </svg>
                           )}
@@ -410,9 +410,9 @@ export default function SupplierPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 rounded-lg bg-[#0087eb]/5 border border-[#0087eb]/20 p-4 flex items-center gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0087eb]/10">
-                      <svg className="h-5 w-5 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                  <div className="mt-6 bg-[#0072ea]/5 border border-[#0072ea]/20 p-4 flex items-center gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0072ea]/10">
+                      <svg className="h-5 w-5 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                     </div>
@@ -474,7 +474,7 @@ export default function SupplierPage() {
                   <div className="mt-8 grid gap-4 lg:grid-cols-2">
                     {/* Featured testimonial */}
                     <div className="rounded-xl bg-gray-50 p-5 lg:row-span-2">
-                      <svg className="h-6 w-6 text-[#0087eb]/30" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="h-6 w-6 text-[#0072ea]/30" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
                       <p className="mt-3 text-sm text-gray-700 leading-relaxed">
@@ -533,7 +533,7 @@ export default function SupplierPage() {
                     </p>
                     <Link
                       href="/registrierung/einlieferer"
-                      className="mt-6 inline-flex items-center rounded-lg bg-[#0087eb] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
+                      className="mt-6 inline-flex items-center bg-[#0072ea] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#005fc4]"
                     >
                       {t.supplier.cta.button}
                     </Link>

@@ -11,7 +11,7 @@ export function LanguageSwitcher() {
         onClick={() => setLocale('de')}
         className={`px-2 py-1 text-xs font-medium rounded-md transition-all ${
           locale === 'de'
-            ? 'bg-[#0087eb] text-white'
+            ? 'bg-[#0072ea] text-white'
             : 'text-gray-500 hover:text-gray-900'
         }`}
       >
@@ -21,7 +21,7 @@ export function LanguageSwitcher() {
         onClick={() => setLocale('en')}
         className={`px-2 py-1 text-xs font-medium rounded-md transition-all ${
           locale === 'en'
-            ? 'bg-[#0087eb] text-white'
+            ? 'bg-[#0072ea] text-white'
             : 'text-gray-500 hover:text-gray-900'
         }`}
       >

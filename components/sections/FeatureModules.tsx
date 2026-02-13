@@ -45,7 +45,7 @@ export function FeatureModules() {
               key={title}
               className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0087eb]/10 text-[#0087eb]">
+              <div className="flex h-10 w-10 items-center justify-center bg-[#0072ea]/10 text-[#0072ea]">
                 <Icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 text-sm font-semibold text-gray-900">

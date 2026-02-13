@@ -25,7 +25,7 @@ export function HomeTestimonials() {
             >
               {/* Quote icon */}
               <svg
-                className="h-5 w-5 text-[#0087eb]/30"
+                className="h-5 w-5 text-[#0072ea]/30"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -44,7 +44,7 @@ export function HomeTestimonials() {
                 <span
                   className={`mt-1.5 inline-block rounded-full px-1.5 py-0.5 text-[10px] font-medium ${
                     testimonial.type === "buyer"
-                      ? "bg-blue-50 text-[#0087eb]"
+                      ? "bg-blue-50 text-[#0072ea]"
                       : "bg-emerald-50 text-emerald-600"
                   }`}
                 >

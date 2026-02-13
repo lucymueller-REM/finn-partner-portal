@@ -12,7 +12,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
-        primary: "#0087eb",
+        primary: "#0072ea",
       },
     },
   },

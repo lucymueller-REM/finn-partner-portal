@@ -34,7 +34,7 @@ export function KpiTiles() {
               key={kpi.label}
               className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm"
             >
-              <p className="text-[10px] font-medium uppercase tracking-wider text-[#0087eb]">
+              <p className="text-[10px] font-medium uppercase tracking-wider text-[#0072ea]">
                 {kpi.sub}
               </p>
               <p className="mt-1.5 text-2xl font-bold text-gray-900 lg:text-3xl">

@@ -52,7 +52,7 @@ export function Comparison() {
                 {row.klassisch}
               </div>
               <div className="flex items-center gap-1.5 border-l border-gray-100 bg-blue-50 p-3 text-xs font-medium text-gray-900">
-                <span className="shrink-0 text-[#0087eb]">
+                <span className="shrink-0 text-[#0072ea]">
                   <CheckIcon className="h-4 w-4" />
                 </span>
                 {row.finn}

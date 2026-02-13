@@ -40,7 +40,7 @@ export default function EinliefererLoginPage() {
                     className="h-8 w-auto"
                   />
                 </Link>
-                <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0087eb]">
+                <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0072ea]">
                   Einlieferer-Login
                 </p>
                 <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900">
@@ -63,7 +63,7 @@ export default function EinliefererLoginPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                     placeholder="ihre@email.de"
                   />
                 </div>
@@ -75,7 +75,7 @@ export default function EinliefererLoginPage() {
                     </label>
                     <Link
                       href="#passwort-vergessen"
-                      className="text-sm text-[#0087eb] hover:underline"
+                      className="text-sm text-[#0072ea] hover:underline"
                     >
                       Passwort vergessen?
                     </Link>
@@ -87,14 +87,14 @@ export default function EinliefererLoginPage() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                     placeholder="••••••••"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-[#0087eb] px-4 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                  className="w-full bg-[#0072ea] px-4 py-3 text-sm font-medium text-white transition hover:bg-[#005fc4]"
                 >
                   Anmelden
                 </button>
@@ -103,7 +103,7 @@ export default function EinliefererLoginPage() {
               <div className="mt-8 text-center">
                 <p className="text-sm text-gray-600">
                   Noch kein Partner?{" "}
-                  <Link href="/registrierung/einlieferer" className="font-medium text-[#0087eb] hover:underline">
+                  <Link href="/registrierung/einlieferer" className="font-medium text-[#0072ea] hover:underline">
                     Jetzt Kontakt aufnehmen
                   </Link>
                 </p>
@@ -124,8 +124,8 @@ export default function EinliefererLoginPage() {
           <div className="hidden lg:block lg:flex-1 relative bg-gray-50">
             <div className="absolute inset-0 flex items-center justify-center p-12">
               <div className="max-w-md text-center">
-                <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-[#0087eb]/10">
-                  <svg className="h-10 w-10 text-[#0087eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-[#0072ea]/10">
+                  <svg className="h-10 w-10 text-[#0072ea]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>

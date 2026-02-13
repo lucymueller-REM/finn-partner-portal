@@ -120,7 +120,7 @@ export function ScrollProcess() {
                     relative flex gap-5 rounded-2xl p-5 transition-all duration-300
                     ${
                       isActive
-                        ? "bg-[#0087eb]/5 border border-[#0087eb]/20"
+                        ? "bg-[#0072ea]/5 border border-[#0072ea]/20"
                         : "border border-transparent"
                     }
                   `}
@@ -131,7 +131,7 @@ export function ScrollProcess() {
                       flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 text-sm font-bold transition-all duration-300
                       ${
                         isActive
-                          ? "border-[#0087eb] bg-[#0087eb] text-white"
+                          ? "border-[#0072ea] bg-[#0072ea] text-white"
                           : "border-gray-200 bg-white text-gray-400"
                       }
                     `}
@@ -165,8 +165,8 @@ export function ScrollProcess() {
             <div className="sticky top-32">
               <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 shadow-sm transition-all duration-500">
                 {/* Visual placeholder */}
-                <div className="mb-6 flex h-40 items-center justify-center rounded-xl bg-gradient-to-br from-[#0087eb]/10 to-[#0087eb]/5 border border-[#0087eb]/10">
-                  <span className="text-5xl font-bold text-[#0087eb]/30">
+                <div className="mb-6 flex h-40 items-center justify-center rounded-xl bg-gradient-to-br from-[#0072ea]/10 to-[#0072ea]/5 border border-[#0072ea]/10">
+                  <span className="text-5xl font-bold text-[#0072ea]/30">
                     {activeStep.num}
                   </span>
                 </div>
@@ -185,8 +185,8 @@ export function ScrollProcess() {
         {/* Mobile: Show preview below (non-sticky) */}
         <div className="mt-10 lg:hidden">
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
-            <div className="mb-4 flex h-32 items-center justify-center rounded-xl bg-gradient-to-br from-[#0087eb]/10 to-[#0087eb]/5 border border-[#0087eb]/10">
-              <span className="text-4xl font-bold text-[#0087eb]/30">
+            <div className="mb-4 flex h-32 items-center justify-center rounded-xl bg-gradient-to-br from-[#0072ea]/10 to-[#0072ea]/5 border border-[#0072ea]/10">
+              <span className="text-4xl font-bold text-[#0072ea]/30">
                 {activeStep.num}
               </span>
             </div>

@@ -41,7 +41,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               </a>
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
+                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#005fc4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>
@@ -58,7 +58,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               </a>
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
+                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#005fc4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>
@@ -75,7 +75,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               </a>
               <Link
                 href="/registrierung/einlieferer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
+                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#005fc4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>

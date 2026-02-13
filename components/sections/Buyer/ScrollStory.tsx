@@ -199,7 +199,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
     <div className="border-b border-gray-100 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between py-5 text-left transition hover:text-[#0087eb]"
+        className="flex w-full items-center justify-between py-5 text-left transition hover:text-[#0072ea]"
       >
         <span className="font-medium text-gray-900">{question}</span>
         <IconChevron className="h-5 w-5 shrink-0 text-gray-400" isOpen={isOpen} />
@@ -275,7 +275,7 @@ export function ScrollStory() {
               onClick={() => scrollToSection(section.id)}
               className={`shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition ${
                 activeSection === section.id
-                  ? "bg-[#0087eb] text-white"
+                  ? "bg-[#0072ea] text-white"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
@@ -303,7 +303,7 @@ export function ScrollStory() {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Der direkte Weg zu
               <br />
-              <span className="text-[#0087eb]">jungen Gebrauchtwagen.</span>
+              <span className="text-[#0072ea]">jungen Gebrauchtwagen.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-gray-600 sm:text-xl">
               Kaufen Sie Fahrzeuge aus Flotten und Remarketing-Programmen – mit festen Preisen, transparenten Zustandsdaten und vollständig digitaler Abwicklung.
@@ -311,7 +311,7 @@ export function ScrollStory() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center rounded-xl bg-[#0087eb] px-8 py-3 text-base font-medium text-white transition hover:bg-[#006fc7]"
+                className="inline-flex items-center justify-center bg-[#0072ea] px-8 py-3 text-base font-medium text-white transition hover:bg-[#005fc4]"
               >
                 Partnerzugang anfragen
               </Link>
@@ -347,8 +347,8 @@ export function ScrollStory() {
                   key={benefit.title}
                   className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0087eb]/10">
-                    <benefit.icon className="h-6 w-6 text-[#0087eb]" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center bg-[#0072ea]/10">
+                    <benefit.icon className="h-6 w-6 text-[#0072ea]" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">{benefit.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-gray-600">{benefit.description}</p>
@@ -472,7 +472,7 @@ export function ScrollStory() {
               </p>
               <Link
                 href="/registrierung/haendler"
-                className="mt-8 inline-flex items-center justify-center rounded-xl bg-[#0087eb] px-8 py-3 text-base font-medium text-white transition hover:bg-[#006fc7]"
+                className="mt-8 inline-flex items-center justify-center bg-[#0072ea] px-8 py-3 text-base font-medium text-white transition hover:bg-[#005fc4]"
               >
                 Partnerzugang anfragen
               </Link>
@@ -499,14 +499,14 @@ export function ScrollStory() {
                         onClick={() => scrollToSection(section.id)}
                         className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition ${
                           isActive
-                            ? "bg-[#0087eb]/5 font-medium text-gray-900"
+                            ? "bg-[#0072ea]/5 font-medium text-gray-900"
                             : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                         }`}
                       >
                         {/* Indicator */}
                         <span
                           className={`h-1.5 w-1.5 shrink-0 rounded-full transition-colors ${
-                            isActive ? "bg-[#0087eb]" : "bg-gray-300"
+                            isActive ? "bg-[#0072ea]" : "bg-gray-300"
                           }`}
                         />
                         {section.label}
@@ -519,7 +519,7 @@ export function ScrollStory() {
 
             {/* Guide card */}
             <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#0087eb]">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#0072ea]">
                 Gerade ansehen
               </p>
               <h3 className="mt-3 text-lg font-bold text-gray-900 transition-all duration-300">
@@ -530,8 +530,8 @@ export function ScrollStory() {
               </p>
 
               {/* Mini visual placeholder */}
-              <div className="mt-5 flex h-24 items-center justify-center rounded-xl bg-gradient-to-br from-[#0087eb]/10 to-[#0087eb]/5 border border-[#0087eb]/10">
-                <span className="text-2xl font-bold text-[#0087eb]/30">
+              <div className="mt-5 flex h-24 items-center justify-center rounded-xl bg-gradient-to-br from-[#0072ea]/10 to-[#0072ea]/5 border border-[#0072ea]/10">
+                <span className="text-2xl font-bold text-[#0072ea]/30">
                   {sections.findIndex((s) => s.id === activeSection) + 1}/{sections.length}
                 </span>
               </div>
