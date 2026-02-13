@@ -43,7 +43,7 @@ export function PartnerLogos() {
   const { t } = useLanguage();
 
   return (
-    <section className="overflow-hidden bg-white py-4 border-t border-gray-100">
+    <section className="overflow-hidden bg-white py-6 border-t border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[10px] font-medium uppercase tracking-widest text-gray-400">
           {t.home.partners}
@@ -51,7 +51,7 @@ export function PartnerLogos() {
       </div>
 
       {/* Scrolling container */}
-      <div className="relative mt-2 overflow-hidden">
+      <div className="relative mt-6 overflow-hidden">
         <div className="logo-scroll flex">
           {/* First set of logos */}
           {partners.map((partner, i) => (
