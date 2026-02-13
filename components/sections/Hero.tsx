@@ -7,7 +7,7 @@ export function Hero() {
 
   return (
     <section className="bg-white pt-32 pb-16 sm:pt-40 sm:pb-20">
-      <div className={`mx-auto px-4 text-center sm:px-6 ${locale === 'de' ? 'max-w-3xl' : 'max-w-4xl'}`}>
+      <div className={`mx-auto px-4 text-center sm:px-6 ${locale === 'de' ? 'max-w-2xl' : 'max-w-4xl'}`}>
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
           {t.home.hero.headlinePart1}
           <span className="text-[#0087eb]">{t.home.hero.headlineHighlight}</span>
