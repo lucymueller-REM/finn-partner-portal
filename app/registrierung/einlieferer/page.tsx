@@ -5,26 +5,55 @@ import Link from "next/link";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzv-Gu3sA07VtUinnwUQCQUAp07QOWUmxE6aAWI80c5t4D16c5xiXQPG-X9kgqyjtnx7Q/exec";
+
 export default function EinliefererRegistrierungPage() {
   const [formData, setFormData] = useState({
     firmenname: "",
     ansprechpartner: "",
     email: "",
     telefon: "",
-    strasse: "",
     plz: "",
     ort: "",
-    unternehmensart: "",
-    flottengroesse: "",
     nachricht: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Hier würde die Formular-Logik kommen
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          partnerType: "Einlieferer",
+          companyName: formData.firmenname,
+          contactPerson: formData.ansprechpartner,
+          email: formData.email,
+          phone: formData.telefon,
+          location: `${formData.plz} ${formData.ort}`,
+          message: formData.nachricht,
+        }),
+      });
+
+      // Da wir no-cors verwenden, können wir die Response nicht lesen
+      // Wir nehmen an, dass es erfolgreich war
+      setSubmitted(true);
+    } catch (err) {
+      setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -106,7 +135,7 @@ export default function EinliefererRegistrierungPage() {
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
                   />
                 </div>
-                <div>
+                <div className="sm:col-span-2">
                   <label htmlFor="ansprechpartner" className="block text-sm font-medium text-gray-700">
                     Ansprechpartner *
                   </label>
@@ -119,27 +148,6 @@ export default function EinliefererRegistrierungPage() {
                     onChange={handleChange}
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
                   />
-                </div>
-                <div>
-                  <label htmlFor="unternehmensart" className="block text-sm font-medium text-gray-700">
-                    Art des Unternehmens *
-                  </label>
-                  <select
-                    name="unternehmensart"
-                    id="unternehmensart"
-                    required
-                    value={formData.unternehmensart}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
-                  >
-                    <option value="">Bitte auswählen</option>
-                    <option value="oem">OEM / Hersteller</option>
-                    <option value="leasing">Leasinggesellschaft</option>
-                    <option value="captive">Captive Bank</option>
-                    <option value="autovermietung">Autovermietung</option>
-                    <option value="fleet">Fleet Management</option>
-                    <option value="sonstige">Sonstige</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -176,29 +184,14 @@ export default function EinliefererRegistrierungPage() {
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
                   />
                 </div>
-                <div className="sm:col-span-2">
-                  <label htmlFor="strasse" className="block text-sm font-medium text-gray-700">
-                    Straße und Hausnummer *
-                  </label>
-                  <input
-                    type="text"
-                    name="strasse"
-                    id="strasse"
-                    required
-                    value={formData.strasse}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
-                  />
-                </div>
                 <div>
                   <label htmlFor="plz" className="block text-sm font-medium text-gray-700">
-                    PLZ *
+                    PLZ
                   </label>
                   <input
                     type="text"
                     name="plz"
                     id="plz"
-                    required
                     value={formData.plz}
                     onChange={handleChange}
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
@@ -206,13 +199,12 @@ export default function EinliefererRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="ort" className="block text-sm font-medium text-gray-700">
-                    Ort *
+                    Ort
                   </label>
                   <input
                     type="text"
                     name="ort"
                     id="ort"
-                    required
                     value={formData.ort}
                     onChange={handleChange}
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
@@ -221,54 +213,41 @@ export default function EinliefererRegistrierungPage() {
               </div>
             </div>
 
-            {/* Zusätzliche Infos */}
+            {/* Nachricht */}
             <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-6">Flotten-Informationen</h2>
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="flottengroesse" className="block text-sm font-medium text-gray-700">
-                    Geschätzte Flottengröße (Fahrzeuge pro Jahr)
-                  </label>
-                  <select
-                    name="flottengroesse"
-                    id="flottengroesse"
-                    value={formData.flottengroesse}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
-                  >
-                    <option value="">Bitte auswählen</option>
-                    <option value="unter-500">Unter 500 Fahrzeuge</option>
-                    <option value="500-2000">500 - 2.000 Fahrzeuge</option>
-                    <option value="2000-5000">2.000 - 5.000 Fahrzeuge</option>
-                    <option value="5000-10000">5.000 - 10.000 Fahrzeuge</option>
-                    <option value="ueber-10000">Über 10.000 Fahrzeuge</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="nachricht" className="block text-sm font-medium text-gray-700">
-                    Nachricht (optional)
-                  </label>
-                  <textarea
-                    name="nachricht"
-                    id="nachricht"
-                    rows={4}
-                    value={formData.nachricht}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
-                    placeholder="Beschreiben Sie kurz Ihre Remarketing-Anforderungen oder stellen Sie Fragen."
-                  />
-                </div>
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">Nachricht</h2>
+              <div>
+                <label htmlFor="nachricht" className="block text-sm font-medium text-gray-700">
+                  Ihre Nachricht (optional)
+                </label>
+                <textarea
+                  name="nachricht"
+                  id="nachricht"
+                  rows={4}
+                  value={formData.nachricht}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0087eb] focus:ring-[#0087eb]"
+                  placeholder="Beschreiben Sie kurz Ihre Remarketing-Anforderungen oder stellen Sie Fragen."
+                />
               </div>
             </div>
+
+            {/* Error Message */}
+            {error && (
+              <div className="rounded-lg bg-red-50 border border-red-200 p-4 text-red-700 text-sm">
+                {error}
+              </div>
+            )}
 
             {/* Submit */}
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500">* Pflichtfelder</p>
               <button
                 type="submit"
-                className="inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7]"
+                disabled={isSubmitting}
+                className="inline-flex items-center rounded-xl bg-[#0087eb] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#006fc7] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Anfrage absenden
+                {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
               </button>
             </div>
           </form>

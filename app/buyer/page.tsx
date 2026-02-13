@@ -300,14 +300,12 @@ export default function BuyerPage() {
                       {t.buyer.hero.description}
                     </p>
                     <div className="mt-8">
-                      <a
-                        href="https://partners.one.finn.auto/p/login"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        href="/registrierung/haendler"
                         className="inline-flex items-center rounded-lg bg-[#0087eb] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                       >
                         {t.buyer.hero.cta}
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -543,14 +541,12 @@ export default function BuyerPage() {
                     <p className="mx-auto mt-3 max-w-sm text-sm text-gray-600">
                       {t.buyer.cta.description}
                     </p>
-                    <a
-                      href="https://partners.one.finn.auto/p/login"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/registrierung/haendler"
                       className="mt-6 inline-flex items-center rounded-lg bg-[#0087eb] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#006fc7]"
                     >
                       {t.buyer.cta.button}
-                    </a>
+                    </Link>
                     <p className="mt-3 text-[10px] text-gray-500">
                       {t.buyer.cta.note}
                     </p>

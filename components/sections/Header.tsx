@@ -39,14 +39,12 @@ export function Header({ variant = "home" }: HeaderProps) {
               >
                 {t.header.loginForPartner}
               </a>
-              <a
-                href="https://partners.one.finn.auto/p/login"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/registrierung/haendler"
                 className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
               >
                 {t.header.requestAccess}
-              </a>
+              </Link>
             </nav>
           ) : variant === "buyer" ? (
             <nav className="flex items-center justify-end gap-4 w-[320px]">
@@ -58,14 +56,12 @@ export function Header({ variant = "home" }: HeaderProps) {
               >
                 {t.header.loginForDealer}
               </a>
-              <a
-                href="https://partners.one.finn.auto/p/login"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/registrierung/haendler"
                 className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
               >
                 {t.header.requestAccess}
-              </a>
+              </Link>
             </nav>
           ) : variant === "supplier" ? (
             <nav className="flex items-center justify-end gap-4 w-[320px]">
@@ -77,14 +73,12 @@ export function Header({ variant = "home" }: HeaderProps) {
               >
                 {t.header.loginForSupplier}
               </a>
-              <a
-                href="https://partners.one.finn.auto/p/login"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/registrierung/einlieferer"
                 className="inline-flex items-center justify-center rounded-lg bg-[#0087eb] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#006fc7] min-w-[165px]"
               >
                 {t.header.requestAccess}
-              </a>
+              </Link>
             </nav>
           ) : (
             <nav className="flex items-center gap-4">

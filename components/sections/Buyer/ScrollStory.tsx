@@ -310,11 +310,7 @@ export function ScrollStory() {
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
-                href="#cta"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("cta");
-                }}
+                href="/registrierung/haendler"
                 className="inline-flex items-center justify-center rounded-xl bg-[#0087eb] px-8 py-3 text-base font-medium text-white transition hover:bg-[#006fc7]"
               >
                 Partnerzugang anfragen
@@ -475,7 +471,7 @@ export function ScrollStory() {
                 Fordern Sie jetzt Ihren Partnerzugang an und erhalten Sie sofort Zugriff auf verfügbare Fahrzeuge.
               </p>
               <Link
-                href="#cta"
+                href="/registrierung/haendler"
                 className="mt-8 inline-flex items-center justify-center rounded-xl bg-[#0087eb] px-8 py-3 text-base font-medium text-white transition hover:bg-[#006fc7]"
               >
                 Partnerzugang anfragen
