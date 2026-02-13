@@ -4,10 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjZ3dAOU46J8RTYEXZ634QOzm4uOZn8vpScy4a06T2XT0Ie0AguBwODhUpTEOjEYwLnQ/exec";
 
 export default function HaendlerRegistrierungPage() {
+  const { t } = useLanguage();
+  const reg = t.registration.dealer;
+  const countries = t.registration.countries;
+
   const [formData, setFormData] = useState({
     firmenname: "",
     vorname: "",
@@ -16,7 +21,7 @@ export default function HaendlerRegistrierungPage() {
     telefon: "",
     plz: "",
     ort: "",
-    land: "Deutschland",
+    land: countries.germany,
     nachricht: "",
   });
 
@@ -30,7 +35,7 @@ export default function HaendlerRegistrierungPage() {
     setError("");
 
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -49,11 +54,9 @@ export default function HaendlerRegistrierungPage() {
         }),
       });
 
-      // Da wir no-cors verwenden, können wir die Response nicht lesen
-      // Wir nehmen an, dass es erfolgreich war
       setSubmitted(true);
     } catch (err) {
-      setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
+      setError(reg.errorMessage);
       console.error(err);
     } finally {
       setIsSubmitting(false);
@@ -78,15 +81,13 @@ export default function HaendlerRegistrierungPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">Vielen Dank für Ihre Registrierung!</h1>
-              <p className="mt-4 text-gray-600">
-                Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
-              </p>
+              <h1 className="text-2xl font-bold text-gray-900">{reg.successHeadline}</h1>
+              <p className="mt-4 text-gray-600">{reg.successMessage}</p>
               <Link
                 href="/buyer"
                 className="mt-8 inline-flex items-center bg-[#0072ea] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#005fc4]"
               >
-                Zurück zur Händler-Seite
+                {reg.successButton}
               </Link>
             </div>
           </div>
@@ -104,29 +105,26 @@ export default function HaendlerRegistrierungPage() {
           {/* Header */}
           <div className="mb-12">
             <Link href="/buyer" className="text-sm text-[#0072ea] hover:underline">
-              ← Zurück zur Händler-Übersicht
+              {reg.backLink}
             </Link>
             <p className="mt-6 text-sm font-medium uppercase tracking-widest text-[#0072ea]">
-              Händler-Registrierung
+              {reg.kicker}
             </p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Partnerzugang beantragen
+              {reg.headline}
             </h1>
-            <p className="mt-4 text-lg text-gray-600">
-              Füllen Sie das Formular aus, um Zugang zum FINN Partner Portal zu erhalten.
-              Wir prüfen Ihre Angaben und schalten Sie innerhalb von 24 Stunden frei.
-            </p>
+            <p className="mt-4 text-lg text-gray-600">{reg.description}</p>
           </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Firmendaten */}
             <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-6">Firmendaten</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">{reg.companySection}</h2>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label htmlFor="firmenname" className="block text-sm font-medium text-gray-700">
-                    Firmenname *
+                    {reg.companyName} *
                   </label>
                   <input
                     type="text"
@@ -140,7 +138,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="vorname" className="block text-sm font-medium text-gray-700">
-                    Vorname *
+                    {reg.firstName} *
                   </label>
                   <input
                     type="text"
@@ -154,7 +152,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="nachname" className="block text-sm font-medium text-gray-700">
-                    Nachname *
+                    {reg.lastName} *
                   </label>
                   <input
                     type="text"
@@ -171,11 +169,11 @@ export default function HaendlerRegistrierungPage() {
 
             {/* Kontaktdaten */}
             <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-6">Kontaktdaten</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">{reg.contactSection}</h2>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    E-Mail-Adresse *
+                    {reg.email} *
                   </label>
                   <input
                     type="email"
@@ -189,7 +187,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="telefon" className="block text-sm font-medium text-gray-700">
-                    Telefon *
+                    {reg.phone} *
                   </label>
                   <input
                     type="tel"
@@ -203,7 +201,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="plz" className="block text-sm font-medium text-gray-700">
-                    PLZ
+                    {reg.plz}
                   </label>
                   <input
                     type="text"
@@ -216,7 +214,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div>
                   <label htmlFor="ort" className="block text-sm font-medium text-gray-700">
-                    Ort
+                    {reg.city}
                   </label>
                   <input
                     type="text"
@@ -229,7 +227,7 @@ export default function HaendlerRegistrierungPage() {
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="land" className="block text-sm font-medium text-gray-700">
-                    Land
+                    {reg.country}
                   </label>
                   <select
                     name="land"
@@ -238,19 +236,19 @@ export default function HaendlerRegistrierungPage() {
                     onChange={handleChange}
                     className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
                   >
-                    <option value="Deutschland">Deutschland</option>
-                    <option value="Österreich">Österreich</option>
-                    <option value="Schweiz">Schweiz</option>
-                    <option value="Niederlande">Niederlande</option>
-                    <option value="Belgien">Belgien</option>
-                    <option value="Luxemburg">Luxemburg</option>
-                    <option value="Frankreich">Frankreich</option>
-                    <option value="Italien">Italien</option>
-                    <option value="Spanien">Spanien</option>
-                    <option value="Polen">Polen</option>
-                    <option value="Tschechien">Tschechien</option>
-                    <option value="Dänemark">Dänemark</option>
-                    <option value="Sonstiges">Sonstiges</option>
+                    <option value={countries.germany}>{countries.germany}</option>
+                    <option value={countries.austria}>{countries.austria}</option>
+                    <option value={countries.switzerland}>{countries.switzerland}</option>
+                    <option value={countries.netherlands}>{countries.netherlands}</option>
+                    <option value={countries.belgium}>{countries.belgium}</option>
+                    <option value={countries.luxembourg}>{countries.luxembourg}</option>
+                    <option value={countries.france}>{countries.france}</option>
+                    <option value={countries.italy}>{countries.italy}</option>
+                    <option value={countries.spain}>{countries.spain}</option>
+                    <option value={countries.poland}>{countries.poland}</option>
+                    <option value={countries.czechia}>{countries.czechia}</option>
+                    <option value={countries.denmark}>{countries.denmark}</option>
+                    <option value={countries.other}>{countries.other}</option>
                   </select>
                 </div>
               </div>
@@ -258,10 +256,10 @@ export default function HaendlerRegistrierungPage() {
 
             {/* Nachricht */}
             <div className="rounded-2xl border border-gray-100 bg-gray-50/50 p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-6">Nachricht</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-6">{reg.messageSection}</h2>
               <div>
                 <label htmlFor="nachricht" className="block text-sm font-medium text-gray-700">
-                  Ihre Nachricht (optional)
+                  {reg.message}
                 </label>
                 <textarea
                   name="nachricht"
@@ -270,7 +268,7 @@ export default function HaendlerRegistrierungPage() {
                   value={formData.nachricht}
                   onChange={handleChange}
                   className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 focus:border-[#0072ea] focus:ring-[#0072ea]"
-                  placeholder="Haben Sie noch Fragen oder Anmerkungen?"
+                  placeholder={reg.messagePlaceholder}
                 />
               </div>
             </div>
@@ -284,13 +282,13 @@ export default function HaendlerRegistrierungPage() {
 
             {/* Submit */}
             <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-500">* Pflichtfelder</p>
+              <p className="text-sm text-gray-500">{reg.required}</p>
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="inline-flex items-center bg-[#0072ea] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#005fc4] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Wird gesendet..." : "Registrierung absenden"}
+                {isSubmitting ? reg.submitting : reg.submit}
               </button>
             </div>
           </form>
