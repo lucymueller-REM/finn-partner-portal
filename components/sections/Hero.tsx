@@ -13,7 +13,7 @@ export function Hero() {
           <span className="text-[#0087eb]">{t.home.hero.headlineHighlight}</span>
           {t.home.hero.headlinePart2}
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-lg text-gray-500 sm:text-xl">
+        <p className="mx-auto mt-6 max-w-md text-lg text-gray-500 sm:text-xl">
           {t.home.hero.description}
         </p>
       </div>
