@@ -232,46 +232,40 @@ export default function BuyerPage() {
 
   // Observe sections for TOC highlighting
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
     const tocIds = ["ueberblick", "vorteile", "sortiment", "so-funktionierts", "feedback", "faq", "partner-werden"];
 
-    tocIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            // Skip if user just clicked a TOC link
-            if (isManualNavigation.current) return;
-            if (entry.isIntersecting) {
-              setActiveSection(id);
-            }
-          });
-        },
-        { rootMargin: "-20% 0px -50% 0px", threshold: 0 }
-      );
-
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    // Check if scrolled to very bottom → activate last section
     const handleScroll = () => {
       if (isManualNavigation.current) return;
-      
+
+      // Check if scrolled to very bottom → activate last section
       const scrolledToBottom = 
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 20;
       if (scrolledToBottom) {
         setActiveSection("partner-werden");
+        return;
+      }
+
+      // Find which section is currently in view
+      const viewportTop = window.scrollY + window.innerHeight * 0.25;
+      
+      for (let i = tocIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(tocIds[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          
+          if (elementTop <= viewportTop) {
+            setActiveSection(tocIds[i]);
+            return;
+          }
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      observers.forEach((o) => o.disconnect());
-      window.removeEventListener("scroll", handleScroll);
-    };
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Observe steps for process timeline highlighting
