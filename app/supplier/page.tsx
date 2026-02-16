@@ -234,14 +234,9 @@ export default function SupplierPage() {
     const observers: IntersectionObserver[] = [];
     const tocIds = ["ueberblick", "vorteile", "full-service", "so-funktionierts", "feedback", "faq", "partner-werden"];
 
-    tocIds.forEach((id, index) => {
+    tocIds.forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
-
-      // Use different rootMargin for last two sections (faq, partner-werden)
-      // so they can be detected even when short
-      const isLastSections = index >= tocIds.length - 2;
-      const rootMargin = isLastSections ? "-10% 0px -10% 0px" : "-20% 0px -60% 0px";
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -253,14 +248,29 @@ export default function SupplierPage() {
             }
           });
         },
-        { rootMargin, threshold: 0.1 }
+        { rootMargin: "-20% 0px -50% 0px", threshold: 0 }
       );
 
       observer.observe(el);
       observers.push(observer);
     });
 
-    return () => observers.forEach((o) => o.disconnect());
+    // Check if scrolled to very bottom → activate last section
+    const handleScroll = () => {
+      if (isManualNavigation.current) return;
+      
+      const scrolledToBottom = 
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 20;
+      if (scrolledToBottom) {
+        setActiveSection("partner-werden");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      observers.forEach((o) => o.disconnect());
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   // Observe steps for process timeline highlighting
