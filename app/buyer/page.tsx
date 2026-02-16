@@ -224,10 +224,10 @@ export default function BuyerPage() {
   const handleTocNavigate = (id: string) => {
     isManualNavigation.current = true;
     setActiveSection(id);
-    // Reset after scroll animation completes
+    // Reset after scroll animation completes - longer timeout
     setTimeout(() => {
       isManualNavigation.current = false;
-    }, 1000);
+    }, 1500);
   };
 
   // Observe sections for TOC highlighting
@@ -235,9 +235,14 @@ export default function BuyerPage() {
     const observers: IntersectionObserver[] = [];
     const tocIds = ["ueberblick", "vorteile", "sortiment", "so-funktionierts", "feedback", "faq", "partner-werden"];
 
-    tocIds.forEach((id) => {
+    tocIds.forEach((id, index) => {
       const el = document.getElementById(id);
       if (!el) return;
+
+      // Use different rootMargin for last two sections (faq, partner-werden)
+      // so they can be detected even when short
+      const isLastSections = index >= tocIds.length - 2;
+      const rootMargin = isLastSections ? "-10% 0px -10% 0px" : "-20% 0px -60% 0px";
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -249,36 +254,14 @@ export default function BuyerPage() {
             }
           });
         },
-        { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+        { rootMargin, threshold: 0.1 }
       );
 
       observer.observe(el);
       observers.push(observer);
     });
 
-    // Check if scrolled to bottom → activate last section
-    const handleScroll = () => {
-      // Skip if user just clicked a TOC link
-      if (isManualNavigation.current) return;
-      
-      const scrolledToBottom = 
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
-      const partnerSection = document.getElementById("partner-werden");
-      
-      if (scrolledToBottom && partnerSection) {
-        const rect = partnerSection.getBoundingClientRect();
-        // Only activate if "partner-werden" section is actually visible
-        if (rect.top < window.innerHeight) {
-          setActiveSection("partner-werden");
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      observers.forEach((o) => o.disconnect());
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   // Observe steps for process timeline highlighting
