@@ -236,9 +236,15 @@ export default function SupplierPage() {
     // Check if scrolled to bottom → activate last section
     const handleScroll = () => {
       const scrolledToBottom = 
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
-      if (scrolledToBottom) {
-        setActiveSection("partner-werden");
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      const partnerSection = document.getElementById("partner-werden");
+      
+      if (scrolledToBottom && partnerSection) {
+        const rect = partnerSection.getBoundingClientRect();
+        // Only activate if "partner-werden" section is actually visible
+        if (rect.top < window.innerHeight) {
+          setActiveSection("partner-werden");
+        }
       }
     };
 
