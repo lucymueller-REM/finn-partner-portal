@@ -48,8 +48,17 @@ function ScrollReveal({ children, className = "" }: { children: ReactNode; class
    TABLE OF CONTENTS - Subtle sticky navigation
    ═════════════════════════════════════════════════════════════════════════════ */
 
-function TableOfContents({ activeSection, items }: { activeSection: string; items: { id: string; label: string }[] }) {
+function TableOfContents({ 
+  activeSection, 
+  items, 
+  onNavigate 
+}: { 
+  activeSection: string; 
+  items: { id: string; label: string }[];
+  onNavigate: (id: string) => void;
+}) {
   const scrollTo = (id: string) => {
+    onNavigate(id);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -195,6 +204,7 @@ export default function BuyerPage() {
   const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState("ueberblick");
   const [activeStep, setActiveStep] = useState(0);
+  const isManualNavigation = useRef(false);
 
   // Create TOC items from translations
   const tocItems = [
@@ -210,6 +220,16 @@ export default function BuyerPage() {
   // Create process steps from translations
   const processSteps = t.buyer.process.steps;
 
+  // Handle manual TOC navigation
+  const handleTocNavigate = (id: string) => {
+    isManualNavigation.current = true;
+    setActiveSection(id);
+    // Reset after scroll animation completes
+    setTimeout(() => {
+      isManualNavigation.current = false;
+    }, 1000);
+  };
+
   // Observe sections for TOC highlighting
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -222,6 +242,8 @@ export default function BuyerPage() {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
+            // Skip if user just clicked a TOC link
+            if (isManualNavigation.current) return;
             if (entry.isIntersecting) {
               setActiveSection(id);
             }
@@ -236,6 +258,9 @@ export default function BuyerPage() {
 
     // Check if scrolled to bottom → activate last section
     const handleScroll = () => {
+      // Skip if user just clicked a TOC link
+      if (isManualNavigation.current) return;
+      
       const scrolledToBottom = 
         window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
       const partnerSection = document.getElementById("partner-werden");
@@ -294,7 +319,7 @@ export default function BuyerPage() {
             {/* LEFT: Sticky TOC (xl+ only) */}
             <aside className="hidden xl:block">
               <div className="sticky top-24 pt-8">
-                <TableOfContents activeSection={activeSection} items={tocItems} />
+                <TableOfContents activeSection={activeSection} items={tocItems} onNavigate={handleTocNavigate} />
               </div>
             </aside>
 
