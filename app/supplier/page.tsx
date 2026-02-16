@@ -549,7 +549,7 @@ export default function SupplierPage() {
               {/* ─────────────────────────────────────────────────────────────
                  FAQ
                  ───────────────────────────────────────────────────────────── */}
-              <section id="faq" className="py-14 border-t border-gray-100">
+              <section id="faq" className="py-14 border-t border-gray-100 min-h-[50vh]">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     {t.supplier.faq.headline}
