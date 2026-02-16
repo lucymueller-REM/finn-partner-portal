@@ -234,7 +234,20 @@ export default function BuyerPage() {
       observers.push(observer);
     });
 
-    return () => observers.forEach((o) => o.disconnect());
+    // Check if scrolled to bottom → activate last section
+    const handleScroll = () => {
+      const scrolledToBottom = 
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      if (scrolledToBottom) {
+        setActiveSection("partner-werden");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      observers.forEach((o) => o.disconnect());
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   // Observe steps for process timeline highlighting
