@@ -62,7 +62,7 @@ function SplitPanel({
             </li>
           ))}
         </ul>
-        <span className="mt-6 inline-flex w-fit items-center justify-center bg-[#0072ea] px-5 py-2 text-xs font-medium text-white transition group-hover:bg-[#0167D4]">
+        <span className="mt-6 inline-flex w-fit items-center justify-center rounded-[2px] bg-[#0072ea] px-5 py-2 text-xs font-semibold text-white transition group-hover:bg-[#0167D4]">
           {cta}
         </span>
       </div>

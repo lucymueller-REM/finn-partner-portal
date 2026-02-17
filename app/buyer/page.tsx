@@ -333,7 +333,7 @@ export default function BuyerPage() {
                     <div className="mt-8">
                       <Link
                         href="/registrierung/haendler"
-                        className="inline-flex items-center bg-[#0072ea] px-5 py-2 text-xs font-medium text-white transition hover:bg-[#0167D4]"
+                        className="inline-flex items-center rounded-[2px] bg-[#0072ea] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#0167D4]"
                       >
                         {t.buyer.hero.cta}
                       </Link>
@@ -574,7 +574,7 @@ export default function BuyerPage() {
                     </p>
                     <Link
                       href="/registrierung/haendler"
-                      className="mt-6 inline-flex items-center bg-[#0072ea] px-6 py-2 text-xs font-medium text-white transition hover:bg-[#0167D4]"
+                      className="mt-6 inline-flex items-center rounded-[2px] bg-[#0072ea] px-6 py-2 text-xs font-semibold text-white transition hover:bg-[#0167D4]"
                     >
                       {t.buyer.cta.button}
                     </Link>

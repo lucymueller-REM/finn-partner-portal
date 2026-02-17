@@ -311,7 +311,7 @@ export function ScrollStory() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center bg-[#0072ea] px-8 py-3 text-base font-medium text-white transition hover:bg-[#0167D4]"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#0072ea] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#0167D4]"
               >
                 Partnerzugang anfragen
               </Link>
@@ -472,7 +472,7 @@ export function ScrollStory() {
               </p>
               <Link
                 href="/registrierung/haendler"
-                className="mt-8 inline-flex items-center justify-center bg-[#0072ea] px-8 py-3 text-base font-medium text-white transition hover:bg-[#0167D4]"
+                className="mt-8 inline-flex items-center justify-center rounded-[2px] bg-[#0072ea] px-8 py-3 text-base font-semibold text-white transition hover:bg-[#0167D4]"
               >
                 Partnerzugang anfragen
               </Link>

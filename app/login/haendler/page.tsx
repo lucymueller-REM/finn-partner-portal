@@ -94,7 +94,7 @@ export default function HaendlerLoginPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#0072ea] px-4 py-3 text-sm font-medium text-white transition hover:bg-[#0167D4]"
+                  className="w-full rounded-[2px] bg-[#0072ea] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#0167D4]"
                 >
                   Anmelden
                 </button>

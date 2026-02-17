@@ -35,13 +35,13 @@ export function Header({ variant = "home" }: HeaderProps) {
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-gray-300 bg-white px-4 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 min-w-[115px]"
+                className="inline-flex items-center justify-center rounded-[2px] border border-[#1A1A1A] bg-transparent px-4 py-1.5 text-xs font-semibold text-[#1A1A1A] transition hover:bg-[#1A1A1A] hover:text-white min-w-[115px]"
               >
                 {t.header.loginForPartner}
               </a>
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#0167D4] min-w-[165px]"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#0072ea] px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-[#0167D4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>
@@ -58,7 +58,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               </a>
               <Link
                 href="/registrierung/haendler"
-                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#0167D4] min-w-[165px]"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#0072ea] px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-[#0167D4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>
@@ -75,7 +75,7 @@ export function Header({ variant = "home" }: HeaderProps) {
               </a>
               <Link
                 href="/registrierung/einlieferer"
-                className="inline-flex items-center justify-center bg-[#0072ea] px-4 py-1.5 text-xs font-medium text-white transition hover:bg-[#0167D4] min-w-[165px]"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#0072ea] px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-[#0167D4] min-w-[165px]"
               >
                 {t.header.requestAccess}
               </Link>

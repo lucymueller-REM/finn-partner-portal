@@ -14,7 +14,7 @@ export function CtaSection() {
         </p>
         <Button
           asChild
-          className="mt-10 bg-[#0072ea] px-8 py-3 text-base text-white hover:bg-[#0167D4]"
+          className="mt-10 rounded-[2px] bg-[#0072ea] px-8 py-3 text-base font-semibold text-white hover:bg-[#0167D4]"
         >
           <Link href="#partnerzugang">Partnerzugang beantragen</Link>
         </Button>

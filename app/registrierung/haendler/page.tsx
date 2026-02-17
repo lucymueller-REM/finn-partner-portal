@@ -85,7 +85,7 @@ export default function HaendlerRegistrierungPage() {
               <p className="mt-4 text-gray-600">{reg.successMessage}</p>
               <Link
                 href="/buyer"
-                className="mt-8 inline-flex items-center bg-[#0072ea] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#0167D4]"
+                className="mt-8 inline-flex items-center rounded-[2px] bg-[#0072ea] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0167D4]"
               >
                 {reg.successButton}
               </Link>
@@ -286,7 +286,7 @@ export default function HaendlerRegistrierungPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center bg-[#0072ea] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#0167D4] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center rounded-[2px] bg-[#0072ea] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#0167D4] disabled:bg-[#D7D7D7] disabled:text-[#979797] disabled:cursor-not-allowed"
               >
                 {isSubmitting ? reg.submitting : reg.submit}
               </button>
