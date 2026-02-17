@@ -2,9 +2,9 @@
   "header": {
     "loginForPartner": "Partner Login",
     "requestAccess": "Request Access",
-    "loginForDealer": "Dealer Login",
-    "loginForSupplier": "Supplier Login",
-    "login": "Login"
+    "loginForDealer": "Partner Login",
+    "loginForSupplier": "Partner Login",
+    "login": "Partner Login"
   },
   "home": {
     "hero": {
