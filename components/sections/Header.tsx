@@ -30,12 +30,12 @@ export function Header({ variant = "home" }: HeaderProps) {
           <LanguageSwitcher />
           
           {variant === "home" ? (
-            <nav className="flex items-center justify-end gap-3 w-[320px]">
+            <nav className="flex items-center justify-end gap-4 w-[320px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-[2px] border border-[#1A1A1A] bg-transparent px-4 py-1.5 text-xs font-semibold text-[#1A1A1A] transition hover:bg-[#1A1A1A] hover:text-white min-w-[115px]"
+                className="text-xs font-semibold text-[#1A1A1A] transition-colors hover:text-[#707070] min-w-[115px] text-center"
               >
                 {t.header.loginForPartner}
               </a>
@@ -47,12 +47,12 @@ export function Header({ variant = "home" }: HeaderProps) {
               </Link>
             </nav>
           ) : variant === "buyer" ? (
-            <nav className="flex items-center justify-end gap-3 w-[320px]">
+            <nav className="flex items-center justify-end gap-4 w-[320px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-[2px] border border-[#1A1A1A] bg-transparent px-4 py-1.5 text-xs font-semibold text-[#1A1A1A] transition hover:bg-[#1A1A1A] hover:text-white min-w-[115px]"
+                className="text-xs font-semibold text-[#1A1A1A] transition-colors hover:text-[#707070] min-w-[115px] text-center"
               >
                 {t.header.loginForDealer}
               </a>
@@ -64,12 +64,12 @@ export function Header({ variant = "home" }: HeaderProps) {
               </Link>
             </nav>
           ) : variant === "supplier" ? (
-            <nav className="flex items-center justify-end gap-3 w-[320px]">
+            <nav className="flex items-center justify-end gap-4 w-[320px]">
               <a
                 href="https://partners.one.finn.auto/p/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-[2px] border border-[#1A1A1A] bg-transparent px-4 py-1.5 text-xs font-semibold text-[#1A1A1A] transition hover:bg-[#1A1A1A] hover:text-white min-w-[115px]"
+                className="text-xs font-semibold text-[#1A1A1A] transition-colors hover:text-[#707070] min-w-[115px] text-center"
               >
                 {t.header.loginForSupplier}
               </a>
