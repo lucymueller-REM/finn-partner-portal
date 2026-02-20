@@ -33,7 +33,7 @@ export default function EinliefererLoginPage() {
               <div className="mb-10">
                 <Link href="/" className="inline-block">
                   <Image
-                    src="/FINN_Logo_Black_Test_klein.jpg"
+                    src="/FINN_Logo_Black_RGB.png"
                     alt="FINN"
                     width={100}
                     height={32}

@@ -17,7 +17,7 @@ export function Header({ variant = "home" }: HeaderProps) {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/FINN_Logo_Black_Test_klein.jpg"
+            src="/FINN_Logo_Black_RGB.png"
             alt="FINN"
             width={80}
             height={26}
