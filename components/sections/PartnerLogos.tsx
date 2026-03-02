@@ -1,31 +1,27 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const partners = [
-  // Gemischt: Händler + OEMs/LB gleichmäßig verteilt
-  { name: "AHG", logo: "/Partner_Logo_ahg.png", scale: "scale-100" },
-  { name: "Assenheimer", logo: "/Partner_Logo_Assenheimer.png", scale: "scale-100" },
-  { name: "Baltes", logo: "/Partner_Logo_Baltes.png", scale: "scale-125" },
-  { name: "Nissan", logo: "/Partner_Logo_nissan.png", scale: "scale-100" },
-  { name: "BHG", logo: "/Partner_Logo_bhg.png", scale: "scale-100" },
-  { name: "Bierschneider", logo: "/Partner_Logo_Bierschneider.png", scale: "scale-100" },
-  { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png", scale: "scale-100" },
-  { name: "Polestar", logo: "/Partner_Logo_polestar.png", scale: "scale-100" },
-  { name: "Dosch", logo: "/Partner_Logo_Dosch.png", scale: "scale-100" },
-  { name: "Elspass", logo: "/Partner_Logo_Elspass.png", scale: "scale-100" },
-  { name: "Credit Agricole Autobank", logo: "/Partner_Logo_autobank.png", scale: "scale-[2]" },
-  { name: "Euler", logo: "/Partner_Logo_euler.png", scale: "scale-[2.25]" },
-  { name: "Häusler", logo: "/Partner_Logo_Häusler.png", scale: "scale-[2]" },
-  { name: "Leasys", logo: "/Partner_Logo_leasy.png", scale: "scale-100" },
-  { name: "Scherer", logo: "/Partner_Logo_Scherer.png", scale: "scale-[2]" },
-  { name: "Unterberger", logo: "/Partner_Logo_Unterberger.png", scale: "scale-100" },
+  { name: "Cloppenburg", logo: "/Partner_Logo_Cloppenburg.png", url: "https://www.cloppenburg-gruppe.de/", scale: "scale-100" },
+  { name: "Dosch", logo: "/Partner_Logo_Dosch.png", url: "https://home.mobile.de/DOSCHAUTOMOBILE", scale: "scale-100" },
+  { name: "Bald", logo: "/Partner_Logo_bald.png.png", url: "https://www.bald.de/", scale: "scale-150" },
+  { name: "AH Cuntz", logo: "/Partner_Logo_cuntz.png", url: "https://www.autohaus-cuntz.de/", scale: "scale-100" },
+  { name: "LIZY", logo: "/Partner_Logo_lizy.png.png", url: "https://www.lizy.be/nl", scale: "scale-100" },
+  { name: "AH Koch", logo: "/Partner_Logo_ah_koch.png.png", url: "https://koch-autogruppe.de/", scale: "scale-100" },
+  { name: "Gerhard Schuster GmbH", logo: "/Partner_Logo_schuster.png", url: "https://www.schuster-automobile.de/", scale: "scale-100" },
 ];
 
-function LogoItem({ partner }: { partner: { name: string; logo: string; scale: string } }) {
+function LogoItem({ partner }: { partner: { name: string; logo: string; url: string; scale: string } }) {
   return (
-    <div className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center overflow-hidden">
+    <Link
+      href={partner.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mx-6 flex h-10 w-28 flex-shrink-0 items-center justify-center overflow-hidden"
+    >
       <div className={`relative h-8 w-24 ${partner.scale}`}>
         <Image
           src={partner.logo}
@@ -35,7 +31,7 @@ function LogoItem({ partner }: { partner: { name: string; logo: string; scale: s
           unoptimized
         />
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -53,14 +49,12 @@ export function PartnerLogos() {
       {/* Scrolling container */}
       <div className="relative mt-6 overflow-hidden">
         <div className="logo-scroll flex">
-          {/* First set of logos */}
-          {partners.map((partner, i) => (
-            <LogoItem key={`a-${i}`} partner={partner} />
-          ))}
-          {/* Duplicate for seamless loop */}
-          {partners.map((partner, i) => (
-            <LogoItem key={`b-${i}`} partner={partner} />
-          ))}
+          {/* Render logos 4 times for seamless infinite loop */}
+          {[...Array(4)].map((_, setIndex) =>
+            partners.map((partner, i) => (
+              <LogoItem key={`${setIndex}-${i}`} partner={partner} />
+            ))
+          )}
         </div>
       </div>
 
@@ -70,11 +64,11 @@ export function PartnerLogos() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-25%);
           }
         }
         .logo-scroll {
-          animation: logo-scroll 50s linear infinite;
+          animation: logo-scroll 20s linear infinite;
           width: max-content;
         }
       `}</style>

@@ -211,7 +211,8 @@ export default function SupplierPage() {
     { id: "vorteile", label: t.supplier.nav.benefits },
     { id: "full-service", label: t.supplier.nav.fullService },
     { id: "so-funktionierts", label: t.supplier.nav.howItWorks },
-    { id: "feedback", label: t.supplier.nav.feedback },
+    // TODO: Re-enable when feedback is ready
+    // { id: "feedback", label: t.supplier.nav.feedback },
     { id: "faq", label: t.supplier.nav.faq },
     { id: "partner-werden", label: t.supplier.nav.becomePartner },
   ];
@@ -231,7 +232,7 @@ export default function SupplierPage() {
 
   // Observe sections for TOC highlighting
   useEffect(() => {
-    const tocIds = ["ueberblick", "vorteile", "full-service", "so-funktionierts", "feedback", "faq", "partner-werden"];
+    const tocIds = ["ueberblick", "vorteile", "full-service", "so-funktionierts", "faq", "partner-werden"]; // TODO: Add "feedback" back when ready
 
     const handleScroll = () => {
       if (isManualNavigation.current) return;
@@ -492,8 +493,9 @@ export default function SupplierPage() {
 
               {/* ─────────────────────────────────────────────────────────────
                  FEEDBACK (1 featured + 2 smaller)
+                 TODO: Re-enable when partner feedback is ready
                  ───────────────────────────────────────────────────────────── */}
-              <section id="feedback" className="py-14 border-t border-gray-100">
+              {/* <section id="feedback" className="py-14 border-t border-gray-100">
                 <ScrollReveal>
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
                     {t.supplier.feedback.headline}
@@ -503,7 +505,6 @@ export default function SupplierPage() {
                   </p>
 
                   <div className="mt-8 grid gap-4 lg:grid-cols-2">
-                    {/* Featured testimonial */}
                     <div className="rounded-xl bg-gray-50 p-5 lg:row-span-2">
                       <svg className="h-6 w-6 text-[#0072ea]/30" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -517,7 +518,6 @@ export default function SupplierPage() {
                       </div>
                     </div>
 
-                    {/* Smaller testimonials */}
                     {t.supplier.feedback.testimonials.slice(1).map((testimonial, idx) => (
                       <div key={idx} className="rounded-lg border border-gray-100 p-4">
                         <p className="text-xs text-gray-700 leading-relaxed">
@@ -531,7 +531,7 @@ export default function SupplierPage() {
                     ))}
                   </div>
                 </ScrollReveal>
-              </section>
+              </section> */}
 
               {/* ─────────────────────────────────────────────────────────────
                  FAQ
